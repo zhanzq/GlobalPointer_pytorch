@@ -9,7 +9,7 @@ import sys
 import torch
 import json
 from transformers import BertTokenizerFast, BertModel
-from models.GlobalPointer import DataMaker, MyDataset, GlobalPointer, MetricsCalculator
+from models.GlobalPointer import DataMaker, XPNER, GlobalPointer
 from torch.utils.data import DataLoader, Dataset
 import numpy as np
 
@@ -66,7 +66,7 @@ def data_generator(data_type="test"):
 
     if data_type == "test":
         test_inputs = data_maker.generate_inputs(test_data, max_seq_len, ent2id, data_type="test")
-        test_dataloader = DataLoader(MyDataset(test_inputs),
+        test_dataloader = DataLoader(XPNER(test_inputs),
                                         batch_size=hyper_parameters["batch_size"],
                                         shuffle=False,
                                         num_workers=config["num_workers"],
@@ -131,11 +131,11 @@ def load_model():
 
     return model
 
+
 def evaluate():
     test_dataloader = data_generator(data_type="test")
 
     model = load_model()
-    
 
     predict_res = predict(test_dataloader, model)
     
@@ -150,9 +150,3 @@ def evaluate():
 
 if __name__ == '__main__':
     evaluate()
-
-
-
-
-
-
