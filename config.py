@@ -1,16 +1,19 @@
-"""
-Date: 2021-06-01 17:18:25
-LastEditors: GodK
-"""
+# !/usr/bin/env python
+# encoding=utf-8
+# author: zhanzq
+# email : zhanzhiqiang09@126.com
+# date  : 2021/11/15
+#
+
 import time
 common = {
-    "exp_name": "cluener",
+    "exp_name": "xp_ner",
     "encoder": "BERT",
     "data_home": "./datasets",
-    "bert_path": "./pretrained_models/bert-base-chinese",  # bert-base-cased， bert-base-chinese
-    "run_type": "train", # train,eval
+    "bert_path": "/Users/zhanzq/Downloads/models/bert-base-chinese",  # bert-base-cased， bert-base-chinese
+    "run_type": "train",    # train,eval
     "f1_2_save": 0.5,  # 存模型的最低f1值
-    "logger":"default" # wandb or default，default意味着只输出日志到控制台
+    "logger": "default"  # wandb or default，default意味着只输出日志到控制台
 }
 
 # wandb的配置，只有在logger=wandb时生效。用于可视化训练过程
@@ -23,7 +26,7 @@ train_config = {
     "train_data": "train.json",
     "valid_data": "dev.json",
     "ent2id": "ent2id.json",
-    "path_to_save_model": "./outputs", # 在logger不是wandb时生效
+    "path_to_save_model": "./outputs",  # 在logger不是wandb时生效
     "hyper_parameters": {
         "lr": 5e-5,
         "batch_size": 64,
@@ -35,7 +38,7 @@ train_config = {
 }
 
 eval_config = {
-    "model_state_dir": "./outputs/cluener/",
+    "model_state_dir": "./outputs/xp_ner/",
     "run_id": "",
     "last_k_model": 1,  # 取倒数第几个model_state
     "test_data": "test.json",
@@ -59,8 +62,7 @@ step_scheduler = {
     "decay_steps": 100,
 }
 
-
 # ---------------------------------------------
-train_config["hyper_parameters"].update(**cawr_scheduler,**step_scheduler)
+train_config["hyper_parameters"].update(**cawr_scheduler, **step_scheduler)
 train_config = {**train_config, **common, **wandb_config}
 eval_config = {**eval_config, **common}
