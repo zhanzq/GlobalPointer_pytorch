@@ -30,7 +30,7 @@ train_config = {
     "hyper_parameters": {
         "lr": 5e-5,
         "batch_size": 64,
-        "epochs": 50,
+        "epochs": 10,
         "seed": 2333,
         "max_seq_len": 128,
         "scheduler": "CAWR"
