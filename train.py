@@ -179,7 +179,7 @@ batch_acc: %.4f" % (global_step, train_loss, batch_loss, batch_f1, batch_acc))
                     t_outputs_all = torch.cat((t_outputs_all, t_outputs), dim=0)
 
         gd_truths = t_targets_all.cpu().numpy()
-        preds = torch.argmax(t_outputs_all, -1).cpu().numpy()
+        preds = t_outputs_all.cpu().numpy()
 
         pred = []
         true = []
