@@ -1,285 +1,342 @@
 # !/usr/bin/env python
 # encoding=utf-8
 # author: zhanzq
-# email : zhanzhiqiang09@126.com
-# date  : 2021/11/15
+# email : zhanzhiqiang09@126.com 
+# date  : 2021/11/16
 #
 
 import os
 import sys
-import json
-import time
-import glob
+import math
+
+import numpy
+import random
+import logging
+import argparse
+
+from transformers import BertModel, BertTokenizer
+from time import strftime, localtime
+
 import torch
-import wandb
-import config
-
-from tqdm import tqdm
-from evaluate import evaluate
+import torch.nn as nn
 from torch.utils.data import DataLoader
-from transformers import BertTokenizerFast, BertModel
+
+from data_utils import XPNER
+from data_utils import load_ner_data
+
+from models import GlobalPointer
+
 from common.utils import multilabel_categorical_crossentropy
-from models.GlobalPointer import DataMaker, XPNER, GlobalPointer, MetricsCalculator
-
-os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
 
-def load_data(data_path, data_type="train"):
-    """读取数据集
-
-    Args:
-        data_path (str): 数据存放路径
-        data_type (str, optional): 数据类型. Defaults to "train".
-
-    Returns:
-        (json): train和valid中一条数据格式：{"text": "", "entity_list": [(start, end, label), (start, end, label)...]}
-    """
-    if data_type == "train" or data_type == "valid":
-        datas = []
-        with open(data_path, encoding="utf-8") as f:
-            for line in f:
-                line = json.loads(line)
-                item = {"text": line["text"], "entity_list": []}
-                for k, v in line['label'].items():
-                    for spans in v.values():
-                        for start, end in spans:
-                            item["entity_list"].append((start, end, k))
-                datas.append(item)
-        return datas
-    else:
-        return json.load(open(data_path, encoding="utf-8"))
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
-def data_generator(data_type="train"):
-    """
-    读取数据，生成DataLoader。
-    """
+class Instructor:
+    def __init__(self, opt):
+        self.opt = opt
+        self.tokenizer = BertTokenizer.from_pretrained(opt.pretrained_bert_name)
+        bert = BertModel.from_pretrained(opt.pretrained_bert_name)
+        self.model = opt.model_class(bert, opt).to(opt.device)
 
-    train_data, valid_data = [], []
-    if data_type == "train":
-        train_data_path = os.path.join(config["data_home"], config["exp_name"], config["train_data"])
-        train_data = load_data(train_data_path, "train")
-        valid_data_path = os.path.join(config["data_home"], config["exp_name"], config["valid_data"])
-        valid_data = load_data(valid_data_path, "valid")
-    elif data_type == "valid":
-        valid_data_path = os.path.join(config["data_home"], config["exp_name"], config["valid_data"])
-        valid_data = load_data(valid_data_path, "valid")
-        train_data = []
-   
-    all_data = train_data + valid_data
+        data_dir = opt.data_dir
+        train_data, valid_data, test_data = load_ner_data(
+            data_dir=data_dir,
+            with_punctuation=False,
+            tokenizer=self.tokenizer,
+            do_shuffle=False,
+            opt=opt,
+        )
 
-    # TODO: 句子截取
-    max_tok_num = 0
-    for sample in all_data:
-        tokens = tokenizer(sample["text"])["input_ids"]
-        max_tok_num = max(max_tok_num, len(tokens))
-    assert max_tok_num <= hyper_parameters["max_seq_len"], \
-        f'数据文本最大token数量{max_tok_num}超过预设{hyper_parameters["max_seq_len"]}'
-    max_seq_len = min(max_tok_num, hyper_parameters["max_seq_len"])
+        self.train_dataset = XPNER(train_data)
+        self.valid_dataset = XPNER(valid_data)
+        self.test_dataset = XPNER(test_data)
 
-    data_maker = DataMaker(tokenizer)
+        if opt.device.type == "cuda":
+            logger.info("cuda memory allocated: {}".format(torch.cuda.memory_allocated(device=opt.device.index)))
+        self._print_args()
 
-    if data_type == "train":
-        train_inputs = data_maker.generate_inputs(train_data, max_seq_len, ent2id)
-        valid_inputs = data_maker.generate_inputs(valid_data, max_seq_len, ent2id)
-        train_dataloader = DataLoader(XPNER(train_inputs),
-                                      batch_size=hyper_parameters["batch_size"],
-                                      shuffle=True,
-                                      num_workers=config["num_workers"],
-                                      drop_last=False,
-                                      collate_fn=data_maker.generate_batch
-                                      )
-        valid_dataloader = DataLoader(XPNER(valid_inputs),
-                                      batch_size=hyper_parameters["batch_size"],
-                                      shuffle=True,
-                                      num_workers=config["num_workers"],
-                                      drop_last=False,
-                                      collate_fn=data_maker.generate_batch
-                                      )
-        return train_dataloader, valid_dataloader
+    def _print_args(self):
+        n_trainable_params, n_untrainable_params = 0, 0
+        for p in self.model.parameters():
+            n_params = torch.prod(torch.tensor(p.shape))
+            if p.requires_grad:
+                n_trainable_params += n_params
+            else:
+                n_untrainable_params += n_params
+        logger.info("> n_trainable_params: %d, n_untrainable_params: %d" % (n_trainable_params, n_untrainable_params))
+        logger.info("> training arguments:")
+        for arg in vars(self.opt):
+            logger.info(">>> {0}: {1}".format(arg, getattr(self.opt, arg)))
 
-    elif data_type == "valid":
-        valid_inputs = data_maker.generate_inputs(valid_data, max_seq_len, ent2id)
-        valid_dataloader = DataLoader(XPNER(valid_inputs),
-                                      batch_size=hyper_parameters["batch_size"],
-                                      shuffle=True,
-                                      num_workers=config["num_workers"],
-                                      drop_last=False,
-                                      )
-        return valid_dataloader
+    def _reset_params(self):
+        for child in self.model.children():
+            if type(child) != BertModel:  # skip bert params
+                for p in child.parameters():
+                    if p.requires_grad:
+                        if len(p.shape) > 1:
+                            self.opt.initializer(p)
+                        else:
+                            stdev = 1. / math.sqrt(p.shape[0])
+                            torch.nn.init.uniform_(p, a=-stdev, b=stdev)
 
-
-def train_step(batch_train, model, optimizer, criterion, device):
-    # batch_input_ids: (batch_size, seq_len)    batch_labels: (batch_size, ent_type_size, seq_len, seq_len)
-    # batch_samples = batch_train["sample_list"]
-    batch_input_ids = batch_train["batch_input_ids"].to(device)
-    batch_attention_mask = batch_train["batch_attention_mask"].to(device)
-    batch_token_type_ids = batch_train["batch_token_type_ids"].to(device)
-    batch_labels = batch_train["batch_labels"].to(model.device)
-
-    logits = model(batch_input_ids, batch_attention_mask, batch_token_type_ids)
-
-    loss = criterion(logits, batch_labels)
-    
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
-
-    sample_precision = metrics.get_sample_precision(logits, batch_labels)
-    sample_f1 = metrics.get_sample_f1(logits, batch_labels)
-    
-    return loss.item(), sample_precision.item(), sample_f1.item()
-
-
-def train(model, dataloader, epoch):
-    model.train()
-
-    # loss func
-    def loss_fun(y_true, y_pred):
+    @staticmethod
+    def loss_fun(gd_truths, preds):
         """
-        y_true: (batch_size, ent_type_size, seq_len, seq_len)
-        y_pred: (batch_size, ent_type_size, seq_len, seq_len)
+        gd_truths: (batch_size, ner_type_num, seq_len, seq_len)
+        preds: (batch_size, ner_type_num, seq_len, seq_len)
         """
-        batch_size, ent_type_size = y_pred.shape[: 2]
-        y_true = y_true.reshape(batch_size*ent_type_size, -1)
-        y_pred = y_pred.reshape(batch_size*ent_type_size, -1)
-        loss = multilabel_categorical_crossentropy(y_true, y_pred)
+        batch_size, ner_type_num = preds.shape[:2]
+        gd_truths = gd_truths.reshape(batch_size*ner_type_num, -1)
+        preds = preds.reshape(batch_size*ner_type_num, -1)
+        loss = multilabel_categorical_crossentropy(gd_truths, preds)
         return loss
 
-    # optimizer
-    init_learning_rate = float(hyper_parameters["lr"])
-    optimizer = torch.optim.Adam(model.parameters(), lr=init_learning_rate)
+    def _train(self, criterion, optimizer, train_data_loader, val_data_loader, model_name="None", tag=0):
+        path = None
+        max_val_f1 = 0
+        max_val_acc = 0
+        global_step = 0
+        max_val_epoch = 0
+        for i_epoch in range(self.opt.num_epoch):
+            logger.info(">" * 100)
+            logger.info("epoch: {}".format(i_epoch))
+            n_correct, n_total, loss_total = 0, 0, 0
+            # switch model to training mode
+            self.model.train()
+            for i_batch, batch in enumerate(train_data_loader):
+                global_step += 1
+                # clear gradient accumulators
+                optimizer.zero_grad()
 
-    # scheduler
-    if hyper_parameters["scheduler"] == "CAWR":
-        T_mult = hyper_parameters["T_mult"]
-        rewarm_epoch_num = hyper_parameters["rewarm_epoch_num"]
-        scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer,
-                                                                         len(train_dataloader) * rewarm_epoch_num,
-                                                                         T_mult)
-    elif hyper_parameters["scheduler"] == "Step":
-        decay_rate = hyper_parameters["decay_rate"]
-        decay_steps = hyper_parameters["decay_steps"]
-        scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=decay_steps, gamma=decay_rate)
+                outputs = self.model(batch)
+                targets = batch["labels"].to(self.opt.device)
 
-    total_loss, total_precision, total_f1 = 0., 0., 0.
-    for batch_ind, batch_data in enumerate(dataloader):
+                loss = criterion(outputs, targets)
+                loss.backward()
+                optimizer.step()
 
-        loss, precision, f1 = train_step(batch_data, model, optimizer, loss_fun, device)
+                batch_sz = len(outputs)
+                batch_f1, batch_acc = self.get_sample_fp(outputs, targets)
+                n_total += batch_sz
+                batch_loss = loss.item()
+                loss_total += batch_loss * batch_sz
+                if global_step % self.opt.log_step == 0:
+                    # train_acc = n_correct / n_total
+                    train_loss = loss_total / n_total
+                    logger.info("steps: %d, total avg loss: %.4f, batch_loss: %.4f, batch_f1: %.4f, \
+batch_acc: %.4f" % (global_step, train_loss, batch_loss, batch_f1, batch_acc))
 
-        total_loss += loss
-        total_precision += precision
-        total_f1 += f1
+            val_res = self._evaluate_acc_f1(val_data_loader)
+            val_acc, val_f1 = val_res["P"], val_res["F1"]
+            logger.info("> val_acc: {:.4f}, val_f1: {:.4f}".format(val_acc, val_f1))
+            if val_acc > max_val_acc:
+                if not os.path.exists("state_dict"):
+                    os.mkdir("state_dict")
+                path = "state_dict/{0}_{1}_val_acc_{2}_{3}_{4}".format(
+                    self.opt.model_name, self.opt.dataset, round(val_acc, 4), model_name, tag)
+                torch.save(self.model.state_dict(), path)
+                logger.info(">> saved better model: {}".format(path))
+                org_path = "state_dict/{0}_{1}_val_acc_{2}_{3}_{4}".format(
+                    self.opt.model_name, self.opt.dataset, round(max_val_acc, 4), model_name, tag)
+                if os.path.exists(org_path):
+                    os.remove(org_path)
+                    logger.info(">> remove older model: {}".format(org_path))
 
-        avg_loss = total_loss / (batch_ind + 1)
-        scheduler.step()
+                max_val_acc = val_acc
+                max_val_epoch = i_epoch
+            if val_f1 > max_val_f1:
+                max_val_f1 = val_f1
+            if i_epoch - max_val_epoch >= self.opt.patience:
+                print(">> early stop.")
+                break
 
-        avg_precision = total_precision / (batch_ind + 1)
-        avg_f1 = total_f1 / (batch_ind + 1)
+        return path
 
-        print(f'Project: {config["exp_name"]}, Epoch: {epoch+1}/{hyper_parameters["epochs"]}, Batch: {batch_ind+1}/{len(dataloader)}, loss: {avg_loss}, precision: {avg_precision}, f1: {avg_f1}, lr: {optimizer.param_groups[0]["lr"]}')
-        if config["logger"] == "wandb" and batch_ind % config["log_interval"] == 0:
-                logger.log({
-                    "epoch": epoch,
-                    "train_loss": avg_loss,
-                    "train_precision": avg_precision,
-                    "train_f1": avg_f1,
-                    "learning_rate": optimizer.param_groups[0]['lr'],
-                })
+    @staticmethod
+    def get_sample_fp(self, y_pred, y_true):
+        y_pred = torch.gt(y_pred, 0).float()
+        f1 = 2 * torch.sum(y_true * y_pred) / torch.sum(y_true + y_pred + 1e-5)
+        p = torch.sum(y_pred[y_true == 1]) / (y_pred.sum() + 1)
+        return f1, p
 
+    def _evaluate_acc_f1(self, data_loader):
+        t_targets_all, t_outputs_all = None, None
+        # switch model to evaluation mode
+        self.model.eval()
+        with torch.no_grad():
+            for i_batch, t_batch in enumerate(data_loader):
+                t_targets = t_batch["labels"].to(self.opt.device)
+                t_outputs = self.model(t_batch)
 
-def valid_step(batch_valid, model, device):
-    batch_samples = batch_valid["sample_list"]
-    batch_input_ids = batch_valid["batch_input_ids"].to(device)
-    batch_attention_mask = batch_valid["batch_attention_mask"].to(device)
-    batch_token_type_ids = batch_valid["batch_token_type_ids"].to(device)
-    batch_labels = batch_valid["batch_labels"].to(model.device)
+                if t_targets_all is None:
+                    t_targets_all = t_targets
+                    t_outputs_all = t_outputs
+                else:
+                    t_targets_all = torch.cat((t_targets_all, t_targets), dim=0)
+                    t_outputs_all = torch.cat((t_outputs_all, t_outputs), dim=0)
 
-    with torch.no_grad():
-        logits = model(batch_input_ids, batch_attention_mask, batch_token_type_ids)
-    sample_f1, sample_precision, sample_recall = metrics.get_evaluate_fpr(logits, batch_labels)
-    
-    return sample_f1, sample_precision, sample_recall
+        gd_truths = t_targets_all.cpu().numpy()
+        preds = torch.argmax(t_outputs_all, -1).cpu().numpy()
 
+        pred = []
+        true = []
+        for b, l, start, end in zip(*numpy.where(preds > 0)):
+            pred.append((b, l, start, end))
+        for b, l, start, end in zip(*numpy.where(gd_truths > 0)):
+            true.append((b, l, start, end))
 
-def valid(model, dataloader):
-    model.eval()
+        R = set(pred)
+        T = set(true)
+        X = len(R & T) + 1e-5
+        Y = len(R) + 1e-5
+        Z = len(T) + 1e-5
+        f1, precision, recall = 2 * X / (Y + Z), X / Y, X / Z
 
-    total_f1, total_precision, total_recall = 0., 0., 0.
-    for batch_data in tqdm(dataloader, desc="Validating"):
-        f1, precision, recall = valid_step(batch_data, model, device)
+        result = {
+            "P": precision,
+            "R": recall,
+            "F1": f1,
+        }
+        return result
 
-        total_f1 += f1
-        total_precision += precision
-        total_recall += recall
+    def run(self, model_name="chinese-bert-base", tag=0):
+        # Loss and Optimizer
+        criterion = self.loss_fun
+        _params = filter(lambda p: p.requires_grad, self.model.parameters())
+        optimizer = self.opt.optimizer(_params, lr=self.opt.lr, weight_decay=self.opt.l2reg)
+        train_data_loader = DataLoader(dataset=self.train_dataset, batch_size=self.opt.batch_size, shuffle=False)
+        test_data_loader = DataLoader(dataset=self.test_dataset, batch_size=self.opt.batch_size, shuffle=False)
+        val_data_loader = DataLoader(dataset=self.valid_dataset, batch_size=self.opt.batch_size, shuffle=False)
 
-    avg_f1 = total_f1 / (len(dataloader))
-    avg_precision = total_precision / (len(dataloader))
-    avg_recall = total_recall / (len(dataloader))
-    print("******************************************")
-    print(f'avg_precision: {avg_precision}, avg_recall: {avg_recall}, avg_f1: {avg_f1}')
-    print("******************************************")
-    if config["logger"] == "wandb":
-        logger.log({"valid_precision": avg_precision, "valid_recall": avg_recall, "valid_f1": avg_f1})
-    return avg_f1
+        self._reset_params()
+        best_model_path = self._train(criterion, optimizer, train_data_loader, val_data_loader, model_name, tag)
+        self.model.load_state_dict(torch.load(best_model_path))
+        print("load model from %s" % best_model_path)
+        train_res = self._evaluate_acc_f1(train_data_loader)
+        val_res = self._evaluate_acc_f1(val_data_loader)
+        test_res = self._evaluate_acc_f1(test_data_loader)
+        logger.info(">> train_p: {:.4f}, train_r: {:.4f}, train_f1: {:.4f}".format(train_res["P"],
+                                                                                   train_res["R"], train_res["F1"]))
+        logger.info(">> val_p: {:.4f}, val_r: {:.4f}, val_f1: {:.4f}".format(val_res["P"],
+                                                                             val_res["R"], val_res["F1"]))
+        logger.info(">> test_p: {:.4f}, test_r: {:.4f}, test_f1: {:.4f}".format(test_res["P"],
+                                                                                test_res["R"], test_res["F1"]))
 
-
-config = config.train_config
-hyper_parameters = config["hyper_parameters"]
-device = torch.device("cuda: 0" if torch.cuda.is_available() else "cpu")
-config["num_workers"] = 6 if sys.platform.startswith("linux") else 0
-
-# for reproductivity
-torch.manual_seed(hyper_parameters["seed"])  # pytorch random seed
-torch.backends.cudnn.deterministic = True
-
-if config["logger"] == "wandb" and config["run_type"] == "train":
-    # init wandb
-    wandb.init(project="GlobalPointer_"+config["exp_name"],
-               config=hyper_parameters  # Initialize config
-               )
-    wandb.run.name = config["run_name"] + "_" + wandb.run.id
-
-    model_state_dict_dir = wandb.run.dir
-    logger = wandb
-else:
-    model_state_dict_dir = os.path.join(config["path_to_save_model"], config["exp_name"],
-                                        time.strftime("%Y-%m-%d_%H: %M: %S", time.gmtime()))
-    if not os.path.exists(model_state_dict_dir):
-        os.makedirs(model_state_dict_dir)
-
-tokenizer = BertTokenizerFast.from_pretrained(config["bert_path"], add_special_tokens=True, do_lower_case=False)
-
-ent2id_path = os.path.join(config["data_home"], config["exp_name"], config["ent2id"])
-ent2id = load_data(ent2id_path, "ent2id")
-ent_type_size = len(ent2id)
-
-metrics = MetricsCalculator()
-
-encoder = BertModel.from_pretrained(config["bert_path"])
-model = GlobalPointer(encoder, ent_type_size, 64)
-model = model.to(device)
-
-if config["logger"] == "wandb" and config["run_type"] == "train":
-    wandb.watch(model)
+        return train_res, val_res, test_res
 
 
-if __name__ == '__main__':
-    if config["run_type"] == "train":
-        train_dataloader, valid_dataloader = data_generator()
-        max_f1 = 0.
-        for epoch in range(hyper_parameters["epochs"]):
-            train(model, train_dataloader, epoch)
-            valid_f1 = valid(model, valid_dataloader)
-            if valid_f1 > max_f1:
-                max_f1 = valid_f1
-                if valid_f1 > config["f1_2_save"]:  # save the best model
-                    modle_state_num = len(glob.glob(model_state_dict_dir + "/model_state_dict_*.pt"))
-                    torch.save(model.state_dict(),
-                            os.path.join(model_state_dict_dir, "model_state_dict_{}.pt".format(modle_state_num)))
-            print(f"Best F1: {max_f1}")
-            print("******************************************")
-            if config["logger"] == "wandb":
-                logger.log({"Best_F1": max_f1})
-    elif config["run_type"] == "eval":
-        evaluate()
+def main():
+    # Hyper Parameters
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model_name", default="gp", type=str)
+    parser.add_argument("--dataset", default="xp_ner", type=str, help="xp_ner dataset")
+    parser.add_argument("--optimizer", default="adam", type=str)
+    parser.add_argument("--initializer", default="xavier_uniform_", type=str)
+    parser.add_argument("--lr", default=2e-5, type=float, help="try 5e-5, 2e-5 for BERT, 1e-3 for others")
+    parser.add_argument("--dropout", default=0.1, type=float)
+    parser.add_argument("--l2reg", default=0.01, type=float)
+    parser.add_argument("--num_epoch", default=5, type=int, help="try larger number (>20) for non-BERT models")
+    parser.add_argument("--batch_size", default=32, type=int, help="try 16, 32, 64 for BERT models")
+    parser.add_argument("--log_step", default=10, type=int)
+    parser.add_argument("--embed_dim", default=300, type=int)
+    parser.add_argument("--hidden_dim", default=300, type=int)
+    parser.add_argument("--hidden_size", default=768, type=int)
+    parser.add_argument("--inner_dim", default=64, type=int)
+    parser.add_argument("--bert_dim", default=768, type=int)
+    parser.add_argument("--pretrained_bert_name", default="bert-base-uncased", type=str)
+    parser.add_argument("--max_seq_len", default=50, type=int)
+    parser.add_argument("--ner_type_num", default=6, type=int)
+    parser.add_argument("--hops", default=3, type=int)
+    parser.add_argument("--patience", default=5, type=int)
+    parser.add_argument("--ro_pe", default=False, type=bool)
+    parser.add_argument("--device", default=None, type=str, help="e.g. cuda:0")
+    parser.add_argument("--data_dir", default="datasets/xp_ner/", type=str, help="xp dataset")
+    parser.add_argument("--seed", default=1234, type=int, help="set seed for reproducibility")
+    parser.add_argument("--valid_dataset_ratio", default=0.1, type=float,
+                        help="set ratio between 0 and 1 for validation support")
+
+    opt = parser.parse_args()
+
+    if opt.seed is not None:
+        random.seed(opt.seed)
+        numpy.random.seed(opt.seed)
+        torch.manual_seed(opt.seed)
+        torch.cuda.manual_seed(opt.seed)
+        torch.backends.cudnn.benchmark = False
+        torch.backends.cudnn.deterministic = True
+        os.environ["PYTHONHASHSEED"] = str(opt.seed)
+
+    model_classes = {
+        'gp': GlobalPointer,
+    }
+    dataset_files = {
+        'xp_ner': {
+            'train': './datasets/xp_ner/train.jsonl',
+            'dev': './datasets/xp_ner/dev.jsonl',
+            'test': './datasets/xp_ner/test.jsonl',
+        },
+    }
+
+    input_cols = {
+        'gp': ['input_ids', 'attention_mask', 'token_type_ids', "labels"],
+    }
+
+    initializers = {
+        "xavier_uniform_": torch.nn.init.xavier_uniform_,
+        "xavier_normal_": torch.nn.init.xavier_normal_,
+        "orthogonal_": torch.nn.init.orthogonal_,
+    }
+    optimizers = {
+        "sgd": torch.optim.SGD,
+        "asgd": torch.optim.ASGD,  # default lr=0.01
+        "adam": torch.optim.Adam,  # default lr=0.001
+        "adamax": torch.optim.Adamax,  # default lr=0.002
+        "rmsprop": torch.optim.RMSprop,  # default lr=0.01
+        "adagrad": torch.optim.Adagrad,  # default lr=0.01
+        "adadelta": torch.optim.Adadelta,  # default lr=1.0
+    }
+    opt.optimizer = optimizers[opt.optimizer]
+    opt.inputs_cols = input_cols[opt.model_name]
+    opt.model_class = model_classes[opt.model_name]
+    opt.dataset_file = dataset_files[opt.dataset]
+    opt.initializer = initializers[str(opt.initializer)]
+    opt.ent2id = {"": 0, "location": 1, "type": 2, "poiName": 3, "dishName": 4, "taste": 5}
+    if opt.device is None:
+        if torch.cuda.is_available():
+            opt.device = torch.device("cuda")
+        else:
+            opt.device = torch.device("cpu")
+    else:
+        opt.device = torch.device(str(opt.device))
+
+    log_file = "{}-{}-{}.log".format(opt.model_name, opt.dataset, strftime("%y%m%d-%H%M", localtime()))
+    logger.addHandler(logging.FileHandler(log_file))
+
+    results = []
+    run_num = 5
+    model_name = opt.pretrained_bert_name.split("/")[-1]
+    with open("train.log", "a") as writer:
+        for i in range(run_num):
+            ins = Instructor(opt)
+            res_i = ins.run(model_name=model_name, tag=i)
+            result_i = []
+            for res_ij in res_i:
+                result_i.extend([res_ij["P"], res_ij["F1"]])
+            results.append(result_i)
+        avg_result = numpy.mean(results, axis=0)
+        avg_result = [it.item() for it in avg_result]
+        # write logs
+        writer.write("pretrained model: {:s}, model architecture: {:s}\n".format(model_name, opt.model_name))
+        writer.write("{:10s}{:10s}{:10s}{:10s}{:10s}{:10s}{:10s}\n".format("run_idx", "train_acc", "train_f1",
+                                                                           "valid_acc", "valid_f1",
+                                                                           "test_acc", "test_f1"))
+        for i in range(run_num):
+            writer.write("%-10d%-10.4f%-10.4f%-10.4f%-10.4f%-10.4f%-10.4f\n" % tuple([i] + results[i]))
+        writer.write("%-10s%-10.4f%-10.4f%-10.4f%-10.4f%-10.4f%-10.4f\n\n\n" % tuple(["avg"] + avg_result))
+
+
+if __name__ == "__main__":
+    main()
