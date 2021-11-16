@@ -156,7 +156,7 @@ batch_acc: %.4f" % (global_step, train_loss, batch_loss, batch_f1, batch_acc))
         return path
 
     @staticmethod
-    def get_sample_fp(self, y_pred, y_true):
+    def get_sample_fp(y_pred, y_true):
         y_pred = torch.gt(y_pred, 0).float()
         f1 = 2 * torch.sum(y_true * y_pred) / torch.sum(y_true + y_pred + 1e-5)
         p = torch.sum(y_pred[y_true == 1]) / (y_pred.sum() + 1)

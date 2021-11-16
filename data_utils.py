@@ -88,10 +88,10 @@ def get_ner_example(sample, with_punctuation=False, tokenizer=None, opt=None):
 
     data = {
         # "sample": sample,
-        "labels": torch.LongTensor(inputs["labels"]),
-        "input_ids": torch.LongTensor(inputs["input_ids"]),
-        "attention_mask": torch.LongTensor(inputs["attention_mask"]),
-        "token_type_ids": torch.LongTensor(inputs["token_type_ids"]),
+        "labels": torch.LongTensor(inputs["labels"]).to(opt.device),
+        "input_ids": torch.LongTensor(inputs["input_ids"]).to(opt.device),
+        "attention_mask": torch.LongTensor(inputs["attention_mask"]).to(opt.device),
+        "token_type_ids": torch.LongTensor(inputs["token_type_ids"]).to(opt.device),
     }
 
     return data
