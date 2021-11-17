@@ -163,7 +163,7 @@ batch_acc: %.4f" % (global_step, train_loss, batch_loss, batch_f1, batch_acc))
         return f1, p
 
     def _evaluate_acc_f1(self, data_loader):
-        t_targets_all, t_outputs_all = None, None
+        preds, gd_truths = [], []
         # switch model to evaluation mode
         self.model.eval()
         with torch.no_grad():
@@ -171,25 +171,15 @@ batch_acc: %.4f" % (global_step, train_loss, batch_loss, batch_f1, batch_acc))
                 t_targets = t_batch["labels"].to(self.opt.device)
                 t_outputs = self.model(t_batch)
 
-                if t_targets_all is None:
-                    t_targets_all = t_targets
-                    t_outputs_all = t_outputs
-                else:
-                    t_targets_all = torch.cat((t_targets_all, t_targets), dim=0)
-                    t_outputs_all = torch.cat((t_outputs_all, t_outputs), dim=0)
+                batch_truths = t_targets.cpu().numpy()
+                batch_preds = t_outputs.cpu().numpy()
+                for b, l, start, end in zip(*numpy.where(batch_preds > 0)):
+                    preds.append((i_batch, b, l, start, end))
+                for b, l, start, end in zip(*numpy.where(batch_truths > 0)):
+                    gd_truths.append((i_batch, b, l, start, end))
 
-        gd_truths = t_targets_all.cpu().numpy()
-        preds = t_outputs_all.cpu().numpy()
-
-        pred = []
-        true = []
-        for b, l, start, end in zip(*numpy.where(preds > 0)):
-            pred.append((b, l, start, end))
-        for b, l, start, end in zip(*numpy.where(gd_truths > 0)):
-            true.append((b, l, start, end))
-
-        R = set(pred)
-        T = set(true)
+        R = set(preds)
+        T = set(gd_truths)
         X = len(R & T) + 1e-5
         Y = len(R) + 1e-5
         Z = len(T) + 1e-5
