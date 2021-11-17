@@ -18,13 +18,12 @@ from transformers import BertModel, BertTokenizer
 from time import strftime, localtime
 
 import torch
-import torch.nn as nn
 from torch.utils.data import DataLoader
 
 from data_utils import XPNER
 from data_utils import load_ner_data
 
-from models import GlobalPointer
+from models.gp import GlobalPointer
 
 from common.utils import multilabel_categorical_crossentropy
 
@@ -46,7 +45,7 @@ class Instructor:
             data_dir=data_dir,
             with_punctuation=False,
             tokenizer=self.tokenizer,
-            do_shuffle=False,
+            do_shuffle=True,
             opt=opt,
         )
 
@@ -197,7 +196,7 @@ batch_acc: %.4f" % (global_step, train_loss, batch_loss, batch_f1, batch_acc))
         criterion = self.loss_fun
         _params = filter(lambda p: p.requires_grad, self.model.parameters())
         optimizer = self.opt.optimizer(_params, lr=self.opt.lr, weight_decay=self.opt.l2reg)
-        train_data_loader = DataLoader(dataset=self.train_dataset, batch_size=self.opt.batch_size, shuffle=False)
+        train_data_loader = DataLoader(dataset=self.train_dataset, batch_size=self.opt.batch_size, shuffle=True)
         test_data_loader = DataLoader(dataset=self.test_dataset, batch_size=self.opt.batch_size, shuffle=False)
         val_data_loader = DataLoader(dataset=self.valid_dataset, batch_size=self.opt.batch_size, shuffle=False)
 
