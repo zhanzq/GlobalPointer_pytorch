@@ -1,0 +1,2578 @@
+{"text": "暂时没啥地方去哎想去吃啥说说呗", "label": []}
+{"text": "在哪", "label": []}
+{"text": "你开始导航吧", "label": []}
+{"text": "那花花你呢", "label": []}
+{"text": "去吃点什么吗到午饭时间了", "label": []}
+{"text": "还要等那么久啊", "label": []}
+{"text": "走勒我们现在出发", "label": []}
+{"text": "好啊你决定就好", "label": []}
+{"text": "我想吃川菜", "label": [["type", "川菜"]]}
+{"text": "今天你妈妈出差我们出去吃怎么样", "label": []}
+{"text": "正哥听说做晚有好事发生哦", "label": []}
+{"text": "小P排一个号", "label": []}
+{"text": "现在去买菜做饭好像已经来不及了", "label": []}
+{"text": "好那就排号吧", "label": []}
+{"text": "我想喝杯东西要一起吗", "label": []}
+{"text": "那行现在去吗", "label": []}
+{"text": "2人", "label": []}
+{"text": "不知道让小P推荐吧", "label": []}
+{"text": "那去买些绿豆饼吧", "label": [["dishName", "绿豆饼"]]}
+{"text": "儿子别生气啊这不是一提到吃把你给忘了吗", "label": []}
+{"text": "亲爱的你想去吃什么今天随便吃", "label": []}
+{"text": "好那我们就去吃海鲜", "label": [["dishName", "海鲜"]]}
+{"text": "哥哥润升广场的烤鸡店很正", "label": [["location", "润升广场"], ["dishName", "烤鸡"]]}
+{"text": "小宝你再考虑那就爸爸说了算了", "label": []}
+{"text": "还有2个多钟就不营业了要不要去", "label": []}
+{"text": "亲爱的去吃什么好呢", "label": []}
+{"text": "人不多帮我俩拿个号", "label": []}
+{"text": "那开始导航吧", "label": []}
+{"text": "12分钟可等吗", "label": []}
+{"text": "准备去哪里喝", "label": []}
+{"text": "要不去星星烤肉吧", "label": [["poiName", "星星烤肉"]]}
+{"text": "那小P找一下吧", "label": []}
+{"text": "我们老是吃那么多会不会体重蹭蹭蹭地往上涨呀", "label": []}
+{"text": "哎麦当劳出了个甜咸过瘾双人餐我们去试一下啊", "label": [["poiName", "麦当劳"], ["dishName", "甜咸过瘾双人餐"]]}
+{"text": "找现在在营业的", "label": []}
+{"text": "8个人", "label": []}
+{"text": "哎呀不要去麦当劳宝贝你喉咙还没好呢先不吃薯条好吗", "label": [["dishName", "薯条"], ["poiName", "麦当劳"]]}
+{"text": "去哪里吃", "label": []}
+{"text": "贵不怕有我们大佬埋单嘻嘻", "label": []}
+{"text": "没有怎么啦", "label": []}
+{"text": "不要点鹅肉就好了我对那味道是真的接受不了", "label": [["dishName", "鹅肉"]]}
+{"text": "想好吃什么没有你们", "label": []}
+{"text": "行现在可以", "label": []}
+{"text": "看一下有停车场的", "label": []}
+{"text": "小P大润发周边有那些评论最多的餐厅", "label": [["location", "大润发"]]}
+{"text": "好帮我们排号吧", "label": []}
+{"text": "3人", "label": []}
+{"text": "小P导航吧", "label": []}
+{"text": "去吃粤菜吧好久没吃过了", "label": [["type", "粤菜"]]}
+{"text": "我不知道这边有没有海底捞", "label": [["poiName", "海底捞"]]}
+{"text": "宝宝我们出去吃顿饭吧", "label": []}
+{"text": "可以啊", "label": []}
+{"text": "就是啊不用怀疑", "label": []}
+{"text": "这个吧比较近", "label": []}
+{"text": "帮我们排个号吧四位", "label": []}
+{"text": "那你说说吃什么好", "label": []}
+{"text": "是挺不错的要不出去撸串", "label": []}
+{"text": "需要", "label": []}
+{"text": "我吃什么都可以的你们决定吧", "label": []}
+{"text": "不是的我没说", "label": []}
+{"text": "帮我取号", "label": []}
+{"text": "中午没什么胃口吃饭", "label": []}
+{"text": "宝我们一会去吃什么呢", "label": []}
+{"text": "妈妈我想吃狮子头", "label": [["dishName", "狮子头"]]}
+{"text": "就是只要好吃的再远我也去", "label": []}
+{"text": "要不就去这把跑来跑去累死了", "label": []}
+{"text": "那就出去喝点吃个饭呗", "label": []}
+{"text": "好的开始导航吧小P", "label": []}
+{"text": "应该说你们要带我们去吃些什么吧", "label": []}
+{"text": "那我们去监烤师咯", "label": [["poiName", "监烤师"]]}
+{"text": "给我们导航出发并排号", "label": []}
+{"text": "但是没有人陪我去", "label": []}
+{"text": "排号吧", "label": []}
+{"text": "不如去齐乐路那家吧", "label": [["poiName", "那家"], ["location", "齐乐路"]]}
+{"text": "小p帮我导航到星湖广场", "label": [["location", "星湖广场"]]}
+{"text": "就排号这里吧", "label": []}
+{"text": "明白了去找吃的吧", "label": []}
+{"text": "这我没问题", "label": []}
+{"text": "出发出发", "label": []}
+{"text": "现在去吃点什么东西吧", "label": []}
+{"text": "我觉得去吃日本菜吧", "label": [["type", "日本菜"]]}
+{"text": "取号吧4人用餐", "label": []}
+{"text": "我想吃沙拉", "label": [["dishName", "沙拉"]]}
+{"text": "好呀", "label": []}
+{"text": "行呀我很久没吃了哇", "label": []}
+{"text": "加一我也不想吃椰子鸡", "label": [["dishName", "椰子鸡"]]}
+{"text": "打开车窗", "label": []}
+{"text": "儿子啊你今天想去吃什么呢", "label": []}
+{"text": "那行吧去咯", "label": []}
+{"text": "现在快到饭点了走吧吃饭去", "label": []}
+{"text": "我都行", "label": []}
+{"text": "我想想", "label": []}
+{"text": "欧科欧科", "label": []}
+{"text": "大白现在去吃什么", "label": []}
+{"text": "妈妈说他今天晚上想吃猪肚鸡", "label": [["dishName", "猪肚鸡"]]}
+{"text": "小P帮我找一下福楼法餐厅", "label": [["poiName", "福楼法餐厅"]]}
+{"text": "让小P找下吧", "label": []}
+{"text": "呀你这个过敏很奇怪哦", "label": []}
+{"text": "我都可以你们做主就好", "label": []}
+{"text": "好啊反正明天没事干.", "label": []}
+{"text": "上次你说欠我们的那顿饭什么时候还", "label": []}
+{"text": "看看现在能用餐吗", "label": []}
+{"text": "对啊对啊好吃我也不想天天吃啊", "label": []}
+{"text": "好去吃海鲜", "label": [["type", "海鲜"]]}
+{"text": "那去法兰度航空主题餐厅吧", "label": [["poiName", "法兰度航空主题餐厅"]]}
+{"text": "不是说了嘛等一下嘛", "label": []}
+{"text": "你是主角肯定是你做主的呀", "label": []}
+{"text": "又到teatime时间了点杯东西喝喝吧", "label": []}
+{"text": "听你们的反正我都没吃过", "label": []}
+{"text": "我要吃辣的", "label": [["taste", "辣"]]}
+{"text": "行小P看看哪里有火锅吃", "label": [["type", "火锅"]]}
+{"text": "今天又去吃吗", "label": []}
+{"text": "我都可以有的吃就好", "label": []}
+{"text": "宝宝坐好我们要出发了", "label": []}
+{"text": "也不太远", "label": []}
+{"text": "帮我们按照评分从高到低进行排序吧", "label": []}
+{"text": "这个江南果道怎么样", "label": []}
+{"text": "最近有点上火了", "label": []}
+{"text": "小P导航京基百纳", "label": [["location", "京基百纳"]]}
+{"text": "去花城汇呗", "label": [["location", "花城汇"]]}
+{"text": "那看下别的吧", "label": []}
+{"text": "那我就去出发去东风中路咯", "label": [["location", "东风中路"]]}
+{"text": "去吃什么", "label": []}
+{"text": "没事", "label": []}
+{"text": "妹恭喜你教资证到手了走我们出去庆祝一下", "label": []}
+{"text": "小P搜索上下九路臭豆腐店", "label": [["location", "上下九"], ["dishName", "臭豆腐"]]}
+{"text": "不行那里换了老板现在去的人都少了", "label": [["poiName", "那里"]]}
+{"text": "小胖打算请问去吃什么呀", "label": []}
+{"text": "那就帮我排号吧", "label": []}
+{"text": "帮我查询一下现在的排队情况", "label": []}
+{"text": "那我还是要去禄运茶居那儿吃", "label": [["poiName", "禄运茶居"]]}
+{"text": "粤皇茶楼可以呀", "label": [["poiName", "粤皇茶楼"]]}
+{"text": "小P找一下沙姜猪手", "label": [["dishName", "沙姜猪手"]]}
+{"text": "2人", "label": []}
+{"text": "去步行街吃", "label": [["location", "步行街"]]}
+{"text": "看这名字就知道是吃海鲜的啦", "label": [["type", "海鲜"]]}
+{"text": "牛肉火锅还是比较好吃的", "label": [["dishName", "牛肉火锅"]]}
+{"text": "你说吧你到底想吃啥", "label": []}
+{"text": "有没有找到", "label": []}
+{"text": "不知道", "label": []}
+{"text": "小p帮我查一下有没有停车场", "label": []}
+{"text": "鸡煲我不想吃", "label": [["dishName", "鸡煲"]]}
+{"text": "小P就去这吧排一下号", "label": []}
+{"text": "没事没事那你们想吃什么", "label": []}
+{"text": "那帮我们导航去吧", "label": []}
+{"text": "弟弟晚饭想吃什么", "label": []}
+{"text": "快十点了", "label": []}
+{"text": "我们早点去吃吧肚子的都了", "label": []}
+{"text": "这么久不要这个", "label": []}
+{"text": "好啊有选好地方了吗", "label": []}
+{"text": "小P排号吧", "label": []}
+{"text": "那就去就这吧小P帮我们预定一下", "label": []}
+{"text": "还不错的排号吧小P2人用餐", "label": []}
+{"text": "去吃酸菜鱼吧", "label": [["dishName", "酸菜鱼"]]}
+{"text": "宝宝想吃什么", "label": []}
+{"text": "应该是不错的网上都挺推荐的", "label": []}
+{"text": "等会我先上美团看看评价怎样", "label": []}
+{"text": "是的我同意", "label": []}
+{"text": "好帮你点单哈", "label": []}
+{"text": "你看下吃啥", "label": []}
+{"text": "芳芳洪崖洞可真热闹啊好吃的肯定很多吧", "label": [["location", "洪崖洞"]]}
+{"text": "还不知道想吃什么呢所以才问你们呐", "label": []}
+{"text": "我们去吃关东煮吧", "label": [["dishName", "关东煮"]]}
+{"text": "怎么样饿了没去吃饭吧", "label": []}
+{"text": "我觉得人不多4桌好像也还行", "label": []}
+{"text": "4人", "label": []}
+{"text": "我也不知道哪里有的吃呀不是可以让小p帮我们找吗", "label": []}
+{"text": "就去泰国料理餐厅吧", "label": [["poiName", "泰国料理餐厅"]]}
+{"text": "位置我忘记了你让小p帮忙找一下", "label": []}
+{"text": "我也不清楚", "label": []}
+{"text": "那大家伙的意见就是同意咯", "label": []}
+{"text": "走我也刚好饿了", "label": []}
+{"text": "选择困难症", "label": []}
+{"text": "辣的才好吃", "label": [["taste", "辣"]]}
+{"text": "那今晚请你吃顿饭吧就当做践行吧", "label": []}
+{"text": "是吗我也好久没吃过烧烤了走我带你去吃", "label": [["type", "烧烤"]]}
+{"text": "我是内蒙古人哦", "label": []}
+{"text": "就这家吧", "label": [["poiName", "这家"]]}
+{"text": "那就去这家吃个三五万", "label": [["poiName", "这家"]]}
+{"text": "取消排号吧这里等时间太久了", "label": []}
+{"text": "那帮我定个包间吧", "label": []}
+{"text": "行现在去吃东北烤肉馆", "label": [["poiName", "东北烤肉馆"]]}
+{"text": "我都行你们挑", "label": []}
+{"text": "我们现在过去大概要多久呀肚子饿了", "label": []}
+{"text": "四位", "label": []}
+{"text": "今天气温好高啊出来一会就快融掉了", "label": []}
+{"text": "没事我只是还有点症状", "label": []}
+{"text": "妈今天我生日你不给我庆祝一下吗", "label": []}
+{"text": "这个近一点", "label": [["location", "这个"]]}
+{"text": "那就小p跟我配合咯", "label": []}
+{"text": "好啊小P去香兰印尼餐厅", "label": [["poiName", "香兰印尼餐厅"]]}
+{"text": "要不咋们去白云山吃吧", "label": [["location", "白云山"]]}
+{"text": "要不我们去吃潮汕菜", "label": [["type", "潮汕菜"]]}
+{"text": "老公今天结婚纪念日你有什么安排", "label": []}
+{"text": "那你说出来又不让我吃这不是打击我嘛", "label": []}
+{"text": "亲爱的带你去吃澳洲牛肋条", "label": [["dishName", "澳洲牛肋条"]]}
+{"text": "我都行你们找吧", "label": []}
+{"text": "再弄就让小P不给你看熊大了", "label": []}
+{"text": "小P帮我们排号吧", "label": []}
+{"text": "那我们去吃白斩鸡吧", "label": [["dishName", "白斩鸡"]]}
+{"text": "给我导航", "label": []}
+{"text": "啊对就是这个", "label": []}
+{"text": "10分钟还行去吗", "label": []}
+{"text": "帮我排个号吧", "label": []}
+{"text": "那就随便吃个浙江菜吧", "label": [["type", "浙江菜"]]}
+{"text": "小P有哪些正在营业中的餐厅", "label": []}
+{"text": "那导航吧小P", "label": []}
+{"text": "你们想去哪里吃", "label": []}
+{"text": "那我们去吃什么东西啊", "label": []}
+{"text": "什么菜", "label": []}
+{"text": "海底捞不好吃的", "label": [["poiName", "海底捞"]]}
+{"text": "这边过去好像也不远就去发小顺德菜馆吧", "label": [["poiName", "发小顺德菜馆"], ["location", "这边"]]}
+{"text": "我也同意吃这个", "label": [["dishName", "这个"]]}
+{"text": "小P搜索下赛百味现在的排号信息", "label": [["poiName", "赛百味"]]}
+{"text": "哇哦南嫂那么快生了啊", "label": []}
+{"text": "没事吃点别扫兴", "label": []}
+{"text": "哦耶我过啦我四级过了", "label": []}
+{"text": "小p排号", "label": []}
+{"text": "你们决定就好我没意见", "label": []}
+{"text": "妈妈我想喝姜撞奶", "label": [["dishName", "姜撞奶"]]}
+{"text": "好啊那你找地方", "label": []}
+{"text": "可以去尝尝东南亚菜我也没试过", "label": [["type", "东南亚菜"]]}
+{"text": "那我们等一下去哪里吃饭呢", "label": []}
+{"text": "北京路有什么好吃的", "label": [["location", "北京路"]]}
+{"text": "四个", "label": []}
+{"text": "2人", "label": []}
+{"text": "查询一下该店均价", "label": []}
+{"text": "可以去吃生腌血蚌和椒盐虾", "label": [["dishName", "生腌血蚌"], ["dishName", "椒盐虾"]]}
+{"text": "过去刚好吧", "label": []}
+{"text": "我都可以你不要之后怪我就行.", "label": []}
+{"text": "行啊行来吧推荐吧", "label": []}
+{"text": "你不能光看评分的啊.", "label": []}
+{"text": "今天怎么想出去吃是有什么想吃的吗", "label": []}
+{"text": "好想好去哪里吃了吗", "label": []}
+{"text": "我都行", "label": []}
+{"text": "我们4个人", "label": []}
+{"text": "是火锅", "label": [["type", "火锅"]]}
+{"text": "小帮我们导航到云腾砂锅粥", "label": [["poiName", "云腾砂锅粥"]]}
+{"text": "嗯那去吃薯条好不好", "label": [["dishName", "薯条"]]}
+{"text": "我们去吃什么呢", "label": []}
+{"text": "还是先找好再开车不然浪费时间", "label": []}
+{"text": "我就不去了因为老婆下午有事办我得回家带孩子呢", "label": []}
+{"text": "粤菜不行不想吃", "label": [["type", "粤菜"]]}
+{"text": "帮我们排号吧", "label": []}
+{"text": "鸡鸭鹅我都不想吃", "label": [["dishName", "鸡"], ["dishName", "鸭"], ["dishName", "鹅"]]}
+{"text": "你放心吧", "label": []}
+{"text": "先排号去到就有位置了", "label": []}
+{"text": "行我觉得可以", "label": []}
+{"text": "或者猪肚鸡", "label": [["dishName", "猪肚鸡"]]}
+{"text": "对啊昨天天气预报说今天有冷空气下来啊", "label": []}
+{"text": "对呀", "label": []}
+{"text": "那就去吧", "label": []}
+{"text": "老公你说这话真帅", "label": []}
+{"text": "帮我排号", "label": []}
+{"text": "对就是这个", "label": []}
+{"text": "点都德怎么样", "label": [["poiName", "点都德"]]}
+{"text": "我想吃火锅呢", "label": [["type", "火锅"]]}
+{"text": "别看着我我也不知道去吃什么想着就头疼", "label": []}
+{"text": "可以没意见", "label": []}
+{"text": "说好这餐我做东啊都不能跟去抢给我个机会哈", "label": []}
+{"text": "去尝一尝不就知道咯", "label": []}
+{"text": "叫阅江米库", "label": [["poiName", "阅江米库"]]}
+{"text": "这不错我也想吃", "label": []}
+{"text": "我之前看过一家雪城串吧可以去试下", "label": [["poiName", "一家雪城串吧"]]}
+{"text": "我们今晚去哪吃饭啊", "label": []}
+{"text": "不想", "label": []}
+{"text": "去四会广场吧", "label": [["location", "四会广场"]]}
+{"text": "爸爸我饿了", "label": []}
+{"text": "是的呢这家的啤酒和外面买到的味道不一样很好喝", "label": [["poiName", "这家"], ["dishName", "啤酒"]]}
+{"text": "那我们还是去吧", "label": []}
+{"text": "哎这墨鱼意面我就算了吧", "label": [["dishName", "墨鱼意面"]]}
+{"text": "哥哥不吃火锅我也不想吃", "label": [["type", "火锅"]]}
+{"text": "姐妹你有让小P给我们先排号吗", "label": []}
+{"text": "老六海鲜烧烤青阳炒鸡我知道这家", "label": [["poiName", "老六海鲜烧烤青阳炒鸡"]]}
+{"text": "有韩国料理烤肉呀还有自助餐", "label": [["type", "韩国料理"], ["type", "烤肉"], ["type", "自助餐"]]}
+{"text": "开始导航吧", "label": []}
+{"text": "在哪里啊带我去吃呗", "label": []}
+{"text": "怎么要等那么久啊", "label": []}
+{"text": "那我们去铭悦会怎么样", "label": [["poiName", "铭悦会"]]}
+{"text": "去老佛爷铜炉火锅怎么样", "label": [["poiName", "老佛爷铜炉火锅"]]}
+{"text": "我只认识嵊州路那边的可以吧", "label": [["location", "嵊州路"]]}
+{"text": "上次你不是吃过正哥点心吗我也想吃去吃吧", "label": [["poiName", "正哥点心"]]}
+{"text": "去哪", "label": []}
+{"text": "要不要看一下人均消费", "label": []}
+{"text": "是的粤菜里烧鹅也不错", "label": [["type", "粤菜"], ["dishName", "烧鹅"]]}
+{"text": "蔬稻餐厅目前需要排队吗", "label": [["poiName", "蔬稻餐厅"]]}
+{"text": "好那就去吃火锅吧", "label": [["type", "火锅"]]}
+{"text": "这边很久没来了我都忘记在哪里了", "label": []}
+{"text": "宝贝别睡哈等一下就去吃饭了", "label": []}
+{"text": "行那可以去这家尝尝看", "label": [["poiName", "这家"]]}
+{"text": "小P帮我们排下号", "label": []}
+{"text": "你说等下跟同事去吃啥", "label": []}
+{"text": "烤鱼吗有段时间没去过来去尝尝吧", "label": [["dishName", "烤鱼"]]}
+{"text": "这么火爆一定很好吃", "label": []}
+{"text": "在哪里的", "label": []}
+{"text": "非常谢谢", "label": []}
+{"text": "过去需要多久", "label": []}
+{"text": "小p帮我查一下现在排号情况", "label": []}
+{"text": "那你来挑", "label": []}
+{"text": "我也觉得越南菜好", "label": [["type", "越南菜"]]}
+{"text": "小P给我导航", "label": []}
+{"text": "肯定啦毕竟我们很难才聚一次", "label": []}
+{"text": "小帮我排号", "label": []}
+{"text": "我想想有谁吃过芝士火锅吗我觉得不错", "label": [["dishName", "芝士火锅"]]}
+{"text": "去当然去", "label": []}
+{"text": "走吧带你吃点你没吃过的", "label": []}
+{"text": "要不要等一下信哥一起", "label": []}
+{"text": "去哪里有得吃", "label": []}
+{"text": "可以使用优惠券吗", "label": []}
+{"text": "你们能不能说清楚点去哪家吃", "label": []}
+{"text": "我懂了那就喝点呗", "label": []}
+{"text": "你最好不要骗我们.", "label": []}
+{"text": "这个可以帮我省钱", "label": [["type", "这个"]]}
+{"text": "好现在过去吧", "label": []}
+{"text": "我想吃锡帮菜", "label": [["type", "锡帮菜"]]}
+{"text": "小P帮我推荐评分高的山西菜", "label": [["type", "山西菜"]]}
+{"text": "但是我不想吃啊", "label": []}
+{"text": "泰国菜我也吃不习惯呢", "label": [["type", "泰国菜"]]}
+{"text": "你认识路你开车就好啦", "label": []}
+{"text": "你真聪明哈哈哈哈", "label": []}
+{"text": "查询一下该店均价", "label": []}
+{"text": "老板请客就老板决定.", "label": []}
+{"text": "那我选择去吃烤肉", "label": [["type", "烤肉"]]}
+{"text": "开始导航", "label": []}
+{"text": "那我们赶紧过去吧", "label": []}
+{"text": "这不简单吗叫小p帮我们搜索就行了嘛", "label": []}
+{"text": "也可以是不是又在内涵我呀", "label": []}
+{"text": "好的你退下吧", "label": []}
+{"text": "那就去环翠楼怎样", "label": [["location", "环翠楼"]]}
+{"text": "别急嘛慢慢开车注意安全.", "label": []}
+{"text": "那自助餐可以点菊花茶吗", "label": [["type", "自助餐"], ["dishName", "菊花茶"]]}
+{"text": "太好了去吃火锅咯.", "label": [["type", "火锅"]]}
+{"text": "老婆饿了没我们今天去吃什么好呢", "label": []}
+{"text": "最后一天假了怎么安排", "label": []}
+{"text": "那就去这家吧", "label": [["poiName", "这家"]]}
+{"text": "3人", "label": []}
+{"text": "小p帮我们导航去随素小厨.", "label": [["poiName", "随素小厨"]]}
+{"text": "取号4人", "label": []}
+{"text": "就东二路那家揭阳砂锅粥吧", "label": [["location", "东二路"], ["poiName", "揭阳砂锅粥"]]}
+{"text": "小p取消搜索", "label": []}
+{"text": "也可以啊", "label": []}
+{"text": "有点想吃卤肉饭哦", "label": [["dishName", "卤肉饭"]]}
+{"text": "对呃交警经常抄牌呢", "label": []}
+{"text": "那肯定可以啊", "label": []}
+{"text": "行我找下其他店", "label": []}
+{"text": "亲爱的我想吃回锅肉", "label": [["dishName", "回锅肉"]]}
+{"text": "九悦小馆现在多人吗", "label": [["poiName", "九悦小馆"]]}
+{"text": "我们去吃蜀八婆好不好", "label": [["poiName", "蜀八婆"]]}
+{"text": "行小P帮我导航到奈雪", "label": [["poiName", "奈雪"]]}
+{"text": "哎那有机会吃的到吗", "label": []}
+{"text": "珠江新城这边有什么好吃的啊", "label": [["location", "珠江新城"]]}
+{"text": "小P出发吧", "label": []}
+{"text": "老大今晚去吃什么", "label": []}
+{"text": "你们说了算", "label": []}
+{"text": "我先问问现在营业没有", "label": []}
+{"text": "有没有兴趣出去吃呀", "label": []}
+{"text": "给你这么一说我也想吃了", "label": []}
+{"text": "小p帮我查看一下排队情况", "label": []}
+{"text": "那是啥味道啊.", "label": []}
+{"text": "我不吃羊肉", "label": [["dishName", "羊肉"]]}
+{"text": "小p帮我查一下有没有停车场", "label": []}
+{"text": "不用排号了我们直接过去很近的", "label": []}
+{"text": "看一下蒋奶奶的厨房的排号情况", "label": [["poiName", "蒋奶奶的厨房"]]}
+{"text": "我都可以的就吃铁板烧吧", "label": [["dishName", "铁板烧"]]}
+{"text": "对呀大家等不及想吃了", "label": []}
+{"text": "今天难得有时间我们去吃点什么呢", "label": []}
+{"text": "阿明吃啥我就吃啥", "label": []}
+{"text": "我想吃炸鸡", "label": [["dishName", "炸鸡"]]}
+{"text": "我觉得你就是因为情怀才经常去的悦湖公馆也没有特别好吃", "label": [["poiName", "悦湖公馆"]]}
+{"text": "那你有想吃的口味吗", "label": []}
+{"text": "我也觉得ok你想去哪里吃", "label": []}
+{"text": "小P帮忙排号7人用餐", "label": []}
+{"text": "好家伙不是说好一起去吃啊", "label": []}
+{"text": "那家店叫大家乐有个蟾蜍鸡煲真的是一绝强烈推荐你们", "label": [["poiName", "大家乐"], ["dishName", "蟾蜍鸡煲"]]}
+{"text": "那你都不说提议", "label": []}
+{"text": "到时给你点个葱油鸡哈", "label": [["dishName", "葱油鸡"]]}
+{"text": "好好好现在就去", "label": []}
+{"text": "排个号", "label": []}
+{"text": "营业到几点", "label": []}
+{"text": "去北京路看看", "label": [["location", "北京路"]]}
+{"text": "我也不想吃鱼生", "label": [["dishName", "鱼生"]]}
+{"text": "嗯你决定吧", "label": []}
+{"text": "嗯你先打电话订个炉子", "label": []}
+{"text": "我没吃过可以去试试", "label": []}
+{"text": "我吃不了辣的", "label": [["taste", "辣"]]}
+{"text": "挺多的我想去你们去吗", "label": []}
+{"text": "小p帮我查一下现在的排号情况", "label": []}
+{"text": "你想去吃些什么", "label": []}
+{"text": "那小妹吃什么呢", "label": []}
+{"text": "我好难受啊不想吃饭了", "label": []}
+{"text": "今天有想法一起出吃东西嘛", "label": []}
+{"text": "我都行你们决定", "label": []}
+{"text": "小P那就取消排号", "label": []}
+{"text": "等待时间有点长啊", "label": []}
+{"text": "现在七点了黄总", "label": []}
+{"text": "小P找下哪里的炭烧猪颈肉好吃", "label": [["dishName", "炭烧猪颈肉"]]}
+{"text": "可以去港九酒楼吃", "label": [["poiName", "港九酒楼"]]}
+{"text": "行小p导航过去并排个号", "label": []}
+{"text": "距离最近的那个", "label": []}
+{"text": "这样就好办了", "label": []}
+{"text": "帮我排号先", "label": []}
+{"text": "没吃过不过可以试试", "label": []}
+{"text": "我们去吃顺德菜吧", "label": [["type", "顺德菜"]]}
+{"text": "可以就去那家鱼跃花见吧", "label": [["poiName", "鱼跃花见"]]}
+{"text": "小P开始导航吧", "label": []}
+{"text": "去土钵菜", "label": [["type", "土钵菜"]]}
+{"text": "在营业中再看看有没有停车场吧", "label": []}
+{"text": "我不吃辣", "label": [["taste", "辣"]]}
+{"text": "小P给我推荐一道广东名菜", "label": [["type", "广东名菜"]]}
+{"text": "妈妈呢", "label": []}
+{"text": "我觉得挺不错的", "label": []}
+{"text": "还行吧你们去吗", "label": []}
+{"text": "行就去吃拌饭", "label": [["dishName", "拌饭"]]}
+{"text": "不行不去星湖广场那边太远了", "label": [["location", "星湖广场"]]}
+{"text": "再筛选一下有猪肚鸡的", "label": [["dishName", "猪肚鸡"]]}
+{"text": "好的", "label": []}
+{"text": "小P九锅一堂现在有位吗", "label": [["poiName", "九锅一堂"]]}
+{"text": "我也想吃寿司还有软骨乌冬面", "label": [["dishName", "寿司"], ["dishName", "软骨乌冬面"]]}
+{"text": "小p帮我看看现在的排号情况", "label": []}
+{"text": "第一个", "label": []}
+{"text": "小P搜索一下", "label": []}
+{"text": "先吃点东西垫垫肚子吧不然到那都饿死了", "label": []}
+{"text": "是啊正好我们也不知道要吃什么", "label": []}
+{"text": "我不清楚有什么特色菜吃", "label": [["type", "特色菜"]]}
+{"text": "现在过去吧我们", "label": []}
+{"text": "3位", "label": []}
+{"text": "东哥不喜欢辣的哦", "label": [["taste", "辣"]]}
+{"text": "要不去够味厨房吧", "label": [["poiName", "够味厨房"]]}
+{"text": "看看去哪吃", "label": []}
+{"text": "那去哪个", "label": []}
+{"text": "小P再帮我们导航过去", "label": []}
+{"text": "来得及来得及刚好", "label": []}
+{"text": "那就过去呗人多不多", "label": []}
+{"text": "取号2人用餐", "label": []}
+{"text": "这不得看看有没有可以使用优惠券", "label": []}
+{"text": "嗯挺多的小P你还是直接推荐餐厅吧要高分的", "label": []}
+{"text": "离这里远吗", "label": []}
+{"text": "开始导航小P", "label": []}
+{"text": "烤全羊还是火锅", "label": [["dishName", "烤全羊"], ["type", "火锅"]]}
+{"text": "茶百道", "label": [["poiName", "茶百道"]]}
+{"text": "反对", "label": []}
+{"text": "没事打包就可以了不在他那里吃", "label": []}
+{"text": "重新取号吧", "label": []}
+{"text": "那就去吃粤菜吧", "label": [["type", "粤菜"]]}
+{"text": "可以", "label": []}
+{"text": "我没问题上次去吃过", "label": []}
+{"text": "3人", "label": []}
+{"text": "我想吃木瓜奶冻", "label": [["dishName", "木瓜奶冻"]]}
+{"text": "要不要订位置", "label": []}
+{"text": "你都说两个小时前吃的现在饿也正常啊", "label": []}
+{"text": "我赞成", "label": []}
+{"text": "给我排个号", "label": []}
+{"text": "我绝对同意", "label": []}
+{"text": "我们都很相信你的", "label": []}
+{"text": "我都行", "label": []}
+{"text": "就去风和吧", "label": [["poiName", "风和"]]}
+{"text": "我们要不要先看看多不多人", "label": []}
+{"text": "那我们去吃什么呢", "label": []}
+{"text": "那你去啊", "label": []}
+{"text": "太多人了还是吃别的吧", "label": []}
+{"text": "好那我来看看", "label": []}
+{"text": "那我们去城门洞吧", "label": [["poiName", "城门洞"]]}
+{"text": "店名还挺奇怪哈哈哈", "label": []}
+{"text": "真要去那吃吗", "label": [["poiName", "那"]]}
+{"text": "排个号7人用餐", "label": []}
+{"text": "帮我排号吧", "label": []}
+{"text": "嗯你知道哪里有好吃的吗", "label": []}
+{"text": "我想去吃全聚德", "label": [["poiName", "全聚德"]]}
+{"text": "那走呀去哪里吃烧鸡", "label": [["dishName", "烧鸡"]]}
+{"text": "想不到打一晚上麻将最后是你赢钱了", "label": []}
+{"text": "现在去吃吧", "label": []}
+{"text": "我今天想去缘味先石锅饭", "label": [["poiName", "缘味先石锅饭"]]}
+{"text": "温州这边还挺好玩的", "label": []}
+{"text": "要不咋们去试试粤菜吧", "label": [["type", "粤菜"]]}
+{"text": "小P导航四海一家", "label": [["poiName", "四海一家"]]}
+{"text": "你决定就行", "label": []}
+{"text": "我听我同事说喳喳煲挺好吃所以我们这次就是去尝尝", "label": [["poiName", "喳喳煲"]]}
+{"text": "我都行我经常去呢你们说了算", "label": []}
+{"text": "要是你非要选我没意见", "label": []}
+{"text": "开始导航吧", "label": []}
+{"text": "没有吃过可以试试", "label": []}
+{"text": "你们会路吗", "label": []}
+{"text": "爸爸我又饿了", "label": []}
+{"text": "那去哪里呢", "label": []}
+{"text": "是啊老公就去山家鱼鲜餐厅吧", "label": [["poiName", "山家鱼鲜餐厅"]]}
+{"text": "那去吃意大利菜怎样", "label": [["type", "意大利菜"]]}
+{"text": "还不是为了防止尿酸高", "label": []}
+{"text": "你们有什么推荐的地方吗", "label": []}
+{"text": "我回家方便就去石牌吧", "label": [["location", "石牌"]]}
+{"text": "下雨天和清酒炒蟹更配哦", "label": [["dishName", "清酒炒蟹"]]}
+{"text": "吃川菜吧", "label": [["type", "川菜"]]}
+{"text": "我想吃牛肉火锅不要包子", "label": [["type", "牛肉火锅"], ["dishName", "包子"]]}
+{"text": "嗨他说有事来不了啦就咱哥仨啦小P拿号仨位", "label": []}
+{"text": "在哪", "label": []}
+{"text": "多人吃吗", "label": []}
+{"text": "我要吃钵仔糕", "label": [["dishName", "钵仔糕"]]}
+{"text": "好啊现在吗", "label": []}
+{"text": "那咱一会去哪儿吃呢", "label": []}
+{"text": "叫了先问问去哪里吃", "label": []}
+{"text": "不用我们直接去小P导航温府家宴", "label": [["poiName", "温府家宴"]]}
+{"text": "那小肥你说去哪吃", "label": []}
+{"text": "我也就去过一次忘记名字了.", "label": []}
+{"text": "它家有什么菜", "label": [["poiName", "它家"]]}
+{"text": "你们看看去哪吃吧", "label": []}
+{"text": "3个", "label": []}
+{"text": "人还是挺多我那次也是要排半个小时现在正好周末可能会更久", "label": []}
+{"text": "好的小P帮我导航", "label": []}
+{"text": "想吃撸串", "label": [["dishName", "撸串"]]}
+{"text": "不行哦我老婆海鲜过敏吃不了呀", "label": [["type", "海鲜"]]}
+{"text": "这个可以有今晚就我请客吧", "label": []}
+{"text": "天气这么冷可以考虑一下", "label": []}
+{"text": "哈哈哈没有呀", "label": []}
+{"text": "嗯我也是觉得可以", "label": []}
+{"text": "到哪了什么时候可以吃饭呀", "label": []}
+{"text": "好呀想好去哪里吃了吗", "label": []}
+{"text": "那大约需要多久", "label": []}
+{"text": "四个", "label": []}
+{"text": "确认导航", "label": []}
+{"text": "有你可以点不辣的", "label": [["taste", "辣"]]}
+{"text": "不吃辣的", "label": [["taste", "辣"]]}
+{"text": "没有", "label": []}
+{"text": "有粤菜啊川菜日本菜都挺不错的", "label": [["type", "粤菜"], ["type", "川菜"], ["type", "日本菜"]]}
+{"text": "那看看有没有停车场吧", "label": []}
+{"text": "好啊去吃牛排吧", "label": [["dishName", "牛排"]]}
+{"text": "好啊小p导航去大旺长四嫂", "label": [["location", "大旺"], ["poiName", "长四嫂"]]}
+{"text": "你居然也会怕上火", "label": []}
+{"text": "导航过去吧", "label": []}
+{"text": "都行反正是请你吃", "label": []}
+{"text": "3人", "label": []}
+{"text": "我们去星巴克吧", "label": [["poiName", "星巴克"]]}
+{"text": "行行等会叫小P帮你找", "label": []}
+{"text": "我没问题", "label": []}
+{"text": "我们兄妹2个", "label": []}
+{"text": "那我们去中山一路那边吃呗", "label": [["location", "中山一路"]]}
+{"text": "我赞同", "label": []}
+{"text": "小P找一下吧", "label": []}
+{"text": "你们有什么想吃的", "label": []}
+{"text": "那快点排号小P", "label": []}
+{"text": "那就吃烤羊有没有问题", "label": [["dishName", "烤羊"]]}
+{"text": "是啊你有什么好提议的", "label": []}
+{"text": "价格上还不错先看看有没有包厢吧", "label": []}
+{"text": "琪琪你选吧", "label": []}
+{"text": "去吃私房菜也不错的", "label": [["type", "私房菜"]]}
+{"text": "华强北那的", "label": [["location", "华强北"]]}
+{"text": "等等我叫小P找给你看下", "label": []}
+{"text": "你们能吃辣赢我算我输", "label": [["taste", "辣"]]}
+{"text": "你叫小P找一找吧", "label": []}
+{"text": "哎呀我忘了小P先给我们排号吧", "label": []}
+{"text": "那去吃福至尊土钵菜", "label": [["poiName", "福至尊土钵菜"]]}
+{"text": "要不去试试烤鸭北京烤鸭很出名的", "label": [["dishName", "北京烤鸭"]]}
+{"text": "那让小p先帮忙看一下嘛", "label": []}
+{"text": "够了吧不够再点也可以啊", "label": []}
+{"text": "小P导航简厨", "label": [["poiName", "简厨"]]}
+{"text": "2人", "label": []}
+{"text": "那就排号先吧", "label": []}
+{"text": "我的天呐我忘记了", "label": []}
+{"text": "去吃其他的吧", "label": []}
+{"text": "好像很久我们都没有聚餐了", "label": []}
+{"text": "嗯是哦那大家怎么看", "label": []}
+{"text": "我想走路去", "label": []}
+{"text": "3人", "label": []}
+{"text": "小P看下排号情况", "label": []}
+{"text": "那就赶紧看看吧", "label": []}
+{"text": "小P导航去喜宝", "label": [["poiName", "喜宝"]]}
+{"text": "我们肯定要去吃一下它家招牌才行大佬说好吃肯定好吃", "label": [["poiName", "它家"]]}
+{"text": "南京路有什么好吃的", "label": [["location", "南京路"]]}
+{"text": "我想想去吃点粤菜吧", "label": [["type", "粤菜"]]}
+{"text": "3人", "label": []}
+{"text": "我对鱼过敏这家店不能去", "label": [["poiName", "这家"], ["dishName", "鱼"]]}
+{"text": "是啊你前几天不是说想吃吗", "label": []}
+{"text": "这个我不太清楚", "label": []}
+{"text": "在东郊路那里", "label": [["location", "东郊路"]]}
+{"text": "那就去吃牛杂吧", "label": [["dishName", "牛杂"]]}
+{"text": "那我们去吧", "label": []}
+{"text": "上次说好请吃饭的来说想吃什么你们", "label": []}
+{"text": "别我上一天班快累趴下了你就别再折腾我了", "label": []}
+{"text": "那我们过去要多久啊", "label": []}
+{"text": "吃吃吃给我大口大口吃毕竟难得请你们吃顿饭哈哈", "label": []}
+{"text": "那你们先找一下吃东西的地方吧", "label": []}
+{"text": "可以啊", "label": []}
+{"text": "我想吃云吞", "label": [["dishName", "云吞"]]}
+{"text": "那赶紧去吧", "label": []}
+{"text": "好小P给我们排号吧", "label": []}
+{"text": "暂时还没想到哎你们出点建议呗", "label": []}
+{"text": "哈哈哈美姐打算带我们去哪里干一饭这样", "label": []}
+{"text": "对啊", "label": []}
+{"text": "姐妹们有要去吃海底捞的吗", "label": [["poiName", "海底捞"]]}
+{"text": "那我们就去尝尝东北菜吧", "label": [["type", "东北菜"]]}
+{"text": "可以呀", "label": []}
+{"text": "差不多到12点了吧", "label": []}
+{"text": "那我们先过去吧", "label": []}
+{"text": "查询一下那里评分高的菜品是什么", "label": []}
+{"text": "我也忘了这茬小P取消排号吧不吃了", "label": []}
+{"text": "妈我想去吃松子玉米", "label": [["dishName", "松子玉米"]]}
+{"text": "很好啊烤肉特别棒烧酒也不错", "label": [["type", "烤肉"], ["dishName", "烧酒"]]}
+{"text": "那要去其他地方吗", "label": []}
+{"text": "我都行反正不用我买单哈哈", "label": []}
+{"text": "小P帮我俩先拿个号万一没有号就无法吃到了", "label": []}
+{"text": "那就我说了算吃点烤鱼吧", "label": [["dishName", "烤鱼"]]}
+{"text": "快到饭点了等下去吃什么", "label": []}
+{"text": "附近有家豪亨西餐厅挺不错的", "label": [["poiName", "豪亨西餐厅"]]}
+{"text": "猪脚饭怎么样", "label": [["dishName", "猪脚饭"]]}
+{"text": "看一下我们要去哪里吃", "label": []}
+{"text": "我还没想到", "label": []}
+{"text": "好的丰圆轩5人大桌预计排队时间15分钟我先帮大家取个号吧", "label": [["poiName", "丰圆轩"]]}
+{"text": "没问题啊忙了这么久了", "label": []}
+{"text": "好呀要不去海银海记", "label": []}
+{"text": "小P导航去泰姜私厨", "label": [["poiName", "泰姜私厨"]]}
+{"text": "那我们去喝点凉的吧", "label": []}
+{"text": "帮我们排号吧", "label": []}
+{"text": "今晚节目是啥", "label": []}
+{"text": "小P给我导航夏朵花园", "label": [["poiName", "夏朵花园"]]}
+{"text": "这段时间大家工作辛苦了想吃什么", "label": []}
+{"text": "我觉得应该是挺不错的", "label": []}
+{"text": "我觉得可以服务评分很高", "label": []}
+{"text": "对的2人", "label": []}
+{"text": "过去刚好差不多小P帮我排号吧", "label": []}
+{"text": "那就去吧别争了", "label": []}
+{"text": "要不我们吃别的吧", "label": []}
+{"text": "我们就去山水人家吃吧", "label": [["poiName", "山水人家"]]}
+{"text": "那就先去小p帮我们导航去无味舒食七宝店.", "label": [["poiName", "无味舒食"], ["location", "七宝"]]}
+{"text": "闽菜呀", "label": [["type", "闽菜"]]}
+{"text": "诶今晚吃饭的地方决定好没有哦", "label": []}
+{"text": "这我提的当然就我来", "label": []}
+{"text": "鲜果拿破仑我一定会点的", "label": [["dishName", "鲜果拿破仑"]]}
+{"text": "剪刀石头布谁赢了就吃谁选的哈", "label": []}
+{"text": "都快7点了去吃什么想好没", "label": []}
+{"text": "那你想去什么地方吃", "label": []}
+{"text": "大家伙看看意见如何先", "label": []}
+{"text": "亲爱的我饿了快带我去找吃的吧", "label": []}
+{"text": "但大伙要吃什么", "label": []}
+{"text": "哎去麦当劳啊", "label": [["poiName", "麦当劳"]]}
+{"text": "好呀那去吃什么呀", "label": []}
+{"text": "你想吃什么随便选", "label": []}
+{"text": "你们看看喜欢吃什么", "label": []}
+{"text": "不吃烤肉了吗", "label": [["type", "烤肉"]]}
+{"text": "有的我刚刚看过了", "label": []}
+{"text": "那就去吧", "label": []}
+{"text": "每次都你们说了算这次我说话一次也不行", "label": []}
+{"text": "最近的那间现在给我排号", "label": []}
+{"text": "小P排队取号", "label": []}
+{"text": "那就帮我取个号吧", "label": []}
+{"text": "好好听啊", "label": []}
+{"text": "我想吃韭菜盒子", "label": [["dishName", "韭菜盒子"]]}
+{"text": "我现在让小P导航到煌上煌自助", "label": [["poiName", "煌上煌自助"]]}
+{"text": "去吃招牌猪肚鸡煲挺好吃的", "label": [["dishName", "招牌猪肚鸡煲"]]}
+{"text": "吃烧烤", "label": [["type", "烧烤"]]}
+{"text": "可以啊你们想去哪家吃", "label": []}
+{"text": "吃完饭看电影还是看完再吃", "label": []}
+{"text": "预约排号", "label": []}
+{"text": "按照服务分高到低进行排序", "label": []}
+{"text": "你们有什么想吃的都可以提出来", "label": []}
+{"text": "你别想蒙我你们上次才去吃过川菜.", "label": [["type", "川菜"]]}
+{"text": "没事等你忙完我们就在这边解决晚饭就好啦", "label": []}
+{"text": "带你喝杯咖啡吧我怕你熬不住小P推荐评论多的咖啡厅", "label": [["type", "咖啡"]]}
+{"text": "在大润发啊", "label": [["location", "大润发"]]}
+{"text": "也行小p搜索海底捞", "label": [["poiName", "海底捞"]]}
+{"text": "不会的马上到饭点了", "label": []}
+{"text": "确认排个号", "label": []}
+{"text": "有点久啊", "label": []}
+{"text": "焦糖玛奇朵", "label": [["dishName", "焦糖玛奇朵"]]}
+{"text": "嗯都还可以吧", "label": []}
+{"text": "预定5人的吧", "label": []}
+{"text": "预约取号", "label": []}
+{"text": "我不吃了", "label": []}
+{"text": "好啊想的我流口水", "label": []}
+{"text": "我也想去尝尝鲁菜", "label": [["type", "鲁菜"]]}
+{"text": "今天去吃海碗居怎么样", "label": [["poiName", "海碗居"]]}
+{"text": "你想吃什么", "label": []}
+{"text": "小P看看壹號书院现在开店了没", "label": [["poiName", "壹號书院"]]}
+{"text": "帮我筛选销量最多的餐厅", "label": []}
+{"text": "这边不好停车啊", "label": [["location", "这边"]]}
+{"text": "那你开车走啊", "label": []}
+{"text": "咦评分还挺高的我们就去这里吃吧", "label": []}
+{"text": "我们可以推荐给你参考一下", "label": []}
+{"text": "我平常走的时候不会啊", "label": []}
+{"text": "那么早回家吗要不我们吃点东西再回去", "label": []}
+{"text": "你知不知道哪里有呀", "label": []}
+{"text": "羡慕吃垮你", "label": []}
+{"text": "有什么好吃的吗我先听听有没有你说的那么诱人", "label": []}
+{"text": "要不咋们去吃黄埔沽港吃烤鸡吧", "label": [["location", "黄埔沽港"], ["dishName", "烤鸡"]]}
+{"text": "这个不错我经常点外卖", "label": []}
+{"text": "好啊我觉得可以去", "label": []}
+{"text": "有点贵啊你要大出血了", "label": []}
+{"text": "云腾砂锅粥", "label": [["poiName", "云腾砂锅粥"]]}
+{"text": "打开氛围灯", "label": []}
+{"text": "对呀我也觉得不好吃", "label": []}
+{"text": "那小P找一下西街的宫水茶屋", "label": [["poiName", "宫水茶屋"], ["location", "西街"]]}
+{"text": "妈妈选好了没有啊", "label": []}
+{"text": "2位", "label": []}
+{"text": "那去吃酸菜鱼吧", "label": [["dishName", "酸菜鱼"]]}
+{"text": "不是", "label": []}
+{"text": "是啊我们忙到两点才把文件收整理好", "label": []}
+{"text": "去哪里吃呢", "label": []}
+{"text": "我再想想", "label": []}
+{"text": "等会我先看看有没有优惠", "label": []}
+{"text": "没问题呀挺适合我胖子去吃的", "label": []}
+{"text": "去三水怎么样", "label": [["location", "三水"]]}
+{"text": "妈妈我今天考试考了一百分哦", "label": []}
+{"text": "给我们排个号", "label": []}
+{"text": "你有什么想吃的吗", "label": []}
+{"text": "给我导航出发并排号2人餐", "label": []}
+{"text": "可是我不想吃日本菜我昨天才刚吃了", "label": [["type", "日本菜"]]}
+{"text": "仙庙烧鸡有什么好吃的菜吗", "label": [["poiName", "仙庙烧鸡"]]}
+{"text": "今天晚上你想去吃烧烤吗", "label": [["type", "烧烤"]]}
+{"text": "它家辣吗我吃不了辣", "label": [["poiName", "它家"], ["taste", "辣"]]}
+{"text": "不可以吃麦当劳你都咳嗽了还吃", "label": [["poiName", "麦当劳"]]}
+{"text": "吃日本料理吗", "label": [["type", "日本料理"]]}
+{"text": "答应你了一定带你去", "label": []}
+{"text": "今天我生日你们打算怎么给我庆祝", "label": []}
+{"text": "那你想吃什么全素宴", "label": [["type", "全素"]]}
+{"text": "那岂不是很多人去吃那肯定要等很久吧", "label": []}
+{"text": "我觉得去吃山东菜吧", "label": [["type", "山东菜"]]}
+{"text": "有点贵啊你们还去吗", "label": []}
+{"text": "那我们就去吃粤菜咯", "label": [["type", "粤菜"]]}
+{"text": "那喝粥吧怎么样", "label": [["dishName", "粥"]]}
+{"text": "新开的店排队的人一定很多我们先叫小p帮我们排号吧", "label": []}
+{"text": "我跟你说我已经吃腻了不行", "label": []}
+{"text": "行", "label": []}
+{"text": "便宜坊的鸭子不好吃你确定去", "label": [["poiName", "便宜坊"], ["dishName", "鸭子"]]}
+{"text": "开始导航", "label": []}
+{"text": "今晚去吃火锅怎么样", "label": [["type", "火锅"]]}
+{"text": "好嘞", "label": []}
+{"text": "有吧你可以叫小P帮你找找啊", "label": []}
+{"text": "私房菜好呀", "label": [["type", "私房菜"]]}
+{"text": "可以你们负责烤我负责吃", "label": []}
+{"text": "2个", "label": []}
+{"text": "我看看怎么走", "label": []}
+{"text": "琪琪感冒了我们找些素食吧", "label": [["type", "素食"]]}
+{"text": "2位", "label": []}
+{"text": "你们想吧我有选择恐惧症", "label": []}
+{"text": "帮我们按照评分从高到低进行排序吧", "label": []}
+{"text": "你觉得去哪里吃", "label": []}
+{"text": "有啥吃的", "label": []}
+{"text": "走勒现在就出发", "label": []}
+{"text": "小P搜索看看哪里有去经典烤猪蹄", "label": [["dishName", "经典烤猪蹄"]]}
+{"text": "小p帮我排号", "label": []}
+{"text": "3人就餐", "label": []}
+{"text": "爸爸说吃什么就吃什么", "label": []}
+{"text": "我们四人就餐", "label": []}
+{"text": "俩人", "label": []}
+{"text": "我都可以", "label": []}
+{"text": "排号2位", "label": []}
+{"text": "帮我导航", "label": []}
+{"text": "好可以", "label": []}
+{"text": "还行吧能接受的范围内你要去吗", "label": []}
+{"text": "欧科", "label": []}
+{"text": "再帮我筛选一下服务评分4.5以上的", "label": []}
+{"text": "小P取消取号", "label": []}
+{"text": "小P帮我导航", "label": []}
+{"text": "这跟出名有啥关系啊关键得好吃不想去吃杭帮菜", "label": [["type", "杭帮菜"]]}
+{"text": "那吃点清谈的吧", "label": []}
+{"text": "那我们去尝尝吧", "label": []}
+{"text": "今天八一我们出去吃点东西吧", "label": []}
+{"text": "那我们去吃砂锅粥吧", "label": [["dishName", "砂锅粥"]]}
+{"text": "我暂时没想到不知道去哪里吃", "label": []}
+{"text": "老婆我们去哪里吃呢", "label": []}
+{"text": "不吃小龙虾剥半天都没一点肉", "label": [["dishName", "小龙虾"]]}
+{"text": "去吃点别的吧我想吃清淡点的", "label": [["taste", "清淡"]]}
+{"text": "3人", "label": []}
+{"text": "哈哈哈哈我也是", "label": []}
+{"text": "我同意.", "label": []}
+{"text": "嗯嗯我直接导航过去就行啦", "label": []}
+{"text": "估计要半个小时吧", "label": []}
+{"text": "吃自助餐吧什么都有", "label": [["type", "自助餐"]]}
+{"text": "那就赶紧先看看要不要排队", "label": []}
+{"text": "既然你想吃火锅那就去吃牛肉火锅咯", "label": [["dishName", "牛肉火锅"]]}
+{"text": "那你们还有什么推荐的啊快饿死了", "label": []}
+{"text": "要不我们去点都德", "label": [["poiName", "点都德"]]}
+{"text": "我同学上次排了好久才吃到", "label": []}
+{"text": "那我们去吃什么呢", "label": []}
+{"text": "我想吃清淡的你们有什么推荐", "label": [["taste", "清淡"]]}
+{"text": "潮汕菜远不远", "label": [["type", "潮汕菜"]]}
+{"text": "小P帮我们排个号", "label": []}
+{"text": "小P小P开始导航", "label": []}
+{"text": "小菜你有没有什么特别想去吃呀", "label": []}
+{"text": "对呀反正你买单", "label": []}
+{"text": "小P导航去得意铁板烧", "label": [["poiName", "得意铁板烧"]]}
+{"text": "好的要不就去吃顿蚝饭吧", "label": [["dishName", "蚝饭"]]}
+{"text": "好的那我们就决定去这家了", "label": [["poiName", "这家"]]}
+{"text": "看下有什么先", "label": []}
+{"text": "行呀行呀你们决定", "label": []}
+{"text": "3人", "label": []}
+{"text": "我想吃烤串很想吃", "label": [["type", "烤串"]]}
+{"text": "那你有没有地方吃", "label": []}
+{"text": "羡慕", "label": []}
+{"text": "老婆今晚想吃什么呀", "label": []}
+{"text": "可以推荐一下那边有什么好吃嘛", "label": [["location", "那边"]]}
+{"text": "今天是父亲节喔我们在家煮还是出去吃", "label": []}
+{"text": "当然是现在", "label": []}
+{"text": "这家是吃日本菜的", "label": [["poiName", "这家"], ["type", "日本菜"]]}
+{"text": "这附近的店铺味道都可以挑一挑吧", "label": [["location", "这"]]}
+{"text": "赞同", "label": []}
+{"text": "西北菜可以呀我觉得挺不错的", "label": [["type", "西北菜"]]}
+{"text": "哎呀我不要这样我想和大家一桌", "label": []}
+{"text": "狗肉上火啊我有点不敢吃", "label": [["dishName", "狗肉"]]}
+{"text": "不吃火锅就行", "label": [["type", "火锅"]]}
+{"text": "你不是昨天才吃过吗", "label": []}
+{"text": "给我们导航顺便排个号", "label": []}
+{"text": "真粤中餐厅今天我请客", "label": [["poiName", "真粤中餐厅"]]}
+{"text": "下P那就给我们推荐评分高的东北菜吧", "label": [["type", "东北菜"]]}
+{"text": "我请你们吃早餐", "label": []}
+{"text": "有什么好吃一点的菜吗", "label": []}
+{"text": "那也不是很久", "label": []}
+{"text": "嗯小P我们先排号吧", "label": []}
+{"text": "今天去吃湘菜怎么样各位", "label": [["type", "湘菜"]]}
+{"text": "我带你们去吃潮汕菜吧", "label": [["type", "潮汕菜"]]}
+{"text": "张哥那你说吃啥", "label": []}
+{"text": "你们搜下", "label": []}
+{"text": "拾壹雅苑现在有位吗", "label": [["poiName", "拾壹雅苑"]]}
+{"text": "3个人", "label": []}
+{"text": "我也觉得可以小p帮我排号吧", "label": []}
+{"text": "我们等会在华师这边要不就去这边吃完再回家吧", "label": [["location", "华师"]]}
+{"text": "在珠海地铁大塘站", "label": [["location", "珠海地铁大塘站"]]}
+{"text": "偶尔吃一次不会上火的.", "label": []}
+{"text": "西餐韩国料理自助餐你们选哪一个", "label": [["type", "西餐"], ["type", "韩国料理"], ["type", "自助餐"]]}
+{"text": "你们选吧", "label": []}
+{"text": "我们倆人", "label": []}
+{"text": "我知道有家厨娘湘见挺不错的", "label": [["poiName", "厨娘湘见"]]}
+{"text": "我真的服了能不能选一个统一的", "label": []}
+{"text": "没兴趣", "label": []}
+{"text": "那去哪里", "label": []}
+{"text": "也是环境评分才3.2", "label": []}
+{"text": "老王定的蛋糕直接送到人民路上的东北人家", "label": [["dishName", "蛋糕"], ["location", "人民路"], ["poiName", "东北人家"]]}
+{"text": "那就排号吧2人", "label": []}
+{"text": "小P导航去大旺广场", "label": [["location", "大旺广场"]]}
+{"text": "可以啊听说那里东西挺不错的环境又好", "label": []}
+{"text": "4人", "label": []}
+{"text": "宝宝我想吃糖醋里脊", "label": [["dishName", "糖醋里脊"]]}
+{"text": "还有烧鸭这个挺不错的", "label": [["dishName", "烧鸭"]]}
+{"text": "排个号就我们5个", "label": []}
+{"text": "去吃新疆菜吗", "label": [["type", "新疆菜"]]}
+{"text": "那行", "label": []}
+{"text": "那我们出去吃吧", "label": []}
+{"text": "主要看你们想吃啥", "label": []}
+{"text": "哈哈我也不吃生的", "label": [["taste", "生"]]}
+{"text": "行", "label": []}
+{"text": "我要喝点他们的清酒", "label": [["dishName", "清酒"]]}
+{"text": "那我们就去试试吧", "label": []}
+{"text": "还行哦", "label": []}
+{"text": "嗯嗯我也很饿了", "label": []}
+{"text": "现在去吧我怕晚点堵车.", "label": []}
+{"text": "哟吼新开的店你都知道啦", "label": []}
+{"text": "评分由高到低排序", "label": []}
+{"text": "粤菜我怕你吃不习惯呀", "label": [["type", "粤菜"]]}
+{"text": "我不想吃海鲜", "label": [["type", "海鲜"]]}
+{"text": "想好了就去吃牛排自助餐吧就去那个牛排世家", "label": [["type", "牛排自助餐"], ["poiName", "牛排世家"]]}
+{"text": "就走吧废话少说", "label": []}
+{"text": "茶餐厅太普通了", "label": [["type", "茶餐厅"]]}
+{"text": "吃火锅可以吧", "label": [["type", "火锅"]]}
+{"text": "你们说去吃什么我就负责开车就好哈哈哈", "label": []}
+{"text": "8人", "label": []}
+{"text": "那爸爸今天能带我吃好吃的吗", "label": []}
+{"text": "去到你就知道了", "label": []}
+{"text": "去吃点都德吧可以吗", "label": [["poiName", "点都德"]]}
+{"text": "还有千层肚也不错", "label": []}
+{"text": "小P给我推荐一道北京最有名的菜", "label": [["type", "北京"]]}
+{"text": "不敢有意见", "label": []}
+{"text": "我没有什么想吃的", "label": []}
+{"text": "不想去之前试过不好喝", "label": []}
+{"text": "上庄这边有什么好吃的呀", "label": [["location", "上庄"]]}
+{"text": "那你们想吃些什么", "label": []}
+{"text": "现在周末估计人很多吧不去这家了吧", "label": [["poiName", "这家"]]}
+{"text": "别想了别想了我们吃烧烤去吧", "label": [["type", "烧烤"]]}
+{"text": "找家环境好的而且我要吃辣的", "label": [["taste", "辣"]]}
+{"text": "3人", "label": []}
+{"text": "这次团队奖金发下来没", "label": []}
+{"text": "我猜是重庆火锅", "label": [["type", "重庆火锅"]]}
+{"text": "先想好吃哪些再选地方吧", "label": []}
+{"text": "什么谁便呀别学你妈这一套好吧", "label": []}
+{"text": "我也不爱", "label": []}
+{"text": "取号4人", "label": []}
+{"text": "可以还有吗", "label": []}
+{"text": "不想吃", "label": []}
+{"text": "那就出去吃吧", "label": []}
+{"text": "看自己心意吧", "label": []}
+{"text": "想吃就去吃我们又没有拦着你", "label": []}
+{"text": "人挺多的啊", "label": []}
+{"text": "不用找了我带你们去", "label": []}
+{"text": "2人", "label": []}
+{"text": "亲亲我们去吃杏仁露吧", "label": [["dishName", "杏仁露"]]}
+{"text": "我做的东坡肉总量缺点什么不够正宗", "label": [["dishName", "东坡肉"]]}
+{"text": "小P再选一下海鲜人均价格200内的都行", "label": [["type", "海鲜"]]}
+{"text": "对呀爸爸带你去吃好不好", "label": []}
+{"text": "你确定要请客是吧", "label": []}
+{"text": "今晚去吃哪里吃饭啊", "label": []}
+{"text": "我酸和辣的也可以", "label": [["taste", "酸"], ["taste", "辣"]]}
+{"text": "老婆今晚想吃什么呀", "label": []}
+{"text": "行啊一起去吃吃看", "label": []}
+{"text": "哎呀我最近减肥啊不太想吃", "label": []}
+{"text": "我想喝奶茶", "label": [["dishName", "奶茶"]]}
+{"text": "哥你带我去吃什么", "label": []}
+{"text": "我也不知道哈", "label": []}
+{"text": "好嘞你跟小p说导航过去", "label": []}
+{"text": "那就过去浩哥那边再算吧", "label": []}
+{"text": "我没问题啦那有想好去哪里吃吗", "label": []}
+{"text": "老李你忘记排号了", "label": []}
+{"text": "行吧先解决肚子问题", "label": []}
+{"text": "这还不简单有小p帮忙呢", "label": []}
+{"text": "行没问题去大旺国际广场", "label": [["location", "大旺国际广场"]]}
+{"text": "那家店是不是叫咩姑川菜", "label": []}
+{"text": "去吃牛肉火锅你们有没有意见", "label": [["dishName", "牛肉火锅"]]}
+{"text": "ohmygod我是真的忘了那我们就去吃牛排吧", "label": [["dishName", "牛排"]]}
+{"text": "那是有空就去看看有什么好吃的就知道了", "label": []}
+{"text": "看一下有停车场的", "label": []}
+{"text": "那股椰子味我吃不习惯还是吃点别的吧", "label": []}
+{"text": "搜索肯德基", "label": [["poiName", "肯德基"]]}
+{"text": "我们一起去试试这家吧", "label": [["poiName", "这家"]]}
+{"text": "3位", "label": []}
+{"text": "查询该店有没有停车场", "label": []}
+{"text": "帮我们排号吧", "label": []}
+{"text": "查询一下评分", "label": []}
+{"text": "那我们去看看哪里有猪肚鸡吧", "label": [["dishName", "猪肚鸡"]]}
+{"text": "问一下人多不多", "label": []}
+{"text": "要不我们也去吃", "label": []}
+{"text": "去大旺广场的深夜豆浆", "label": [["location", "大旺广场"], ["poiName", "深夜豆浆"]]}
+{"text": "没吃过猪肚鸡听着我也很想去吃", "label": [["dishName", "猪肚鸡"]]}
+{"text": "口味辣吗", "label": [["taste", "辣"]]}
+{"text": "好吧", "label": []}
+{"text": "去哪", "label": []}
+{"text": "那也可以", "label": []}
+{"text": "威高广场那边很多", "label": [["location", "威高广场"]]}
+{"text": "今天小P就交给我控制了你们都别说话让我先说", "label": []}
+{"text": "那我们出发吧", "label": []}
+{"text": "我很少在外面吃农家菜不是很清楚", "label": [["type", "农家菜"]]}
+{"text": "好嘞浩子地址发下哈", "label": []}
+{"text": "浩子你打电话订餐订包间", "label": []}
+{"text": "你们有什么好的建议吗", "label": []}
+{"text": "我都可以", "label": []}
+{"text": "我想吃羊肉煲", "label": [["dishName", "羊肉煲"]]}
+{"text": "我很晚才吃的不是很饿你看看他们", "label": []}
+{"text": "什么日子啊", "label": []}
+{"text": "我要吃虾饺", "label": [["dishName", "虾饺"]]}
+{"text": "先看看有没有停车场吧没停车场等会要找很久的", "label": []}
+{"text": "听着都不咋样", "label": []}
+{"text": "估计都是火锅", "label": [["type", "火锅"]]}
+{"text": "过去多久", "label": []}
+{"text": "选好去哪家餐厅没", "label": []}
+{"text": "小P导航到珞珈市井火锅吧", "label": [["poiName", "珞珈市井火锅"]]}
+{"text": "需要去吃点东西先吗", "label": []}
+{"text": "我们去哪里吃", "label": []}
+{"text": "那我们晚饭就去金顺吃吧", "label": []}
+{"text": "可以那就搞点酒喝喝", "label": [["dishName", "酒"]]}
+{"text": "我可以呀", "label": []}
+{"text": "司机搜索下呗", "label": []}
+{"text": "没问题现在就去吧", "label": []}
+{"text": "需要", "label": []}
+{"text": "小肥羊现在有位嘛", "label": [["poiName", "小肥羊"]]}
+{"text": "都行小P找下最近的吧", "label": []}
+{"text": "那就去吃火锅吧", "label": [["type", "火锅"]]}
+{"text": "好呀我们都无所谓", "label": []}
+{"text": "爸爸我想听周杰伦", "label": []}
+{"text": "帮我们排号吧四位", "label": []}
+{"text": "想好了明天就去吃麦当劳了", "label": [["poiName", "麦当劳"]]}
+{"text": "没人排队会不会是因为不好吃哈哈哈", "label": []}
+{"text": "去海鲜酒店吧外面餐馆很少有的", "label": [["poiName", "海鲜酒店"]]}
+{"text": "四个", "label": []}
+{"text": "那你叫啥啊", "label": []}
+{"text": "今晚去吃哪里吃", "label": []}
+{"text": "妈妈爸爸你们想去哪吃", "label": []}
+{"text": "我也是跟大部队走", "label": []}
+{"text": "爸爸你知道路吧", "label": []}
+{"text": "那就帮我取四个人的号吧", "label": []}
+{"text": "你们都说可以那就出发吧", "label": []}
+{"text": "要不我们去找个农庄吃吧", "label": [["poiName", "农庄"]]}
+{"text": "儿子今晚我们去吃什么", "label": []}
+{"text": "韩国菜我都还没吃过呢什么味道的", "label": [["type", "韩国菜"]]}
+{"text": "人家都没下班呢放心", "label": []}
+{"text": "查看一下餐厅的菜单", "label": []}
+{"text": "不要再玩你的玩具", "label": []}
+{"text": "行呀那就去吧", "label": []}
+{"text": "那去华琪茶餐厅吃", "label": [["poiName", "华琪茶餐厅"]]}
+{"text": "那帮我们排号吧", "label": []}
+{"text": "叫啥名我搜搜", "label": []}
+{"text": "嗯我跟小p说吧", "label": []}
+{"text": "走啊去吃", "label": []}
+{"text": "还没有呢", "label": []}
+{"text": "要不就去吃炒肝包子", "label": [["dishName", "炒肝包子"]]}
+{"text": "我想吃串串香呐", "label": [["dishName", "串串香"]]}
+{"text": "你们有在广信路发现有好吃的吗", "label": [["location", "广信路"]]}
+{"text": "口不多说赶紧出发", "label": []}
+{"text": "我想喝柠檬茶哇", "label": [["dishName", "柠檬茶"]]}
+{"text": "我可以", "label": []}
+{"text": "你明天就要回学校了你爸肯定开心啦所以现在去吃一顿庆祝一下嘛", "label": []}
+{"text": "美女们今晚我们去聚个餐吧", "label": []}
+{"text": "我们四位就餐", "label": []}
+{"text": "那就去吧是在中山路那边的", "label": [["location", "中山路"]]}
+{"text": "我想去大学城那边的", "label": [["location", "大学城"]]}
+{"text": "3人", "label": []}
+{"text": "2人", "label": []}
+{"text": "好啊海底捞服务非常好", "label": [["poiName", "海底捞"]]}
+{"text": "胶关就算了吧我不喜欢韩国菜", "label": [["poiName", "胶关"], ["type", "韩国菜"]]}
+{"text": "它家怎样", "label": [["poiName", "它家"]]}
+{"text": "吃个饭太难了", "label": []}
+{"text": "好小P订餐四人的", "label": []}
+{"text": "小p帮我排号", "label": []}
+{"text": "那去金满轩海鲜酒家", "label": [["poiName", "金满轩海鲜酒家"]]}
+{"text": "想吃就去吧", "label": []}
+{"text": "哎好想吃咕噜肉啊", "label": [["dishName", "咕噜肉"]]}
+{"text": "有停车场吗", "label": []}
+{"text": "好啊你想好了再说", "label": []}
+{"text": "好就排号吧", "label": []}
+{"text": "那你是去还是不去呢", "label": []}
+{"text": "开始导航", "label": []}
+{"text": "好了好了带你去", "label": []}
+{"text": "那你喜欢吃什么口味呀", "label": []}
+{"text": "我看行但是我不知道有什么喝的", "label": []}
+{"text": "那你们想吃什么", "label": []}
+{"text": "我找找看", "label": []}
+{"text": "那我们今天中午就去吧.", "label": []}
+{"text": "大家都不想吃东西要不去喝点什么吧", "label": []}
+{"text": "哈哈哈你们先等等我想想", "label": []}
+{"text": "3人", "label": []}
+{"text": "那就你来想想吃什么好", "label": []}
+{"text": "不会啊这个时间点还没到高峰", "label": []}
+{"text": "那我们去吃个海底捞吧", "label": [["poiName", "海底捞"]]}
+{"text": "怎么念起这句诗歌来了", "label": []}
+{"text": "好小P排号吧", "label": []}
+{"text": "我们看了江鱼儿你怎么样", "label": [["poiName", "江鱼儿"]]}
+{"text": "我也就在星湖国际这边吧", "label": []}
+{"text": "朋友们那么久不见我们去吃点什么", "label": []}
+{"text": "川菜呀", "label": [["type", "川菜"]]}
+{"text": "今天晚上想去吃什么", "label": []}
+{"text": "那喝吗喝就直接让小P排号然后我们直接过去拿", "label": []}
+{"text": "小p帮我查一下现在的排队情况", "label": []}
+{"text": "是的", "label": []}
+{"text": "ok说个地方我们就出发", "label": []}
+{"text": "好小P预约争鲜寿司PLUS的三人餐", "label": [["poiName", "争鲜寿司PLUS"]]}
+{"text": "我以前去吃过东南亚菜味道还挺不错的呢", "label": [["type", "东南亚菜"]]}
+{"text": "小P搜索下海陵岛周边有那些吃海鲜评分在4.8以上的餐厅", "label": [["location", "海陵岛"], ["type", "海鲜"]]}
+{"text": "就这家喽", "label": [["poiName", "这家"]]}
+{"text": "择日不如撞日不如就现在吧也快到吃饭的时间了", "label": []}
+{"text": "就喝粥吧别犹豫了", "label": [["dishName", "粥"]]}
+{"text": "你看你这记性所以我们今天去吃好的", "label": []}
+{"text": "饿了爸爸", "label": []}
+{"text": "最近的那个", "label": []}
+{"text": "叫什么名字我看下", "label": []}
+{"text": "小P排个号", "label": []}
+{"text": "现在吗这都11点了", "label": []}
+{"text": "那就不客气啦我们去吃小龙虾吧", "label": [["dishName", "小龙虾"]]}
+{"text": "可以吧这营业时间", "label": []}
+{"text": "好的我现在就打电话叫你先定个包间吧", "label": []}
+{"text": "我不想吃火锅", "label": [["type", "火锅"]]}
+{"text": "那我们去点都德吧", "label": [["poiName", "点都德"]]}
+{"text": "我已经开始期待了.", "label": []}
+{"text": "那你咋不回家盖棉被吹空调呀", "label": []}
+{"text": "我看到家强哥砂锅粥要去看看吗", "label": [["poiName", "强哥砂锅粥"]]}
+{"text": "去八合里牛肉火锅吃吧我去过几次", "label": [["poiName", "八合里牛肉火锅"]]}
+{"text": "今天庆祝驾照到手有什么想去吃的吗", "label": []}
+{"text": "可不就是嘛你带我们去吃吧", "label": []}
+{"text": "小P帮我们查一下呗", "label": []}
+{"text": "太多了直接让小P在淘金这边找个算了小P找吧", "label": [["location", "淘金"]]}
+{"text": "取号2人用餐", "label": []}
+{"text": "吃中餐吧", "label": [["type", "中餐"]]}
+{"text": "小P帮我搜索小胖高烤", "label": [["poiName", "小胖高烤"]]}
+{"text": "你们想商量一下我再想一下", "label": []}
+{"text": "好啊同意", "label": []}
+{"text": "哦原来是在龙井的", "label": [["location", "龙井"]]}
+{"text": "哈哈也对", "label": []}
+{"text": "那就帮我排号吧", "label": []}
+{"text": "是昨天看到的那个吗", "label": []}
+{"text": "小P音乐小声点吧", "label": []}
+{"text": "大约等多久", "label": []}
+{"text": "那你说吃啥", "label": []}
+{"text": "妹妹你之前不是一直吵着要吃肯德基吗", "label": [["poiName", "肯德基"]]}
+{"text": "小P搜索下离我最近的贤合庄餐厅", "label": [["poiName", "贤合庄"]]}
+{"text": "还行帮我导航去湖南大碗菜", "label": [["poiName", "湖南大碗菜"]]}
+{"text": "你们难得过来我这边去吃些这边特色菜", "label": [["location", "这边"], ["type", "特色菜"]]}
+{"text": "我要吃辣的", "label": [["taste", "辣"]]}
+{"text": "那就排号吧", "label": []}
+{"text": "那你说去哪里吃你说", "label": []}
+{"text": "对啊比昨天冷多了", "label": []}
+{"text": "那你想吃什么东西", "label": []}
+{"text": "那我们去吃上海菜咯", "label": [["type", "上海菜"]]}
+{"text": "我也同意", "label": []}
+{"text": "好久没有一起出来聚聚了", "label": []}
+{"text": "好", "label": []}
+{"text": "小p帮我排号", "label": []}
+{"text": "那就是确定去了吗", "label": []}
+{"text": "你上次吃是半年前了吧", "label": []}
+{"text": "OK那帮我排号吧", "label": []}
+{"text": "我们就愉快的决定啦", "label": []}
+{"text": "2人", "label": []}
+{"text": "那走吧过去刚好", "label": []}
+{"text": "那我们去吃什么东西", "label": []}
+{"text": "随便你们吃看你们能吃多少", "label": []}
+{"text": "好啊可是现在排队好多人吧", "label": []}
+{"text": "亲爱的去老地方吧", "label": [["poiName", "老地方"]]}
+{"text": "那还行就这样吧", "label": []}
+{"text": "怕什么不吃才上火呢", "label": []}
+{"text": "他的评分是多少", "label": []}
+{"text": "是真的不客气啊看来今晚得大出血了", "label": []}
+{"text": "我也同意", "label": []}
+{"text": "妈妈我要吃", "label": []}
+{"text": "3人", "label": []}
+{"text": "一起咯", "label": []}
+{"text": "人不算多哥几个去吗", "label": []}
+{"text": "火锅好像我们好久没去吃了", "label": [["type", "火锅"]]}
+{"text": "那我们就不客气了喔", "label": []}
+{"text": "都有些啥吃", "label": []}
+{"text": "嗯帮我先按评分从高到低进行排序吧", "label": []}
+{"text": "我想想哪里有", "label": []}
+{"text": "好可以叫小P帮手排位先", "label": []}
+{"text": "我同意去吃烧烤", "label": [["type", "烧烤"]]}
+{"text": "他只是闻着臭吃起来不臭的", "label": []}
+{"text": "小P帮我按销量由高到低排序", "label": []}
+{"text": "我们说要去吃饭又想大忽悠", "label": []}
+{"text": "嗯对这家不考虑了", "label": [["poiName", "这家"]]}
+{"text": "我提议去吃顺德菜", "label": [["type", "顺德菜"]]}
+{"text": "好少数服从多数", "label": []}
+{"text": "我不太想出去", "label": []}
+{"text": "好多的反正都是好吃的哈哈哈", "label": []}
+{"text": "去人民路那家重庆火锅吧", "label": [["location", "人民路"], ["poiName", "重庆火锅"]]}
+{"text": "小P按照评分高到低来排序周围的东北菜", "label": [["type", "东北菜"]]}
+{"text": "预约排号", "label": []}
+{"text": "要不去吃西餐吧", "label": [["type", "西餐"]]}
+{"text": "行", "label": []}
+{"text": "导航过去吧小P", "label": []}
+{"text": "那导航过去吧", "label": []}
+{"text": "嗯嗯这次不那么快走了", "label": []}
+{"text": "俩人", "label": []}
+{"text": "不吃那个好难吃", "label": []}
+{"text": "那你知道哪里有比较好的餐厅吗", "label": []}
+{"text": "我也想吃", "label": []}
+{"text": "好啊好啊我们去哪里吃", "label": []}
+{"text": "小潘潘你怎么不出声啊", "label": []}
+{"text": "儿子你今天想吃什么", "label": []}
+{"text": "没事我们一起过去就行啦", "label": []}
+{"text": "小P导航到顺德粥锅王", "label": [["poiName", "顺德粥锅王"]]}
+{"text": "试下菌菇火锅", "label": [["dishName", "菌菇火锅"]]}
+{"text": "还没要不我们先找找吧看看有没有", "label": []}
+{"text": "行行行下次我们听你的好吧", "label": []}
+{"text": "这里有没有啊", "label": []}
+{"text": "没有哎我不吃鱼头", "label": [["dishName", "鱼头"]]}
+{"text": "火锅怎么样", "label": [["type", "火锅"]]}
+{"text": "你们想吃什么的", "label": []}
+{"text": "我们去吃猪肚汤", "label": [["dishName", "猪肚汤"]]}
+{"text": "我看了下评论人均都是一百这样", "label": []}
+{"text": "可以有推荐吗", "label": []}
+{"text": "我无所谓啦.", "label": []}
+{"text": "就不要去珠江新城了人太多", "label": [["location", "珠江新城"]]}
+{"text": "2位", "label": []}
+{"text": "搞定排号有小P不用等到傻BB", "label": []}
+{"text": "6人", "label": []}
+{"text": "我也想啊不过我知道爸爸妈妈都要上班晚上就能见到爸爸妈妈了", "label": []}
+{"text": "我也没意见", "label": []}
+{"text": "咱们去吃庐山小聚", "label": [["poiName", "庐山小聚"]]}
+{"text": "小P给我们导航过去吧", "label": []}
+{"text": "你们想吃什么先", "label": []}
+{"text": "2人", "label": []}
+{"text": "好呀就去这里小P导航", "label": [["location", "这里"]]}
+{"text": "没问题", "label": []}
+{"text": "你们谁来过", "label": []}
+{"text": "宝宝我饿了", "label": []}
+{"text": "小P取消排号", "label": []}
+{"text": "你想去吃些什么呢", "label": []}
+{"text": "现在出发小P帮我们导航到九码头火锅", "label": [["poiName", "九码头火锅"]]}
+{"text": "我看到它家营业时间了还有好久才关门", "label": [["poiName", "它家"]]}
+{"text": "那行没问题", "label": []}
+{"text": "你喜欢吃酱大骨吗", "label": [["dishName", "酱大骨"]]}
+{"text": "取号2人", "label": []}
+{"text": "2人", "label": []}
+{"text": "当然了这边是北方啊", "label": []}
+{"text": "小P现在导航过去", "label": []}
+{"text": "都有什么呀", "label": []}
+{"text": "亲爱的们介绍个好东西给你们", "label": []}
+{"text": "好啊去那间顺德杨廷记喔", "label": [["poiName", "顺德杨廷记"]]}
+{"text": "小p开始导航", "label": []}
+{"text": "不辣的不上火的", "label": [["taste", "辣"]]}
+{"text": "小P帮我在南黎板面排号", "label": [["poiName", "南黎板面"]]}
+{"text": "有点久啊", "label": []}
+{"text": "有什么菜品是比较好吃的啊花花", "label": []}
+{"text": "好呀很久都没有喝茶了", "label": []}
+{"text": "招贤潮汕砂锅粥挺不错的咱们去尝尝吧", "label": [["poiName", "招贤潮汕砂锅粥"]]}
+{"text": "欧克小P帮我们导航去高德置地的木棉醉心粤味", "label": [["location", "高德置地"], ["poiName", "木棉醉心粤味"]]}
+{"text": "现在给我导航过去", "label": []}
+{"text": "我上午让小P找过找到个很好的餐厅", "label": []}
+{"text": "就去吃麦当劳随便吃一下吧", "label": [["poiName", "麦当劳"]]}
+{"text": "老公国庆快结束了他们俩明天就要去上学了", "label": []}
+{"text": "现在开始导航吧", "label": []}
+{"text": "你想吃啥呀", "label": []}
+{"text": "例如", "label": []}
+{"text": "还有吗", "label": []}
+{"text": "海底捞太贵了不划算哦", "label": [["poiName", "海底捞"]]}
+{"text": "好呀牛排也行", "label": [["dishName", "牛排"]]}
+{"text": "没要不去名扬广场那边吧怎么样", "label": [["location", "名扬广场"]]}
+{"text": "爸爸我今天在学校做好事老师夸我了还奖励我一朵小红花", "label": []}
+{"text": "能停车吗", "label": []}
+{"text": "这是事实嘛嘻嘻嘻", "label": []}
+{"text": "评分由高到低排序", "label": []}
+{"text": "人均消费到还好就不知道味道怎么样", "label": []}
+{"text": "能使用优惠券20040的", "label": []}
+{"text": "我想去吃肯德基", "label": [["poiName", "肯德基"]]}
+{"text": "中山八路那有一家首尔家韩国料理烤肉新开的", "label": [["location", "中山八路"], ["poiName", "首尔家韩国料理烤肉"]]}
+{"text": "好就这家了", "label": [["poiName", "这家"]]}
+{"text": "可以了", "label": []}
+{"text": "老婆今晚你想吃什么", "label": []}
+{"text": "好那就去万达广场那间喜茶吧", "label": [["location", "万达广场"], ["poiName", "喜茶"]]}
+{"text": "我劝你不要那边现在塞死了换个地方吧", "label": [["location", "那边"]]}
+{"text": "哇我昨天去吃才3点多评分现在升的这么快味道还是很多人认可的", "label": []}
+{"text": "哦哦是鱼鲜生嘛我正好想带芳芳去尝尝呢", "label": [["poiName", "鱼鲜生"]]}
+{"text": "我看下它家在大众点评的评价", "label": [["poiName", "它家"]]}
+{"text": "好久没吃野菜饼了", "label": [["dishName", "野菜饼"]]}
+{"text": "再筛选一下服务评分4.5以上", "label": []}
+{"text": "我们逛一逛吧", "label": []}
+{"text": "又吃火锅吗", "label": [["type", "火锅"]]}
+{"text": "我想去吃烧烤", "label": [["type", "烧烤"]]}
+{"text": "开始导航", "label": []}
+{"text": "我都行你们决定就好", "label": []}
+{"text": "要不我们就去吃东南亚菜吧", "label": [["type", "东南亚菜"]]}
+{"text": "那就去吧", "label": []}
+{"text": "2人", "label": []}
+{"text": "那我们先取号吧", "label": []}
+{"text": "现在店里要不要排队", "label": []}
+{"text": "我想吃圆子", "label": [["dishName", "圆子"]]}
+{"text": "老公能不能叫外卖", "label": []}
+{"text": "好了不闹了山西菜酸的菜品应该比较多.", "label": [["type", "山西菜"]]}
+{"text": "我想去吃陶陶居", "label": [["poiName", "陶陶居"]]}
+{"text": "三人俩菜不够", "label": []}
+{"text": "那就找个店吃呗", "label": []}
+{"text": "这也可以现在找地方吃吧", "label": []}
+{"text": "说吧你又想吃什么", "label": []}
+{"text": "音乐开大声一点小P", "label": []}
+{"text": "2人", "label": []}
+{"text": "距离离得远不远啊", "label": []}
+{"text": "要不我们吃个饭后甜品吧", "label": [["dishName", "甜品"]]}
+{"text": "好呀好呀", "label": []}
+{"text": "我就是想吃了吗", "label": []}
+{"text": "新荣记有什么菜推荐的小P", "label": []}
+{"text": "小P搜索下周围有那些人均在30块以下有包厢的餐厅", "label": []}
+{"text": "可以现在出发", "label": []}
+{"text": "排号吧", "label": []}
+{"text": "有听过我想去", "label": []}
+{"text": "银记我吃到想吐了", "label": [["poiName", "银记"]]}
+{"text": "玩累了吧", "label": []}
+{"text": "好啊小P给我找找销量最高的披萨", "label": [["dishName", "披萨"]]}
+{"text": "知道了妈我会看着爸的", "label": []}
+{"text": "小P导航到悦湖公馆", "label": [["poiName", "悦湖公馆"]]}
+{"text": "哎呀忽略了大哥的身体那去哪里吃好呢", "label": []}
+{"text": "这家价格不贵品种又多我们去这家吧", "label": [["poiName", "这家"]]}
+{"text": "那妹妹想吃吗", "label": []}
+{"text": "去啊让小P排号就好了", "label": []}
+{"text": "小P订2个人的", "label": []}
+{"text": "我也是", "label": []}
+{"text": "没有鸭我打算到时候再找呢", "label": []}
+{"text": "宝宝去吃东西吧", "label": []}
+{"text": "我们今天去吃牛蛙怎么样老婆", "label": [["dishName", "牛蛙"]]}
+{"text": "对呀", "label": []}
+{"text": "叫做火瀑椒麻火锅", "label": [["poiName", "火瀑椒麻火锅"]]}
+{"text": "怎么了今天怎么听这种歌了", "label": []}
+{"text": "去吃点别的吧我不想吃辣的", "label": [["taste", "辣"]]}
+{"text": "那去那里吃呢", "label": []}
+{"text": "我都可以啊", "label": []}
+{"text": "现在时间不早了想吃什么赶紧选", "label": []}
+{"text": "茶油鸡挺不错的", "label": [["dishName", "茶油鸡"]]}
+{"text": "是啊最近没啥项目可以做", "label": []}
+{"text": "那我们就去吃点清淡", "label": [["taste", "清淡"]]}
+{"text": "那去哪里吃好", "label": []}
+{"text": "好啊我们去哪里吃呢", "label": []}
+{"text": "星巴克的咖啡非常好喝呢", "label": [["poiName", "星巴克"], ["dishName", "咖啡"]]}
+{"text": "这次我们先不吃下次再带你去吃牛角包好不咯", "label": [["dishName", "牛角包"]]}
+{"text": "还有这么久", "label": []}
+{"text": "那我们去这吧", "label": [["poiName", "这"]]}
+{"text": "不行那个太上火了", "label": [["dishName", "那个"]]}
+{"text": "我同意", "label": []}
+{"text": "小P看一下排号情况", "label": []}
+{"text": "小P找下韩国泡菜", "label": [["dishName", "韩国泡菜"]]}
+{"text": "那你想吃什么你说呀别让我们说来说去的", "label": []}
+{"text": "这玩意啥没听过啊", "label": []}
+{"text": "胖妹面庄咯我都是它家熟客来的", "label": [["poiName", "胖妹面庄"]]}
+{"text": "赶紧导航过去吧", "label": []}
+{"text": "那不如上美团看看有什么好吃的吧", "label": []}
+{"text": "可以哦", "label": []}
+{"text": "我没吃过诶好吃吗", "label": []}
+{"text": "评分最高的要等位吗", "label": []}
+{"text": "有一家牛杂店挺不错的", "label": [["poiName", "一家牛杂店"], ["dishName", "牛杂"]]}
+{"text": "开始导航吧", "label": []}
+{"text": "那行小p帮我们排安徽饭店陈江店.", "label": [["poiName", "安徽饭店"], ["location", "陈江"]]}
+{"text": "我们去珠江新城吧", "label": [["location", "珠江新城"]]}
+{"text": "排号老周记茶点富盛大楼的", "label": [["location", "富盛大楼"], ["poiName", "老周记茶点"]]}
+{"text": "小p排号", "label": []}
+{"text": "筛选有宝宝座椅的", "label": []}
+{"text": "在浩丰创意园有一家叫九品椰子鸡的味道不错", "label": [["location", "浩丰创意园"], ["poiName", "九品椰子鸡"]]}
+{"text": "今晚琛哥生日去哪里吃啊", "label": []}
+{"text": "业哥这都夜里两点了", "label": []}
+{"text": "很好那我们今晚就吃这几个菜吧哈哈", "label": []}
+{"text": "我刚网上查了下还有香芋丸子呢", "label": [["dishName", "香芋丸子"]]}
+{"text": "导航过去吧", "label": []}
+{"text": "宝贝又大一岁了我们出去吃顿饭庆祝你生日吧", "label": []}
+{"text": "好啊小P找下销量大的新疆菜", "label": [["type", "新疆菜"]]}
+{"text": "我们去和平路可以吗", "label": [["location", "和平路"]]}
+{"text": "为什么啊你们上周不是说想吃吗怎么突然就不想吃了", "label": []}
+{"text": "赞同", "label": []}
+{"text": "你个吃白食的没得选老姐来.", "label": []}
+{"text": "3个人", "label": []}
+{"text": "可以可以", "label": []}
+{"text": "去吃火锅吧好久没吃了", "label": [["type", "火锅"]]}
+{"text": "现在知道直男有多不解风情了吧", "label": []}
+{"text": "是啊它家招牌就鲜虾海蟹煲", "label": [["dishName", "鲜虾海蟹煲"], ["poiName", "它家"]]}
+{"text": "有海底捞啊粤菜东南亚菜都挺不错的", "label": [["poiName", "海底捞"], ["type", "粤菜"], ["type", "东南亚菜"]]}
+{"text": "哦开门到几点", "label": []}
+{"text": "好呀你想去哪里吃啊", "label": []}
+{"text": "帮我按照评分的从高到低来排序吧", "label": []}
+{"text": "那就吃这个吧", "label": []}
+{"text": "那就得必须过去这家尝尝了", "label": [["poiName", "这家"]]}
+{"text": "那既然没得选菜系那我要选餐厅.", "label": []}
+{"text": "一日之计在于晨懂不弟妹", "label": []}
+{"text": "没问题", "label": []}
+{"text": "我觉得可以", "label": []}
+{"text": "15分钟不是很久去吧", "label": []}
+{"text": "吃福建菜吧", "label": [["type", "福建菜"]]}
+{"text": "原来是这个样子要不我们选评分高一点的吧", "label": []}
+{"text": "是的", "label": []}
+{"text": "最近想吃些香口的东西", "label": []}
+{"text": "没问题", "label": []}
+{"text": "上次开完会你和钟总去了哪里吃饭", "label": []}
+{"text": "那行志同道合啊", "label": []}
+{"text": "想吃炒饭", "label": []}
+{"text": "对呀日本料理就是吃寿司和一些鱼生很不错的", "label": [["type", "日本料理"], ["dishName", "寿司"], ["dishName", "鱼生"]]}
+{"text": "烤肉不新鲜吃些别的吧", "label": [["type", "烤肉"]]}
+{"text": "小P帮我搜索有优惠券50100的日本菜", "label": [["type", "日本菜"]]}
+{"text": "我想吃清淡一点", "label": [["taste", "清淡"]]}
+{"text": "那还是去东山口吧那边选择多一点", "label": [["location", "东山口"]]}
+{"text": "过去国美那边买东西吧", "label": [["location", "国美"]]}
+{"text": "对啊人生地不熟的.", "label": []}
+{"text": "那玩意可以吃吗", "label": []}
+{"text": "带你去吃麦当劳吧", "label": [["poiName", "麦当劳"]]}
+{"text": "那你就直接说你想吃什么好了我们的你都不喜欢吃", "label": []}
+{"text": "这个我也听说过今天我们就去尝尝吧", "label": [["dishName", "这个"]]}
+{"text": "放心吧这东西老补了营养价值高", "label": []}
+{"text": "嗯嗯导航", "label": []}
+{"text": "让小P搜索下呗", "label": []}
+{"text": "我觉得佐敦道的咖啡好难喝", "label": [["poiName", "佐敦道"], ["dishName", "咖啡"]]}
+{"text": "好啊小P导航", "label": []}
+{"text": "就在绿岛广场那里", "label": [["location", "绿岛广场"]]}
+{"text": "这样吗可以打多少折", "label": []}
+{"text": "我呀我喜欢吃可口的比较香的", "label": []}
+{"text": "排号6人用餐", "label": []}
+{"text": "兄弟们我们今天去哪里吃饭呀", "label": []}
+{"text": "想去吃火锅吗老弟", "label": [["type", "火锅"]]}
+{"text": "老李我想去服务好一点的餐厅", "label": []}
+{"text": "那你先订好再过去", "label": []}
+{"text": "行呀我现在就想赶紧吃饭", "label": []}
+{"text": "有什么口味不吃的", "label": []}
+{"text": "烤肉要吃饱的话好贵啊.", "label": [["type", "烤肉"]]}
+{"text": "好啊你想去喝什么", "label": []}
+{"text": "别走路了吧走路我头晕", "label": []}
+{"text": "还想着打折给你白嫖行不行", "label": []}
+{"text": "我想起来了一家叫什么来着", "label": [["poiName", "一家"]]}
+{"text": "对啊真是众口难调直接去渔文乐吧你们喜欢吃的都有", "label": [["poiName", "渔文乐"]]}
+{"text": "我想吃清淡点的", "label": [["taste", "清淡"]]}
+{"text": "好呀", "label": []}
+{"text": "不管什么片都要谈个恋爱", "label": []}
+{"text": "小p帮我查一下人均消费多少", "label": []}
+{"text": "那我陪你一顿也无所谓", "label": []}
+{"text": "那去吃海底捞吧", "label": [["poiName", "海底捞"]]}
+{"text": "要不我们就去吃粤菜吧", "label": [["type", "粤菜"]]}
+{"text": "哈哈哈那你们现在想不想去吃", "label": []}
+{"text": "宝我想吃好吃的", "label": []}
+{"text": "是的帮我们排号吧", "label": []}
+{"text": "再买点小酒", "label": []}
+{"text": "那这次你就要好好尝尝了而且也不是很贵", "label": []}
+{"text": "爸爸妈妈我想带姥姥姥爷去吃自助餐可以吗", "label": [["type", "自助餐"]]}
+{"text": "你们是有吃过这家吗", "label": [["poiName", "这家"]]}
+{"text": "就我俩啊", "label": []}
+{"text": "阿爸我饿了", "label": []}
+{"text": "等会我们先去吃点东西再去玩吧不然待会会饿", "label": []}
+{"text": "现在要不要排号", "label": []}
+{"text": "爸爸平时喜欢吃什么的", "label": []}
+{"text": "差不多吧", "label": []}
+{"text": "帮我们排号吧", "label": []}
+{"text": "好像那里是吃泰国菜的", "label": [["type", "泰国菜"], ["poiName", "那里"]]}
+{"text": "可以啊这么智能这车落地得40万吧", "label": []}
+{"text": "那要不我们去吃粤菜吧", "label": [["type", "粤菜"]]}
+{"text": "小宝还要小P放歌吗", "label": []}
+{"text": "3个人", "label": []}
+{"text": "没问题那我现在就过去吧远就远点吧", "label": []}
+{"text": "我知道它上过本地热评榜top5确实不错", "label": [["poiName", "它"]]}
+{"text": "我觉得肠粉一般般不喜欢吃", "label": [["dishName", "肠粉"]]}
+{"text": "好的都同意就可以了", "label": []}
+{"text": "这家店我去吃过不好吃不去啦", "label": [["poiName", "这家"]]}
+{"text": "好啊那就导航去麦当劳", "label": [["poiName", "麦当劳"]]}
+{"text": "不是吧我们去吃个饭都要跑18公里远是不是认真的呀", "label": []}
+{"text": "那家店在哪里", "label": [["poiName", "那家"]]}
+{"text": "要不要订餐", "label": []}
+{"text": "那我们今天去吃什么好呢", "label": []}
+{"text": "小P帮我导航", "label": []}
+{"text": "那就订太末元未土菜馆", "label": [["poiName", "太末元未土菜馆"]]}
+{"text": "我要吃烤肉", "label": [["type", "烤肉"]]}
+{"text": "有儿童游玩室吗", "label": []}
+{"text": "注脂牛肉一般都会表明的吧", "label": [["dishName", "注脂牛肉"]]}
+{"text": "行呀不过去吃什么", "label": []}
+{"text": "儿子饿了吗爸爸带你们去茶楼啊", "label": [["poiName", "茶楼"]]}
+{"text": "我也行", "label": []}
+{"text": "亲爱的们饿了吗", "label": []}
+{"text": "天天吃我都不想吃这个了", "label": [["dishName", "这个"]]}
+{"text": "我们多久没一起出去聚餐了", "label": []}
+{"text": "我比较想去鞍山吃可以嘛", "label": [["location", "鞍山"]]}
+{"text": "我看你们决定", "label": []}
+{"text": "就去牡丹园吃徽菜吧", "label": [["location", "牡丹园"], ["type", "徽菜"]]}
+{"text": "我觉得可以去吃梅菜扣肉煲", "label": [["dishName", "梅菜扣肉煲"]]}
+{"text": "那就过去试试呗", "label": []}
+{"text": "那就去这家呗我也看看评论", "label": [["poiName", "这家"]]}
+{"text": "什么是养生餐", "label": []}
+{"text": "2人", "label": []}
+{"text": "去哪里吃", "label": []}
+{"text": "按评分从高往低排", "label": []}
+{"text": "我们喝来喝去都是在大旺喝我们要不要去别的地方喝", "label": [["location", "大旺"]]}
+{"text": "那就听司机夫人的呗", "label": []}
+{"text": "好呀去哪里吃", "label": []}
+{"text": "你不是心心念念的想去吗这就带你去啦", "label": []}
+{"text": "恒达世纪那里有一家叫九码头火锅的餐厅挺不错的", "label": [["poiName", "九码头火锅"], ["location", "恒达世纪"]]}
+{"text": "看起来挺不错的就去这里吧", "label": []}
+{"text": "嗯嗯", "label": []}
+{"text": "我可以看看吧", "label": []}
+{"text": "随便吧", "label": []}
+{"text": "我反正啥都吃不用想", "label": []}
+{"text": "那哪里有比较好吃的呀", "label": []}
+{"text": "我饿了睡一下午了睡饿了都", "label": []}
+{"text": "我海鲜过敏吃不了", "label": [["type", "海鲜"]]}
+{"text": "我赞同试下刺身", "label": [["dishName", "刺身"]]}
+{"text": "那我们就去波仔烤鱼吧", "label": [["poiName", "波仔烤鱼"]]}
+{"text": "宝去炒个菜吃吧", "label": []}
+{"text": "我要吃麦当劳", "label": [["poiName", "麦当劳"]]}
+{"text": "嗯你去我肯定也去咯", "label": []}
+{"text": "你想去吃些啥呢", "label": []}
+{"text": "我们现在出发吗", "label": []}
+{"text": "好啊好啊我要吃麦当劳", "label": [["poiName", "麦当劳"]]}
+{"text": "评分5.9环境4.9", "label": []}
+{"text": "你想吃什么", "label": []}
+{"text": "老实点你现在最想吃什么", "label": []}
+{"text": "请你们吃真好路边摊还是没啥大问题的", "label": [["poiName", "真好路边摊"]]}
+{"text": "找有美团优惠的", "label": []}
+{"text": "是不是呀想吃就让小P帮你找", "label": []}
+{"text": "我想吃辣的", "label": [["taste", "辣"]]}
+{"text": "那我们就去老地方特色菜吧", "label": [["poiName", "老地方特色菜"]]}
+{"text": "既然都不想去吃那就先叫小p取消搜索吧", "label": []}
+{"text": "那还是你来决定吧", "label": []}
+{"text": "帮我们也排个号", "label": []}
+{"text": "3人", "label": []}
+{"text": "小P帮我导航", "label": []}
+{"text": "别必胜客啊王哥我俩开玩笑呢", "label": [["poiName", "必胜客"]]}
+{"text": "远吗", "label": []}
+{"text": "我刚刚说去哪里吃饭", "label": []}
+{"text": "现在直接导航过去", "label": []}
+{"text": "我没意见", "label": []}
+{"text": "那你们俩猜猜拳决定去吃什么", "label": []}
+{"text": "5个", "label": []}
+{"text": "那就去过吧已经开了", "label": []}
+{"text": "我也一样的想法", "label": []}
+{"text": "好的老公那去人民路东北人家吧", "label": [["location", "人民路"], ["poiName", "东北人家"]]}
+{"text": "我想去吃牛蛙", "label": [["dishName", "牛蛙"]]}
+{"text": "对对对你说得对.", "label": []}
+{"text": "不去华记农庄了上次去吃了味道一般般", "label": [["poiName", "华记农庄"]]}
+{"text": "快点决定去哪里吃吧", "label": []}
+{"text": "我是无所谓你问一下他俩", "label": []}
+{"text": "没营养啊", "label": []}
+{"text": "不用排了我们直接过去", "label": []}
+{"text": "那你有决定去哪吃吗", "label": []}
+{"text": "那小P给我们推荐评分高的火锅吧", "label": [["type", "火锅"]]}
+{"text": "远嘛", "label": []}
+{"text": "开始导航", "label": []}
+{"text": "让小p现在帮我们导航过去吧", "label": []}
+{"text": "小导航", "label": []}
+{"text": "那就去聚香牛庄吧", "label": [["poiName", "聚香牛庄"]]}
+{"text": "先让小P看看排号情况吧", "label": []}
+{"text": "我没问题", "label": []}
+{"text": "还真没有发现", "label": []}
+{"text": "3人", "label": []}
+{"text": "我找下其他的店", "label": []}
+{"text": "去吧小P排个号", "label": []}
+{"text": "我想吃烧腊你们呢", "label": [["dishName", "烧腊"]]}
+{"text": "可以可以喝点暖身子", "label": []}
+{"text": "龙口吧停车位比较多", "label": [["location", "龙口"]]}
+{"text": "小p排号", "label": []}
+{"text": "对吃点清淡的吧", "label": [["taste", "清淡"]]}
+{"text": "开始导航吧", "label": []}
+{"text": "小P订3人桌", "label": []}
+{"text": "好好好都说啥叫女人最好命现在就去吧小p搜索川菜馆", "label": [["type", "川菜"]]}
+{"text": "而且又贵不想去", "label": []}
+{"text": "吃川菜吧", "label": [["type", "川菜"]]}
+{"text": "众口难调啊下次绝不带你们出来玩了", "label": []}
+{"text": "你可少说点话吧没人当你哑巴.", "label": []}
+{"text": "你们排了啥", "label": []}
+{"text": "可以可以那我们就去三公塘农庄吧", "label": [["poiName", "三公塘农庄"]]}
+{"text": "等等吃寿喜烧可以吗", "label": [["dishName", "寿喜烧"]]}
+{"text": "小P找下芝士鸡扒牛角包", "label": [["dishName", "芝士鸡扒牛角包"]]}
+{"text": "这可不行哦我不能吃猪杂粉的", "label": [["dishName", "猪杂粉"]]}
+{"text": "老张刚刚王总在群里讲了给我们放假一天不着急回去给了八千的经费", "label": []}
+{"text": "小妹你要带我们去吃什么", "label": []}
+{"text": "没呢小P现在给我们订吧5人的", "label": []}
+{"text": "人挺多的啊应该挺不错的", "label": []}
+{"text": "我也不知道啊有什么吃的", "label": []}
+{"text": "那再帮我筛选一下服务评分4.5以上", "label": []}
+{"text": "怎么了有什么问题吗", "label": []}
+{"text": "没关系四会广场那边可以", "label": [["location", "四会广场"]]}
+{"text": "嗯嗯就去那吧", "label": []}
+{"text": "可以", "label": []}
+{"text": "3位", "label": []}
+{"text": "那你就负责定一下位置吧", "label": []}
+{"text": "太远了八十多公里呢不去了", "label": []}
+{"text": "是吗那就去吧", "label": []}
+{"text": "你先打电话定个包间我打电话给我女朋友", "label": []}
+{"text": "要不咋们去吃潮州菜吧", "label": [["type", "潮州菜"]]}
+{"text": "是呀吃别的吧", "label": []}
+{"text": "田林公园吧怎样吃的东西挺多的", "label": [["location", "田林公园"]]}
+{"text": "老公晚饭我们去吃什么", "label": []}
+{"text": "我想吃东西了亲爱的", "label": []}
+{"text": "我们到了不就知道咯", "label": []}
+{"text": "你都说饿了我还能不带你去吃吗", "label": []}
+{"text": "小P帮我们导航", "label": []}
+{"text": "算了太远了要不然不要了吧", "label": []}
+{"text": "我们昨晚喝太多了", "label": []}
+{"text": "不吃了吧农家菜好少啊都不知道好不好吃", "label": [["type", "农家菜"]]}
+{"text": "不要", "label": []}
+{"text": "我想起来了杨国福之前被查出了食品安全问题你们还去吗", "label": []}
+{"text": "小P有那些创意菜餐厅", "label": [["type", "创意菜"]]}
+{"text": "它家大众点评怎样", "label": [["poiName", "它家"]]}
+{"text": "小p帮我们排蛙来哒华贸店.", "label": [["poiName", "蛙来哒"], ["location", "华贸"]]}
+{"text": "去方案通过", "label": []}
+{"text": "走吧开始导航出发", "label": []}
+{"text": "去就去小P看下隐世餐厅在哪里", "label": [["poiName", "隐世餐厅"]]}
+{"text": "那我们赶快去吧", "label": []}
+{"text": "那你想去吃什么", "label": []}
+{"text": "今晚就请你们吃你们自己选吧", "label": []}
+{"text": "对呀", "label": []}
+{"text": "那宝贝听妈妈的好不好等你感冒好了再带你去吃", "label": []}
+{"text": "对啊晚了怕迟到.", "label": []}
+{"text": "我想吃辣一点的", "label": [["taste", "辣"]]}
+{"text": "可以呀我觉得挺不错的", "label": []}
+{"text": "那我们让小p给我们找吧", "label": []}
+{"text": "那你们要喝哪一家的", "label": []}
+{"text": "我记得不太清楚了", "label": []}
+{"text": "没问题", "label": []}
+{"text": "是在解放碑路那边的", "label": [["location", "解放碑路"]]}
+{"text": "有什么好吃的呀", "label": []}
+{"text": "我和芳芳晚餐后也没有什么活动也是没有问题的", "label": []}
+{"text": "有什么好吃一点的菜吗", "label": []}
+{"text": "算了那边又太偏僻了", "label": [["poiName", "那边"]]}
+{"text": "你说的应该是监烤师餐厅吧", "label": [["poiName", "监烤师"]]}
+{"text": "你知道那边有什么好吃的", "label": [["location", "那边"]]}
+{"text": "小P帮我找均价在100以内的餐厅", "label": []}
+{"text": "到那里去会不会太远了", "label": []}
+{"text": "那你们有什么知道的地方不", "label": []}
+{"text": "哪里有烤鱼吃", "label": []}
+{"text": "我好想吃鸽子呢", "label": [["dishName", "鸽子"]]}
+{"text": "营业到几点关门啊", "label": []}
+{"text": "2位", "label": []}
+{"text": "浩子要不去上次我和你吃的海鲜坊吧", "label": [["poiName", "海鲜坊"]]}
+{"text": "哈哈哈对一定要吃火锅", "label": [["type", "火锅"]]}
+{"text": "你刚出院受得住么", "label": []}
+{"text": "也是应该换换口味了吧", "label": []}
+{"text": "我赞同", "label": []}
+{"text": "姐姐我想带个朋友", "label": []}
+{"text": "这种东西平常餐厅哪能吃的到", "label": []}
+{"text": "听说价格不贵", "label": []}
+{"text": "我们去哪里吃呢", "label": []}
+{"text": "哎虽然工资不多但生活不能随便.", "label": []}
+{"text": "算了我们看看别的吧", "label": []}
+{"text": "帮我排号吧", "label": []}
+{"text": "现在就导航过去", "label": []}
+{"text": "那看下大家如何", "label": []}
+{"text": "对啊现在都到四会了", "label": [["location", "四会"]]}
+{"text": "那去哪里啊", "label": []}
+{"text": "那我们晚饭就去金顺吃吧", "label": []}
+{"text": "我们去吃烤羊腿怎么样", "label": [["dishName", "烤羊腿"]]}
+{"text": "老蔡到饭点了去吃什么东西呀", "label": []}
+{"text": "人民北路的", "label": [["location", "人民北路"]]}
+{"text": "那我先看下附近吧我还是想吃螃蟹", "label": [["dishName", "螃蟹"]]}
+{"text": "那怎么说还去他那吗", "label": []}
+{"text": "小p该店的评分是多少", "label": []}
+{"text": "看了评分感觉是挺不错的不知道那边有没有停车场", "label": []}
+{"text": "小P导航", "label": []}
+{"text": "那就现在去吧", "label": []}
+{"text": "帮我们排号吧小P", "label": []}
+{"text": "我想吃海鲜粥吧", "label": [["dishName", "海鲜粥"]]}
+{"text": "是吃潮汕汤粉的", "label": [["dishName", "潮汕汤粉"]]}
+{"text": "今晚带你们去吃越南菜", "label": [["type", "越南菜"]]}
+{"text": "去敏捷广场啊", "label": [["location", "敏捷广场"]]}
+{"text": "帮我们再按照评分从高到低来排序吧", "label": []}
+{"text": "那里没什么好吃的", "label": [["location", "那里"]]}
+{"text": "猪肚鸡火锅也可以", "label": [["type", "猪肚鸡火锅"]]}
+{"text": "有点多呀", "label": []}
+{"text": "烤鱼也可以呀", "label": [["dishName", "烤鱼"]]}
+{"text": "要不试一下A5级和牛", "label": [["dishName", "A5级和牛"]]}
+{"text": "现在都快9点了不去了", "label": []}
+{"text": "没事只要不是辣的啥都行你们来选吧", "label": [["taste", "辣"]]}
+{"text": "那我推荐牛肉吧", "label": [["dishName", "牛肉"]]}
+{"text": "算了帮我们导航过去吧", "label": []}
+{"text": "没问题有小p帮忙看看", "label": []}
+{"text": "四个", "label": []}
+{"text": "你喜欢吃什么妈妈", "label": []}
+{"text": "很快的20来分钟", "label": []}
+{"text": "又是一个周末你们想去吃什么", "label": []}
+{"text": "导航去吧", "label": []}
+{"text": "是嘛我看看评分先吧", "label": []}
+{"text": "2人", "label": []}
+{"text": "还是路上找个店吧便宜点", "label": []}
+{"text": "去吧小P搜一下", "label": []}
+{"text": "那帮我们排号吧", "label": []}
+{"text": "那我选一煲就掂", "label": [["poiName", "一煲就掂"]]}
+{"text": "老板要不去吃韩国菜", "label": [["type", "韩国菜"]]}
+{"text": "吃牛排吧刚好我有10020的优惠券", "label": [["dishName", "牛排"]]}
+{"text": "嗯嗯仙女你带我们走吧", "label": []}
+{"text": "你想吃些什么菜", "label": []}
+{"text": "那我们再去一次吧", "label": []}
+{"text": "那就太古汇那边喽近一些也有很多吃点", "label": [["location", "太古汇"]]}
+{"text": "有点你要带我去吃什么", "label": []}
+{"text": "没事没事我都可以", "label": []}
+{"text": "要有啤酒其他都无所谓", "label": [["dishName", "啤酒"]]}
+{"text": "咱们来到潮汕这边不得吃吃吃", "label": []}
+{"text": "给我们排个号五位", "label": []}
+{"text": "那就去广州酒家咯", "label": [["poiName", "广州酒家"]]}
+{"text": "老公去机场路的往十里吧", "label": [["poiName", "往十里"], ["location", "机场路"]]}
+{"text": "那你现在想吃", "label": []}
+{"text": "行啊小p帮我排个号", "label": []}
+{"text": "小P哪里有儿童游玩室吗", "label": []}
+{"text": "老公这个点是要排队的我们先排号吧", "label": []}
+{"text": "肚子确实饿了我们要去吃什么呢", "label": []}
+{"text": "3人", "label": []}
+{"text": "小P排号吧", "label": []}
+{"text": "现在几点了", "label": []}
+{"text": "小P排号吧快一点", "label": []}
+{"text": "亲欢乐下午茶时间到了", "label": []}
+{"text": "感觉这家不太好", "label": [["poiName", "这家"]]}
+{"text": "小P搜索最近的月枫堂", "label": [["poiName", "月枫堂"]]}
+{"text": "虎哥现在是越来越社会了哈哈哈", "label": []}
+{"text": "不行不行我不要", "label": []}
+{"text": "是吗小P帮找一下骏和广场的点都德", "label": [["poiName", "点都德"], ["location", "骏和广场"]]}
+{"text": "这个我不是很清楚啊", "label": []}
+{"text": "好小P导航到步行街", "label": [["location", "步行街"]]}
+{"text": "你问问孩子吧今天他好不容易放假", "label": []}
+{"text": "去河堤边专门吃艇仔粥的很好吃", "label": [["location", "河堤边"], ["dishName", "艇仔粥"]]}
+{"text": "评分高不高呀", "label": []}
+{"text": "等下吃什么", "label": []}
+{"text": "排个号先3人", "label": []}
+{"text": "2位", "label": []}
+{"text": "当然去这点耐心当然要有", "label": []}
+{"text": "去吃皮皮虾吧", "label": [["dishName", "皮皮虾"]]}
+{"text": "好吧爸爸我们今晚去吃什么呢", "label": []}
+{"text": "我就比较想吃肉酱意粉", "label": [["dishName", "肉酱意粉"]]}
+{"text": "禄鼎记吧它自家的一个凉粉好好吃的", "label": [["poiName", "禄鼎记"], ["dishName", "凉粉"]]}
+{"text": "7人", "label": []}
+{"text": "老爸今天难得一家人聚在一起", "label": []}
+{"text": "要有停车场的", "label": []}
+{"text": "小P看一下有没有充电桩", "label": []}
+{"text": "取号3人用餐", "label": []}
+{"text": "佳哥推荐一家呗", "label": [["poiName", "一家"]]}
+{"text": "哈哈哈哈你别开玩笑了赶紧选吧", "label": []}
+{"text": "6人", "label": []}
+{"text": "我觉得要不点外卖", "label": []}
+{"text": "天气转凉了我提议吃个火锅", "label": [["type", "火锅"]]}
+{"text": "姐姐不是在嘛.", "label": []}
+{"text": "哟这么自信啊那我带你去吃好吃的提取庆祝一下", "label": []}
+{"text": "花园新村有一家叫盐帮世家挺好吃的就去这家吃吧", "label": [["location", "花园新村"], ["poiName", "盐帮世家"]]}
+{"text": "啥吃的这么神秘", "label": []}
+{"text": "你还请不请了呀", "label": []}
+{"text": "还挺快的", "label": []}
+{"text": "主要看你们想吃什么", "label": []}
+{"text": "小P给我找下评分高的回锅肉", "label": [["dishName", "回锅肉"]]}
+{"text": "绝对没问题好的才带你们去的嘛", "label": []}
+{"text": "去岁宝广场也行但是吃什么呢", "label": [["location", "岁宝广场"]]}
+{"text": "小P搜索下池记餐厅现在要排队吗", "label": [["poiName", "池记"]]}
+{"text": "谢谢老板老板大气", "label": []}
+{"text": "我都可以的啊没事", "label": []}
+{"text": "我去美团搜一下吧", "label": []}
+{"text": "好啊我想吃很久了", "label": []}
+{"text": "好哦看到那么多人拍照分享可以去试试", "label": []}
+{"text": "好的现在过去吧", "label": []}
+{"text": "好呀那再往前开一点我们去常府街那边吃吧", "label": [["location", "常府街"]]}
+{"text": "那你还说去吃烤肉", "label": [["type", "烤肉"]]}
+{"text": "去人民路的山洞拉面", "label": [["location", "人民路"], ["poiName", "山洞拉面"]]}
+{"text": "这顿饭我请吧", "label": []}
+{"text": "那我在找找看", "label": []}
+{"text": "晚上吃点什么", "label": []}
+{"text": "小P帮我导航", "label": []}
+{"text": "我赞同", "label": []}
+{"text": "好啊尝尝也可以啊", "label": []}
+{"text": "可以啊大姐头去吗", "label": []}
+{"text": "找不用排号的", "label": []}
+{"text": "原来是在这等着行请你吃一顿", "label": []}
+{"text": "俩人", "label": []}
+{"text": "别问了去吧饿死了", "label": []}
+{"text": "好啊一起去吧", "label": []}
+{"text": "那跟着大哥准没错了", "label": []}
+{"text": "哎真服你两一起去吃火锅烤肉吧", "label": [["type", "火锅"], ["type", "烤肉"]]}
+{"text": "今天吃什么", "label": []}
+{"text": "好啊今天听你的", "label": []}
+{"text": "查询一下有没有停车场", "label": []}
+{"text": "好的", "label": []}
+{"text": "那刚好我也有想吃的那就去这家吧", "label": [["poiName", "这家"]]}
+{"text": "好吧那就去这里吃呗", "label": [["poiName", "这里"]]}
+{"text": "我们在哪吃中午可能时间不太够", "label": []}
+{"text": "对呀老公我们先排号吧", "label": []}
+{"text": "那我们去哪里吃", "label": []}
+{"text": "还想吃炒肝", "label": [["dishName", "炒肝"]]}
+{"text": "对哦这种国外美食大家有没有戒口或不吃的", "label": []}
+{"text": "去吃血腌花甲王", "label": [["dishName", "血腌花甲王"]]}
+{"text": "对啊好久没这么玩过了", "label": []}
+{"text": "那等等我们就吃这个吧", "label": []}
+{"text": "我喜欢鸭屎香柠檬茶", "label": [["dishName", "鸭屎香柠檬茶"]]}
+{"text": "现在就出发吗", "label": []}
+{"text": "这天气还真适合吃火锅呀", "label": [["type", "火锅"]]}
+{"text": "我都可以", "label": []}
+{"text": "那就去吃年糕了小P搜索哪里能吃年糕", "label": [["dishName", "年糕"]]}
+{"text": "哪次忘记了你想吃", "label": []}
+{"text": "可以啊", "label": []}
+{"text": "那感情好啊", "label": []}
+{"text": "那你等下先载我回去带上我侄子吧", "label": []}
+{"text": "光顾着给老板干活了等一下一定要多吃一点.", "label": []}
+{"text": "你看那家也太多人了吧", "label": [["poiName", "那家"]]}
+{"text": "潮汕砂锅粥挺不错我们试试吧", "label": [["dishName", "潮汕砂锅粥"]]}
+{"text": "OK小P推荐评论多的西餐", "label": [["type", "西餐"]]}
+{"text": "帮我搜一下评分在4.8以上的", "label": []}
+{"text": "我晚饭都没吃太忙了", "label": []}
+{"text": "小P帮我找西月城谭豆花", "label": [["poiName", "西月城谭豆花"]]}
+{"text": "那我们去哪吃", "label": []}
+{"text": "涮羊肉吗我也好久没吃了想去吃", "label": [["dishName", "羊肉"]]}
+{"text": "小P导航西街", "label": [["location", "西街"]]}
+{"text": "它家口味咋样的", "label": [["poiName", "它家"]]}
+{"text": "听你这么说好像有点道理哈我的错", "label": []}
+{"text": "这也挺近的呀两公里去这里吧", "label": [["poiName", "这里"]]}
+{"text": "就是就是", "label": []}
+{"text": "莎莎蛋糕店不适合小朋友吃", "label": [["poiName", "莎莎蛋糕店"]]}
+{"text": "当然是陈记顺和火锅啦", "label": []}
+{"text": "我想吃牛肉汉堡", "label": [["dishName", "牛肉汉堡"]]}
+{"text": "第一个", "label": []}
+{"text": "小帮我们排云顶阁旋转餐厅的号", "label": [["poiName", "云顶阁旋转餐厅"]]}
+{"text": "我建议定位去万达广场看看有什么吃的", "label": [["location", "万达广场"]]}
+{"text": "我不爱吃日式的", "label": [["type", "日式"]]}
+{"text": "为什么吃不起饭了吗", "label": []}
+{"text": "确认排号", "label": []}
+{"text": "泰国菜也辣啊", "label": [["type", "泰国菜"], ["taste", "辣"]]}
+{"text": "老妈后天你生日没办法陪你了", "label": []}
+{"text": "那去茶餐厅", "label": [["type", "茶餐厅"]]}
+{"text": "那去吃川菜吧", "label": [["type", "川菜"]]}
+{"text": "第一个", "label": []}
+{"text": "哇这样真的好方便啊", "label": []}
+{"text": "再说烧烤你自己去吧", "label": [["type", "烧烤"]]}
+{"text": "亲爱的我们去吃披萨吧", "label": [["dishName", "披萨"]]}
+{"text": "亲爱的我饿了", "label": []}
+{"text": "小P有那些高评分烤肉餐厅", "label": [["type", "烤肉"]]}
+{"text": "看起来不错啊评分也是最高的.", "label": []}
+{"text": "好小P预定3位", "label": []}
+{"text": "可以啊", "label": []}
+{"text": "对呀我也不喜欢吃这个", "label": [["dishName", "这个"]]}
+{"text": "那就去吃鸭脖吧", "label": [["dishName", "鸭脖"]]}
+{"text": "也不想吃", "label": []}
+{"text": "麒麟脱胎看起来有点恶心吃不下啊", "label": [["dishName", "麒麟脱胎"]]}
+{"text": "你也是衰拿个快递都不帮人家拿", "label": []}
+{"text": "没有没有感觉让小p帮我们找一下吧哈哈哈", "label": []}
+{"text": "是的", "label": []}
+{"text": "有就行那就去吧", "label": []}
+{"text": "对呀不用急", "label": []}
+{"text": "你跟小p说一下", "label": []}
+{"text": "帮我挑人均50以内的", "label": []}
+{"text": "咱们今天吃江苏菜吧", "label": [["type", "江苏菜"]]}
+{"text": "味道还不错可以呀", "label": []}
+{"text": "排队取号2人用餐", "label": []}
+{"text": "真是冷啊今天", "label": []}
+{"text": "不是吃多了总是会腻的嘛.", "label": []}
+{"text": "那让爸爸给小宝挑一下吧", "label": []}
+{"text": "老婆今晚去哪里吃饭啊", "label": []}
+{"text": "就吃自助餐", "label": [["type", "自助餐"]]}
+{"text": "好啊这个适合我", "label": [["type", "这个"]]}
+{"text": "取号3人", "label": []}
+{"text": "天柱素食也可以哦", "label": [["poiName", "天柱素食"]]}
+{"text": "我前天跟我哥去吃了家野味挺不错的怎么样", "label": [["dishName", "野味"]]}
+{"text": "当然啦难道我们两个会骗你们嘛", "label": []}
+{"text": "嗯嗯假期结束了也该回去上班了", "label": []}
+{"text": "那里应该不会很远吧", "label": [["location", "那里"]]}
+{"text": "去吃酸菜鱼", "label": [["dishName", "酸菜鱼"]]}
+{"text": "有什么好吃一点的菜吗", "label": []}
+{"text": "我怕你有带我去吃奇奇怪怪的东西", "label": []}
+{"text": "等下很难吃咋办", "label": []}
+{"text": "嗯挺不错的它家还有很多好吃的", "label": [["poiName", "它家"]]}
+{"text": "你们都这样说了就出去吃吧", "label": []}
+{"text": "果然是一方水土养一方人啊", "label": []}
+{"text": "清淡点的可以呀你想去吃什么东西啊", "label": [["taste", "清淡"]]}
+{"text": "12分钟可以哈", "label": []}
+{"text": "亲爱的去吃口水鸡吧", "label": [["dishName", "口水鸡"]]}
+{"text": "我上次吃它家的那个铁板水晶粉老好吃了", "label": [["poiName", "它家"], ["dishName", "铁板水晶粉"]]}
+{"text": "我不同意", "label": []}
+{"text": "我都随便啊", "label": []}
+{"text": "那就让小p带我们去吧", "label": []}
+{"text": "可以啊叫小P找一下", "label": []}
+{"text": "辛苦工作这么久我们要去吃大餐犒劳一下", "label": []}
+{"text": "要不去吃酱油鸡", "label": [["dishName", "酱油鸡"]]}
+{"text": "太多了不知道怎么选", "label": []}
+{"text": "你们决定", "label": []}
+{"text": "那没事等下再看嘛不着急", "label": []}
+{"text": "哈哈哈他不懂鱼生到底有多好吃我们去吧", "label": [["dishName", "鱼生"]]}
+{"text": "是的我要排号", "label": []}
+{"text": "那家店叫什么名字啊", "label": [["poiName", "那家"]]}
+{"text": "在朝阳区都有什么好吃的啊", "label": [["location", "朝阳区"]]}
+{"text": "搜索市桥北路的北方小厨", "label": [["poiName", "北方小厨"], ["location", "市桥北路"]]}
+{"text": "那去海底捞吧", "label": [["poiName", "海底捞"]]}
+{"text": "哇我就在小红书上看过没有吃过呢", "label": []}
+{"text": "现在也只能这样了", "label": []}
+{"text": "那边可以挺近的", "label": [["location", "那边"]]}
+{"text": "那就先拿个号吧小P", "label": []}
+{"text": "廖二娃串串香东西不多服务态度一直都很不好这家不推荐去啊", "label": [["poiName", "廖二娃串串香"]]}
+{"text": "帮我们按照评分从高到低进行排序吧", "label": []}
+{"text": "那听你们的决定", "label": []}
+{"text": "小P导航市桥", "label": [["location", "市桥"]]}
+{"text": "我就说嘛先给我们排号吧", "label": []}
+{"text": "要不要先预约的", "label": []}
+{"text": "上次吃的日本料理挺好吃的还想吃下", "label": [["type", "日本料理"]]}
+{"text": "这边四川菜比较少吧", "label": [["type", "四川菜"]]}
+{"text": "闹闹想吃肯德基", "label": [["poiName", "肯德基"]]}
+{"text": "我们吃重庆火锅吧", "label": [["type", "重庆火锅"]]}
+{"text": "那你开始导航吧", "label": []}
+{"text": "行那你有什么地去的吗", "label": []}
+{"text": "没有", "label": []}
+{"text": "对呀你最近胖了好多", "label": []}
+{"text": "我不要真的不想走路啊.", "label": []}
+{"text": "那听你决定吧我跟着", "label": []}
+{"text": "哎呀难得出来逛街就吃一顿吗", "label": []}
+{"text": "没去过上次去的是大沥那边", "label": []}
+{"text": "中午吃个海底捞吧怎么样", "label": [["poiName", "海底捞"]]}
+{"text": "二弟我们去吃肉丝茄子煲", "label": [["dishName", "肉丝茄子煲"]]}
+{"text": "我俩也要排号", "label": []}
+{"text": "现在这个点都得排号了小P给我们4个人排号吧", "label": []}
+{"text": "天气转凉了我提议吃个火锅", "label": [["type", "火锅"]]}
+{"text": "帮我们排号", "label": []}
+{"text": "亲爱的我想吃油焖大虾", "label": [["dishName", "油焖大虾"]]}
+{"text": "那我们现在就去吧", "label": []}
+{"text": "我不吃辣的", "label": [["taste", "辣"]]}
+{"text": "重点是没吃过这个怕踩雷", "label": [["poiName", "这个"]]}
+{"text": "老婆去吃海底捞吗", "label": [["poiName", "海底捞"]]}
+{"text": "是哦还有鸽子药膳汤无花果浸白鸽去吃吧", "label": [["dishName", "鸽子药膳汤"], ["dishName", "无花果浸白鸽"]]}
+{"text": "就这个咯", "label": []}
+{"text": "那你想吃什么", "label": []}
+{"text": "宝宝我们去吃土耳其菜吧", "label": []}
+{"text": "可以啊你喜欢就好.", "label": []}
+{"text": "我要吃流沙包", "label": [["dishName", "流沙包"]]}
+{"text": "妈你还讲哼", "label": []}
+{"text": "小p帮我们排号吧", "label": []}
+{"text": "好我来导航", "label": []}
+{"text": "我也跟大队吧哈哈", "label": []}
+{"text": "那我们去万达广场吃火锅吧", "label": [["location", "万达广场"], ["type", "火锅"]]}
+{"text": "有友情价的吗", "label": []}
+{"text": "它家口味咋样的", "label": [["poiName", "它家"]]}
+{"text": "那我们去这个吧", "label": []}
+{"text": "小P再筛选一下人均价在100到300之间", "label": []}
+{"text": "益华广场", "label": [["location", "益华广场"]]}
+{"text": "再帮我们看一下排队情况", "label": []}
+{"text": "好呀小P先给我们排号吧", "label": []}
+{"text": "算了吧换其他家吧", "label": []}
+{"text": "行小P搜索幸邻食堂", "label": [["poiName", "幸邻食堂"]]}
+{"text": "那就去这家吧", "label": [["poiName", "这家"]]}
+{"text": "在大旺广场", "label": [["location", "大旺广场"]]}
+{"text": "现在共排有10位预计等待60分钟", "label": []}
+{"text": "要不我们就去吃川菜吧吧", "label": [["type", "川菜"]]}
+{"text": "小p帮我查一下排号多少", "label": []}
+{"text": "对啊就是今天", "label": []}
+{"text": "行啊要不叫上铭", "label": []}
+{"text": "就是葱香鸡红酒虾这些当地做法", "label": [["dishName", "葱香鸡"], ["dishName", "红酒虾"]]}
+{"text": "那排3个位吧小P", "label": []}
+{"text": "不需要", "label": []}
+{"text": "我咋感觉你们是要吃东北菜", "label": [["type", "东北菜"]]}
+{"text": "那咱们去七星岩东门广场吧", "label": [["location", "七星岩东门广场"]]}
+{"text": "老婆今天你想吃什么吖", "label": []}
+{"text": "不清楚", "label": []}
+{"text": "好呀这不错", "label": []}
+{"text": "好的帮我们排号吧", "label": []}
+{"text": "好啊去吧", "label": []}
+{"text": "有个专门排号的公众号叫什么突然想不起来了", "label": []}
+{"text": "那你还问我们有什么地方可以吃", "label": []}
+{"text": "小p能帮我放首小猪佩琪吗", "label": []}
+{"text": "吃点垫下肚子就行了", "label": []}
+{"text": "再筛选一下要有停车场的", "label": []}
+{"text": "还是就近吧", "label": []}
+{"text": "还有捞汁螺片鲍鱼捞饭春卷也可以", "label": [["dishName", "捞汁螺片"], ["dishName", "鲍鱼捞饭"], ["dishName", "春卷"]]}
+{"text": "小P成都最火的奶茶", "label": [["dishName", "奶茶"]]}
+{"text": "阿小胖啊今晚去吃生蚝管够", "label": [["dishName", "生蚝"]]}
+{"text": "没事的我挺想吃的", "label": []}
+{"text": "小P去蛙小侠", "label": [["poiName", "蛙小侠"]]}
+{"text": "那就找个好吃的带上爸爸过去尝尝", "label": []}
+{"text": "小P帮我导航", "label": []}
+{"text": "好的小P导航到业业海鲜自助", "label": [["poiName", "业业海鲜自助"]]}
+{"text": "小P展示本次系统更新的内容", "label": []}
+{"text": "五人", "label": []}
+{"text": "我都可以尽快安排吧", "label": []}
+{"text": "看图片介绍我都快流口水了", "label": []}
+{"text": "麻辣烫吗我也要吃", "label": [["dishName", "麻辣烫"]]}
+{"text": "双皮奶还得看大良", "label": [["dishName", "双皮奶"], ["location", "大良"]]}
+{"text": "中山一路那家台湾菜吧", "label": [["location", "中山一路"], ["type", "台湾菜"]]}
+{"text": "4人", "label": []}
+{"text": "我看行小p去五彩城", "label": [["location", "五彩城"]]}
+{"text": "渔文乐可以", "label": [["poiName", "渔文乐"]]}
+{"text": "现在这店排号多人吗小P", "label": []}
+{"text": "可以这个我同意", "label": [["type", "这个"]]}
+{"text": "我都行你们决定", "label": []}
+{"text": "那好吧", "label": []}
+{"text": "我倒没有哦", "label": []}
+{"text": "小P先取个号吧", "label": []}
+{"text": "我看看有点小贵哇快五百一人了", "label": []}
+{"text": "中午去吃点什么吗", "label": []}
+{"text": "人是会变的嘛.", "label": []}
+{"text": "那我们就去吧", "label": []}
+{"text": "先吃点东西垫垫肚子吧好鬼饿", "label": []}
+{"text": "可以啊", "label": []}
+{"text": "四个", "label": []}
+{"text": "那我们去试试呗", "label": []}
+{"text": "张哥体重可是女生的秘密不吃饱哪有力气减肥", "label": []}
+{"text": "那我出发咯", "label": []}
+{"text": "哦豁广泰没包间了", "label": [["poiName", "广泰"]]}
+{"text": "可以啊不过要找容易停车的", "label": []}
+{"text": "小P找下哪里有罗汉果菊花茶", "label": [["dishName", "罗汉果菊花茶"]]}
+{"text": "让小P搜下那些评分高的餐厅", "label": []}
+{"text": "可以我没意见", "label": []}
+{"text": "你知不知道哪里有呀", "label": []}
+{"text": "表哥我出来了喔", "label": []}
+{"text": "快了我们要不要先去排号啊去到就可以吃了", "label": []}
+{"text": "哈哈哈哈你自己一桌应该也挺爽的", "label": []}
+{"text": "小P导航到天河广场", "label": [["location", "天河广场"]]}
+{"text": "评分高点的", "label": []}
+{"text": "去酒店吧", "label": [["poiName", "酒店"]]}
+{"text": "那带上吧带他尝尝鲜", "label": []}
+{"text": "去大旺广场", "label": [["location", "大旺广场"]]}
+{"text": "在白云湖畔", "label": [["location", "白云湖畔"]]}
+{"text": "2人", "label": []}
+{"text": "然后我们饿了小P你有订餐功能吗", "label": []}
+{"text": "是啊新店开业一般都有活动", "label": []}
+{"text": "我赞同", "label": []}
+{"text": "去周记烧烤吧", "label": [["poiName", "周记烧烤"]]}
+{"text": "OK你喜欢就好", "label": []}
+{"text": "既然出去吃就不要吃这些了吧", "label": [["type", "这些"]]}
+{"text": "我都行我经常去呢你们说了算", "label": []}
+{"text": "好嘞", "label": []}
+{"text": "我对烧烤这些的也不太熟呀", "label": [["type", "烧烤"]]}
+{"text": "我觉得我们过去也要时间不知道那边需不需要排队呢", "label": []}
+{"text": "3人", "label": []}
+{"text": "哪里需要看", "label": []}
+{"text": "就是我弟肯定我惯着啦.", "label": []}
+{"text": "好嘞我导航啦", "label": []}
+{"text": "我想吃小龙虾啊烧烤啊还有糖水", "label": [["dishName", "小龙虾"], ["type", "烧烤"], ["dishName", "糖水"]]}
+{"text": "4人", "label": []}
+{"text": "没问题你想吃啥", "label": []}
+{"text": "直接导航到泰安花园吧", "label": [["location", "泰安花园"]]}
+{"text": "这个的话要不找饮品店去", "label": [["type", "饮品"]]}
+{"text": "给王哥孩子省罐奶粉钱不去了", "label": []}
+{"text": "有呀九转大肠老好吃了", "label": [["dishName", "九转大肠"]]}
+{"text": "小P帮我排个号", "label": []}
+{"text": "你们两表个态呗", "label": []}
+{"text": "我没有问题你问一下其他人吧", "label": []}
+{"text": "第一个", "label": []}
+{"text": "几点了", "label": []}
+{"text": "取号2人用餐", "label": []}
+{"text": "乖啦听你妈妈的话", "label": []}
+{"text": "那我们就排号吧", "label": []}
+{"text": "那咱们去黄埔二路吧", "label": [["location", "黄埔二路"]]}
+{"text": "答应你们的事情肯定是要做到的嘛", "label": []}
+{"text": "看一下凡熙餐厅的营业时间", "label": [["poiName", "凡熙餐厅"]]}
+{"text": "那你想去哪", "label": []}
+{"text": "俩位", "label": []}
+{"text": "你推荐的一定没有问题同意", "label": []}
+{"text": "帮我排号先", "label": []}
+{"text": "是吗那今天我们一起去吧.", "label": []}
+{"text": "你吃过吗还是听说过", "label": []}
+{"text": "怎么了怎么这么高兴", "label": []}
+{"text": "还是很多不好找", "label": []}
+{"text": "我想吃不辣的你们有什么推荐", "label": [["taste", "辣"]]}
+{"text": "熊熊", "label": []}
+{"text": "俩人", "label": []}
+{"text": "老婆下班你打算去吃什么东西呀", "label": []}
+{"text": "听起来不错", "label": []}
+{"text": "哪有顺德醉鹅吃啊", "label": [["dishName", "顺德醉鹅"]]}
+{"text": "去吃海底捞", "label": [["poiName", "海底捞"]]}
+{"text": "加上妈妈他们可能有十二个吧", "label": []}
+{"text": "评分有8.0还算可以的", "label": []}
+{"text": "我觉得烤鱼的味道是真的香去吃一顿吧", "label": [["dishName", "烤鱼"]]}
+{"text": "那去吧尝尝鲜", "label": []}
+{"text": "周末了出去聚聚吧", "label": []}
+{"text": "还好有点渴要不我们去试下哈根达斯", "label": [["dishName", "哈根达斯"]]}
+{"text": "嗯那就这个吧", "label": []}
+{"text": "好啊", "label": []}
+{"text": "去吧小P预约四人", "label": []}
+{"text": "好.", "label": []}
+{"text": "这样子吧既然我们的意见不同意那就你来从我们中选一个吧", "label": []}
+{"text": "你们就拼命吃就行啦最重要是要吃的开心", "label": []}
+{"text": "今天第一次见伯父伯母肯定要请岳父岳母吃顿饭", "label": []}
+{"text": "试试其他的呀", "label": []}
+{"text": "对呀我也想喝点小酒呢", "label": [["dishName", "酒"]]}
+{"text": "我的话去吃烤鸭怎么样", "label": [["dishName", "烤鸭"]]}
+{"text": "中午吃点便宜的吧", "label": []}
+{"text": "好吧那你们决定就好了", "label": []}
+{"text": "就去宴江南吧", "label": [["poiName", "宴江南"]]}
+{"text": "不是可以导航吗", "label": []}
+{"text": "我们现在去吃点什么东西啊", "label": []}
+{"text": "小p帮我们导航过去吧.", "label": []}
+{"text": "七点多了", "label": []}
+{"text": "我也不知道呢", "label": []}
+{"text": "你陪不陪我去嘛.", "label": []}
+{"text": "我们一共四人", "label": []}
+{"text": "那就去吃清淡的", "label": [["taste", "清淡"]]}
+{"text": "我也是不了解.", "label": []}
+{"text": "也对哦我看下这家怎么样阳记过桥米线", "label": [["poiName", "阳记过桥米线"]]}
+{"text": "就去海底捞吧", "label": [["poiName", "海底捞"]]}
+{"text": "不过你想去吃什么", "label": []}
+{"text": "是的", "label": []}
+{"text": "嗯还没有问大家对食物有没有什么禁忌呢", "label": []}
+{"text": "那我们先排个号还是去到在排呀", "label": []}
+{"text": "不远耶我们就导航去这里吧", "label": []}
+{"text": "宝宝我想吃猪脚饭", "label": [["dishName", "猪脚饭"]]}
+{"text": "是啊评分还高.", "label": []}
+{"text": "我吃什么都无所谓", "label": []}
+{"text": "老公今天带女儿去哪吃", "label": []}
+{"text": "好的给我们3人排号吧", "label": []}
+{"text": "这怎么行一定要好好招待你你有什么想吃的吗", "label": []}
+{"text": "今天我请你们去吃潮汕菜", "label": [["type", "潮汕菜"]]}
+{"text": "今晚吃红烧肉怎么样", "label": [["dishName", "红烧肉"]]}
+{"text": "我记得叫小川洋风料理", "label": [["poiName", "小川洋风料理"]]}
+{"text": "要不去吃猪肚鸡", "label": [["dishName", "猪肚鸡"]]}
+{"text": "嗯家里做好饭没现在我快饿死了", "label": []}
+{"text": "好嘞小P帮我导航到宁叔煲仔饭", "label": [["poiName", "宁叔煲仔饭"]]}
+{"text": "老婆今天吃什么好呀", "label": []}
+{"text": "不用客气说吧", "label": []}
+{"text": "你开始导航吧", "label": []}
+{"text": "我好久没吃过鸡肉啦好想吃鸡", "label": []}
+{"text": "我最近不想吃辣的", "label": [["taste", "辣"]]}
+{"text": "小P开始导航吧", "label": []}
+{"text": "那就这家吧", "label": [["poiName", "这家"]]}
+{"text": "下雨天和奶茶更配哦", "label": [["dishName", "奶茶"]]}
+{"text": "我记起来一家大小董去吗", "label": [["poiName", "大小董"]]}
+{"text": "五个", "label": []}
+{"text": "好那就去那了", "label": []}
+{"text": "关闭音乐", "label": []}
+{"text": "别考虑啦让大哥带我们去吃就好啦", "label": []}
+{"text": "小p导航去肇庆敏捷广场米芝莲", "label": [["location", "肇庆敏捷广场"], ["poiName", "米芝莲"]]}
+{"text": "看看现在有位吗", "label": []}
+{"text": "不是刚吃过吗怎么又饿了", "label": []}
+{"text": "是的别叽叽歪歪了", "label": []}
+{"text": "选第二个吧比较近", "label": []}
+{"text": "宝啊都看这么久就看好要吃什么了吗", "label": []}
+{"text": "排号吧", "label": []}
+{"text": "可以啊环境看起来不错.", "label": []}
+{"text": "真的好吃你就跟我去试试你绝对会喜欢的", "label": []}
+{"text": "其它地方也还有挺多分店的", "label": []}
+{"text": "是的", "label": []}
+{"text": "就是那种用锡纸包着烤的窑鸡", "label": [["dishName", "窑鸡"]]}
+{"text": "我们先在附近找找看吧看看有什么店", "label": []}
+{"text": "小P我要吃烤牛肉粒", "label": [["dishName", "烤牛肉粒"]]}
+{"text": "啊我要很久才挑出要吃什么啊", "label": []}
+{"text": "你想去吃什么我都可以的", "label": []}
+{"text": "可以啊我也想吃鸡煲", "label": [["dishName", "鸡煲"]]}
+{"text": "我不了解你决定吧.", "label": []}
+{"text": "小P现在这是的运动模式还是什么", "label": []}
+{"text": "给我导航过去顺便排号", "label": []}
+{"text": "好耶我最爱的就是蛋糕了", "label": [["dishName", "蛋糕"]]}
+{"text": "好呀好久没一起出去吃饭了", "label": []}
+{"text": "好不好吃的啊", "label": []}
+{"text": "现在几点钟了", "label": []}
+{"text": "那你要先拿号啊下班过去就多人了", "label": []}
+{"text": "我觉得没必要了下次赶早再去也行", "label": []}
+{"text": "那我们吃什么呢", "label": []}
+{"text": "好啊小P找下哪里有", "label": []}
+{"text": "那现在要去吃啥", "label": []}
+{"text": "那你帮我定间包厢", "label": []}
+{"text": "位置我忘记了你让小p帮忙找一下", "label": []}
+{"text": "老公我们今天去吃什么", "label": []}
+{"text": "我看了评论是有烤肉西餐寿司吃的", "label": [["type", "烤肉"], ["type", "西餐"], ["type", "寿司"]]}
+{"text": "嘿嘿一直没敢跟你说", "label": []}
+{"text": "那你先打个电话订座位", "label": []}
+{"text": "要不出去吃个饭", "label": []}
+{"text": "我尝尝那个大鹅肝", "label": [["dishName", "大鹅肝"]]}
+{"text": "很久没吃了出发", "label": []}
+{"text": "去吃自助餐吧", "label": [["type", "自助餐"]]}
+{"text": "这个时间也还好不是很久那就帮我们预约4位吧", "label": []}
+{"text": "对啊我正好也想吃香辣干锅牛蛙啦", "label": [["dishName", "香辣干锅牛蛙"]]}
+{"text": "我也不知道哦", "label": []}
+{"text": "这家怎么样辣妹子", "label": [["poiName", "辣妹子"]]}
+{"text": "可以没问题", "label": []}
+{"text": "是的", "label": []}
+{"text": "好给我们3人排号吧", "label": []}
+{"text": "那排个号小P", "label": []}
+{"text": "你想吃的你来选吧", "label": []}
+{"text": "嗯我是想吃涮肉啊", "label": [["type", "涮肉"]]}
+{"text": "好评还挺多的", "label": []}
+{"text": "顺便帮我打开全部车窗透气", "label": []}
+{"text": "给我们导航过去顺便排号", "label": []}
+{"text": "我在比较干锅鸡和辣子鸡的区别", "label": [["dishName", "干锅鸡"], ["dishName", "辣子鸡"]]}
+{"text": "好吧就先不吃", "label": []}
+{"text": "现在这小p都这么方便了吗", "label": []}
+{"text": "那我们应该快要过号了时间不够", "label": []}
+{"text": "我没意见", "label": []}
+{"text": "披萨想吃他好久了", "label": [["dishName", "披萨"]]}
+{"text": "这家怎么样牛立方", "label": [["poiName", "牛立方"]]}
+{"text": "然后再订多一个包厢吧", "label": []}
+{"text": "好呀", "label": []}
+{"text": "我来查", "label": []}
+{"text": "近的啦不然我提出来干嘛", "label": []}
+{"text": "有没有人均消费在60的", "label": []}
+{"text": "这天气有点冷要不我们去吃火锅吧", "label": [["type", "火锅"]]}
+{"text": "是呀天气一下就变冷了可怕", "label": []}
+{"text": "人多吗", "label": []}
+{"text": "那你们找一下呗", "label": []}
+{"text": "想吃甜品", "label": [["type", "甜品"]]}
+{"text": "小P搜索荣先森", "label": [["poiName", "荣先森"]]}
+{"text": "现在就去", "label": []}
+{"text": "好吧那就去吃火锅吧", "label": [["type", "火锅"]]}
+{"text": "小辛今天你想出去吃什么呀", "label": []}
+{"text": "小导航到口口火锅城", "label": [["poiName", "口口火锅城"]]}
+{"text": "好啊你喜欢罗", "label": []}
+{"text": "看到了啥呀说来听听是什么好吃的", "label": []}
+{"text": "不知道哇你叫小p搜一下", "label": []}
+{"text": "宝儿想去那里吃啊", "label": []}
+{"text": "要不要先排号的", "label": []}
+{"text": "那就去远点吃点新鲜的", "label": [["taste", "新鲜的"]]}
+{"text": "我都行", "label": []}
+{"text": "体育西路的海底捞怎么样", "label": [["poiName", "海底捞"], ["location", "体育西路"]]}
+{"text": "那行你们觉得呢", "label": []}
+{"text": "我们可以直接走路过去了", "label": []}
+{"text": "我想吃的可多了", "label": []}
+{"text": "有啥好吃的", "label": []}
+{"text": "那想去吃什么呢", "label": []}
+{"text": "找一找吧", "label": []}
+{"text": "小P看下有没有停车场", "label": []}
+{"text": "就去那里了吃了饭我在逛一下换部手机", "label": [["location", "那里"]]}
+{"text": "我觉得可以", "label": []}
+{"text": "或者牛肉火锅", "label": [["dishName", "牛肉火锅"]]}
+{"text": "是不是在和悦汇我忘记叫什么名字来的我们去那里尝尝粤菜", "label": [["type", "粤菜"], ["location", "和悦汇"]]}
+{"text": "我们今天满足你", "label": []}
+{"text": "2人", "label": []}
+{"text": "还是你了解我.", "label": []}
+{"text": "上面写着是在爱工厂文化创业园内的", "label": [["location", "爱工厂文化创业园"]]}
+{"text": "亲爱的要不我们去吃烤肉吧", "label": [["type", "烤肉"]]}
+{"text": "4位", "label": []}
+{"text": "吃砂锅粥很容易饿的去吃点别的吧", "label": [["dishName", "砂锅粥"]]}
+{"text": "小P帮我按销量由高到低排序", "label": []}
+{"text": "去哪吃有想好吗", "label": []}
+{"text": "亲爱的想吃拔丝地瓜", "label": [["dishName", "拔丝地瓜"]]}
+{"text": "当真", "label": []}
+{"text": "爸爸今天能让我自己选餐厅点菜吗", "label": []}
+{"text": "去哪家吃呢", "label": []}
+{"text": "OK也帮我拿号", "label": []}
+{"text": "现在就导航过去", "label": []}
+{"text": "小P真可爱还会温馨提示", "label": []}
+{"text": "还有油盐饭也挺不错的", "label": [["dishName", "油盐饭"]]}
+{"text": "还是你选吧", "label": []}
+{"text": "我没有吃过不过可以尝一尝", "label": []}
+{"text": "评分最高的那个", "label": []}
+{"text": "感觉有点小拥堵", "label": []}
+{"text": "这也太难选了感觉都快有选择恐惧症了.", "label": []}
+{"text": "吃火锅吧", "label": [["type", "火锅"]]}
+{"text": "今天只有10度也太冷了", "label": []}
+{"text": "出来玩怎么也要吃顿好的吧", "label": []}
+{"text": "小p导航去大旺广场瑞幸咖啡", "label": [["location", "大旺广场"], ["poiName", "瑞幸咖啡"]]}
+{"text": "小P帮我导航", "label": []}
+{"text": "哈哈有没有什么不吃的", "label": []}
+{"text": "15分钟可以吗", "label": []}
+{"text": "对的怎么了", "label": []}
+{"text": "嗯去撸串吧", "label": []}
+{"text": "可以", "label": []}
+{"text": "我也来个豆腐花要甜的", "label": [["dishName", "豆腐花"], ["taste", "甜"]]}
+{"text": "不知道啊你有什么好的推荐吗", "label": []}
+{"text": "需要开启导航吧", "label": []}
+{"text": "大伙们今天去吃什么东西", "label": []}
+{"text": "这家环境不怎么样啊", "label": [["poiName", "这家"]]}
+{"text": "那就给我们排号吧", "label": []}
+{"text": "不要我昨晚刚吃过", "label": []}
+{"text": "老婆我们去吃凤凰花胶鸡怎么样", "label": [["poiName", "凤凰花胶鸡"]]}
+{"text": "就是你赶紧带我们去吧", "label": []}
+{"text": "妈妈我想喝饮料", "label": []}
+{"text": "那走吧去尝尝看", "label": []}
+{"text": "还好吧不算很贵", "label": []}
+{"text": "排队取号2人", "label": []}
+{"text": "是啊我上次都吃光盘的", "label": []}
+{"text": "小P搜索哪里有鸡杂煲吃", "label": [["dishName", "鸡杂煲"]]}
+{"text": "好啊那边我没去过去试一下也好", "label": [["location", "那边"]]}
+{"text": "这有什么的交给我小P给我们排号吧4人桌", "label": []}
+{"text": "我也不知道你问问祥哥", "label": []}
+{"text": "它有什么好吃的呢", "label": [["poiName", "它"]]}
+{"text": "去哪里吃老李你来推荐呗", "label": []}
+{"text": "人不多也帮我们兄弟四人排个号", "label": []}
+{"text": "先说好能不能吃辣有没有忌口", "label": [["taste", "辣"]]}
+{"text": "小p搜索洪山路北周边的素之履茶社", "label": [["location", "洪山路"]]}
+{"text": "今天过中秋去吃什么", "label": []}
+{"text": "小P哪里可以吃火锅呀", "label": [["type", "火锅"]]}
+{"text": "有什么好吃", "label": []}
+{"text": "事可真多", "label": []}
+{"text": "旺旺广场有一家傻嗨嗨餐厅挺不错的", "label": [["location", "旺旺广场"], ["poiName", "傻嗨嗨"]]}
+{"text": "那我们还吃什么", "label": []}
+{"text": "那吃什么", "label": []}
+{"text": "有哦他们家的菌菇锅超级鲜美", "label": [["dishName", "菌菇锅"]]}
+{"text": "没事咱们可以等", "label": []}
+{"text": "那去吃桑拿走地鸡挺不错的", "label": [["dishName", "桑拿走地鸡"]]}
+{"text": "那你给个意见啊", "label": []}
+{"text": "想起就流口水", "label": []}
+{"text": "那帮我排号吧", "label": []}
+{"text": "换其他看看呗", "label": []}
+{"text": "这个我觉得可以哦", "label": [["type", "这个"]]}
+{"text": "3人", "label": []}
+{"text": "你是不是忘了什么", "label": []}
+{"text": "很快的10来分钟", "label": []}
+{"text": "好啊我也要去", "label": []}
+{"text": "行啊一起去吃吃看", "label": []}
+{"text": "这个店现在要排多久", "label": []}
+{"text": "那肯定记得啦今晚出去吃个你最喜欢的西餐", "label": [["type", "西餐"]]}
+{"text": "小P帮我查询幸福西饼", "label": [["poiName", "幸福西饼"]]}
+{"text": "没问题", "label": []}
+{"text": "那就去帝景蓝湾那家中华茶楼吧", "label": [["location", "帝景蓝湾"], ["poiName", "中华茶楼"]]}
+{"text": "亲爱的要不去吃川国演义吧", "label": [["poiName", "川国演义"]]}
+{"text": "五位", "label": []}
+{"text": "小P到我的号了吗", "label": []}
+{"text": "你们确定吗", "label": []}
+{"text": "我不能吃海鲜吃了会过敏", "label": [["type", "海鲜"]]}
+{"text": "不行那个太油", "label": [["type", "那个"]]}
+{"text": "导航现在前往", "label": []}
+{"text": "那小p帮我排号吧", "label": []}
+{"text": "我们排个号先吧", "label": []}
+{"text": "排号五位", "label": []}
+{"text": "可以呀你想去吃什么东西", "label": []}
+{"text": "那里的东西好不好吃呀", "label": [["poiName", "那里"]]}
+{"text": "我最近胃不太舒服不想吃辣的", "label": [["taste", "辣"]]}
+{"text": "这个好像是不错不过价格怎么样", "label": []}
+{"text": "嗯你先跟小p说在哪吧不然我不知道怎么开", "label": []}
+{"text": "我就特别想吃虾饺", "label": [["dishName", "虾饺"]]}
+{"text": "为什么", "label": []}
+{"text": "那我们就去吃闽南菜吧", "label": [["type", "闽南菜"]]}
+{"text": "今天重阳节我们出去吃点东西改善伙食吧", "label": []}
+{"text": "知道哪里的好吃嘛", "label": []}
+{"text": "咋你是准备宰我一顿", "label": []}
+{"text": "那去哪里吃", "label": []}
+{"text": "嘿嘿我这是教育他们凡事要紧着妈妈先", "label": []}
+{"text": "还可以啊不算太高啊", "label": []}
+{"text": "酱香骨头听名字就香了我要去吃", "label": [["dishName", "酱香骨头"]]}
+{"text": "我觉得还是看看吧", "label": []}
+{"text": "那你想去哪里去吃烤肉", "label": [["type", "烤肉"]]}
+{"text": "我们去哪里吃", "label": []}
+{"text": "赞同", "label": []}
+{"text": "去吃广式烧腊餐厅感觉挺不错的", "label": [["poiName", "广式烧腊餐厅"]]}
+{"text": "那走吧", "label": []}
+{"text": "没事烤鱼我接受老公你反对无效", "label": [["dishName", "烤鱼"]]}
+{"text": "我们去吃烤肉怎么样", "label": [["type", "烤肉"]]}
+{"text": "那里有吗", "label": [["location", "那里"]]}
+{"text": "火锅好吃好久没吃了", "label": [["type", "火锅"]]}
+{"text": "不过哪里的好吃呢", "label": []}
+{"text": "我也可以", "label": []}
+{"text": "你说吃啥嘛这又不行那又不行的", "label": []}
+{"text": "我们不管今晚必须要安排饭局", "label": []}
+{"text": "那要不去东北人家", "label": [["poiName", "东北人家"]]}
+{"text": "我想喝蜜雪冰城", "label": [["poiName", "蜜雪冰城"]]}
+{"text": "为什么", "label": []}
+{"text": "评分最高的", "label": []}
+{"text": "妈妈你说我们吃什么比较好啊", "label": []}
+{"text": "可以那就去吃吧", "label": []}
+{"text": "小P找好喝的椰子炖鸡", "label": [["dishName", "椰子炖鸡"]]}
+{"text": "那就去找个家常菜吧", "label": [["type", "家常菜"]]}
+{"text": "开始导航吧", "label": []}
+{"text": "要等那么久呀", "label": []}
+{"text": "好吧", "label": []}
+{"text": "想喝就点杯来喝", "label": []}
+{"text": "小P搜索渔村鹏城饭馆", "label": [["poiName", "渔村鹏城饭馆"]]}
+{"text": "那小P找一下评价高的东北菜推荐", "label": [["type", "东北菜"]]}
+{"text": "我想到一家店", "label": [["poiName", "一家"]]}
+{"text": "有啊我每次都要必点那个蜜汁烧排骨那味道是真的香", "label": [["dishName", "蜜汁烧排骨"]]}
+{"text": "大沙地店那个", "label": [["poiName", "大沙地店"]]}
+{"text": "考试了也是数学考试考了九十分", "label": []}
+{"text": "你看下这家怎么样", "label": [["poiName", "这家"]]}
+{"text": "可以", "label": []}
+{"text": "小P帮我导航", "label": []}
+{"text": "不错噢挺近的", "label": []}
+{"text": "在大旺广场那里有一家确定香饭店味道挺不错的", "label": [["location", "大旺广场"], ["poiName", "确定香"]]}
+{"text": "我就知道一个香茅草烤鱼还不错", "label": [["dishName", "香茅草烤鱼"]]}
+{"text": "那宝贝你想吃什么爸爸带你去", "label": []}
+{"text": "好的", "label": []}
+{"text": "没吃过啊去尝尝怎样", "label": []}
+{"text": "我都可以", "label": []}
+{"text": "行导航侨美食家", "label": [["poiName", "侨美食家"]]}
+{"text": "你们的意见如何", "label": []}
+{"text": "我想吃印度菜", "label": [["type", "印度菜"]]}
+{"text": "可以叫爸爸带你去啊", "label": []}
+{"text": "那你想去吃什么菜呀", "label": []}
+{"text": "那里河鲜都很新鲜呢", "label": [["poiName", "那里"], ["type", "河鲜"]]}
+{"text": "今晚随便吃发工资了还怕没钱结账啊", "label": []}
+{"text": "这店有没有优惠卷领啊", "label": []}
+{"text": "老公我想喝豆浆", "label": [["dishName", "豆浆"]]}
+{"text": "那我们要去试试看吗", "label": []}
+{"text": "武林广场有啥好吃的推荐吗小P", "label": [["location", "武林广场"]]}
+{"text": "小P去吃澳洲牛肋条", "label": [["dishName", "澳洲牛肋条"]]}
+{"text": "有没有优惠啊", "label": []}
+{"text": "三水的比较多要不去三水", "label": [["location", "三水"]]}
+{"text": "好久还去吗", "label": []}
+{"text": "好呀", "label": []}
+{"text": "我们4人就餐", "label": []}
+{"text": "小P搜索下院子餐厅现在营业了吗", "label": [["poiName", "院子餐厅"]]}
+{"text": "小P帮我导航", "label": []}
+{"text": "应该有的不过要搜搜看", "label": []}
+{"text": "啊这样吗要不去试试私房菜吧", "label": [["type", "私房菜"]]}
+{"text": "对啊你看看哪家多人排队的应该就不会踩坑了", "label": []}
+{"text": "那就走咯", "label": []}
+{"text": "怎么不订呢万一要排队久就完了", "label": []}
+{"text": "小P搜索一下人均20的餐厅", "label": []}
+{"text": "哎哟你这个小坏蛋", "label": []}
+{"text": "可以呀", "label": []}
+{"text": "我看了下在高岳路那有", "label": [["location", "高岳路"]]}
+{"text": "那我们就去吃粤菜吧", "label": [["type", "粤菜"]]}
+{"text": "行听你的下次再去", "label": []}
+{"text": "价格不会太贵吧", "label": []}
+{"text": "我想吃天妇罗", "label": [["dishName", "天妇罗"]]}
+{"text": "是的我们去试试自助餐吧", "label": [["type", "自助餐"]]}
+{"text": "那就出发吧", "label": []}
+{"text": "不要吧感觉那里没什么好吃的", "label": [["location", "那里"]]}
+{"text": "播放音乐", "label": []}
+{"text": "那先找个餐厅我们吃完再打包吧", "label": []}
+{"text": "我们今天去哪里吃饭啊", "label": []}
+{"text": "是啊所以你们赶紧同意", "label": []}
+{"text": "我们是去海底捞吃", "label": [["poiName", "海底捞"]]}
+{"text": "没事去到那里就差不多了", "label": []}
+{"text": "难道咱几个小姐妹出来玩就得放开玩也放开吃", "label": []}
+{"text": "好吃嘛", "label": []}
+{"text": "换一个吧我觉得东南亚菜不好吃", "label": [["type", "东南亚菜"]]}
+{"text": "行嘞没问题", "label": []}
+{"text": "给我们订个4人餐", "label": []}
+{"text": "那就去那家餐厅吧", "label": [["poiName", "那家"]]}
+{"text": "这家怎么样齐氏蟹橙酿", "label": [["poiName", "齐氏蟹橙酿"]]}
+{"text": "我也不", "label": []}
+{"text": "我都行反正是你想喝", "label": []}
+{"text": "好想去吃雪鳗虾饼", "label": []}
+{"text": "那好小P导航首尔家韩国料理", "label": []}
+{"text": "小P不就是能帮到我们吗", "label": []}
+{"text": "我今天生日我一个人在这里没得什么朋友", "label": []}
+{"text": "帮我们排号", "label": []}
+{"text": "这家有金牌红烧乳鸽秘制脆皮黑叉烧我都想吃", "label": [["dishName", "金牌红烧乳鸽"], ["dishName", "秘制脆皮黑叉烧"], ["poiName", "这家"]]}
+{"text": "那你们还有什么好推荐的吗", "label": []}
+{"text": "上次你不是说想吃虾饺吗我们就去吃虾饺可以吗", "label": [["dishName", "虾饺"]]}
+{"text": "那去吃火锅吧", "label": [["type", "火锅"]]}
+{"text": "那好吧", "label": []}
+{"text": "小p使用团购卷", "label": []}
+{"text": "应该还行吧", "label": []}
+{"text": "好像有", "label": []}
+{"text": "请当然少不了你们的", "label": []}
+{"text": "还挺早的现在就要去吗", "label": []}
+{"text": "可以呀那我们就去这家吃吧", "label": [["poiName", "这家"]]}
+{"text": "排号", "label": []}
+{"text": "我也无所谓", "label": []}
+{"text": "太辣不行到时点个鸳鸯锅", "label": [["dishName", "鸳鸯锅"], ["taste", "辣"]]}
+{"text": "既然你们都想去那就去华辉烤吧咯", "label": [["poiName", "华辉烤吧"]]}
+{"text": "好啊就在大旺吧", "label": [["location", "大旺"]]}
+{"text": "不瞒你说我也想吃哈哈哈哈", "label": []}
+{"text": "是万福路那家是吧", "label": [["location", "万福路"], ["poiName", "那家"]]}
+{"text": "给我们导航顺便排号", "label": []}
+{"text": "去光明广场怎么样", "label": [["location", "光明广场"]]}
+{"text": "今天难得放松休假啊去吃点好的怎样", "label": []}
+{"text": "我也想吃海底捞", "label": [["poiName", "海底捞"]]}
+{"text": "小P查询竹园饭店的地址", "label": [["poiName", "竹园饭店"]]}
+{"text": "俩人", "label": []}
+{"text": "亲爱的愿者上钩", "label": [["poiName", "愿者上钩"]]}
+{"text": "我要吃日本菜", "label": [["type", "日本菜"]]}
+{"text": "排号吧3人用餐", "label": []}
+{"text": "我有点忘记了", "label": []}
+{"text": "小帮我导航到小伙伴烤肉", "label": [["poiName", "小伙伴烤肉"]]}
+{"text": "你昨天去办事情况怎样", "label": []}
+{"text": "这个我没吃过去尝尝吧", "label": [["dishName", "这个"]]}
+{"text": "可以就订这里吧还是", "label": []}
+{"text": "老公儿子高考考得很好要不今晚就奖励下他请他去吃大餐吧", "label": []}
+{"text": "那就准备出发咯", "label": []}
+{"text": "开在哪了", "label": []}
+{"text": "再看看有没有儿童座椅吧", "label": []}
+{"text": "小导航到老尾潮汕菜", "label": [["poiName", "老尾潮汕菜"]]}
+{"text": "今天吃的不一样的吗", "label": []}
+{"text": "开这么久车了吃点啥吧", "label": []}
+{"text": "那就先不回去了吃点东西先", "label": []}
+{"text": "那个铁锅炖挺好吃的", "label": [["dishName", "铁锅炖"]]}
+{"text": "要不我去吃别的不太想吃烤肉", "label": [["type", "烤肉"]]}
+{"text": "小P中国八大菜系哪个最好吃", "label": []}
+{"text": "我也吃过可以看下", "label": []}
+{"text": "肯定有啊比如口水鸡", "label": [["dishName", "口水鸡"]]}
+{"text": "小P搜索一下麦当劳", "label": [["poiName", "麦当劳"]]}
+{"text": "小P帮我找RONG荣越南餐厅", "label": [["poiName", "RONG荣越南餐厅"]]}
+{"text": "可以啊我正好想吃呢", "label": []}
+{"text": "现在走起哈哈哈", "label": []}
+{"text": "难得今天都有空去聚聚吗", "label": []}
+{"text": "我想吃海鲜大咖", "label": [["dishName", "海鲜大咖"]]}
+{"text": "3个", "label": []}
+{"text": "我们就过去光头佬那里吃鱼生吧", "label": [["poiName", "光头佬"], ["dishName", "鱼生"]]}
+{"text": "我想回家吃", "label": []}
+{"text": "也是也是山水有相逢的", "label": []}
+{"text": "好想好去哪里吃了吗", "label": []}
+{"text": "高丽苑韩餐小民大排档都不错我都吃过", "label": [["poiName", "高丽苑韩餐"], ["poiName", "小民大排档"]]}
+{"text": "爸爸我想吃麦当劳", "label": [["poiName", "麦当劳"]]}
+{"text": "先看下有多少人小P", "label": []}
+{"text": "那我呢不带上我吗", "label": []}
+{"text": "我们去同和西路看看吧便宜些", "label": [["location", "同和西路"]]}
+{"text": "难道是怀孕了吗", "label": []}
+{"text": "好吧", "label": []}
+{"text": "我们找个地方喝点东西好吗", "label": []}
+{"text": "预定4人就餐哦", "label": []}
+{"text": "咱们也去聚聚吧", "label": []}
+{"text": "是吗先看下人均消费怎样", "label": []}
+{"text": "呃附近就只有一家川菜太二酸菜鱼", "label": [["type", "川菜"], ["poiName", "太二酸菜鱼"]]}
+{"text": "你说吧想去哪里", "label": []}
+{"text": "可以啊小P排号", "label": []}
+{"text": "亲爱的福楼法餐厅不错哦正宗的法餐享受法式浪漫", "label": [["poiName", "福楼法餐厅"]]}
+{"text": "这个提议不错", "label": []}
+{"text": "纤纤今晚不煮饭了我们出去吃好了", "label": []}
+{"text": "不错很少差评啊", "label": []}
+{"text": "这个听起来有戏哎", "label": []}
+{"text": "帮我们排号吧", "label": []}
+{"text": "行你让小P搜一下", "label": []}
+{"text": "那我们出发吧", "label": []}
+{"text": "好了好了不逗你了宝我们出发吧", "label": []}
+{"text": "你们拿主意吧", "label": []}
+{"text": "那就去这个店吧", "label": [["poiName", "这个"]]}
+{"text": "好好好随你.", "label": []}
+{"text": "导航吧", "label": []}
+{"text": "广州菜可以啊", "label": [["type", "广州菜"]]}
+{"text": "先导航过去吧小P帮我们导航", "label": []}
+{"text": "那就去那家姜太公烤鱼吃吧", "label": [["poiName", "姜太公烤鱼"]]}
+{"text": "它也没什么好吃的吧", "label": [["poiName", "它"]]}
+{"text": "2个", "label": []}
+{"text": "那我们路上再商量吃什么呗", "label": []}
+{"text": "你嘞", "label": []}
+{"text": "有停车场的", "label": []}
+{"text": "那个排队时间10分钟内的", "label": []}
+{"text": "现在是不是刚好有活动", "label": []}
+{"text": "八个人", "label": []}
+{"text": "我都可以啊", "label": []}
+{"text": "小P我们想吃豫菜找一下评分高的", "label": [["type", "豫菜"]]}
+{"text": "不会是去吃蛇吧", "label": []}
+{"text": "这样啊那我看下吧", "label": []}
+{"text": "那肯定吃点好的顺便帮你放放血啦", "label": []}
+{"text": "你们饿了没要不要去吃点东西", "label": []}
+{"text": "就俩", "label": []}
+{"text": "就去新达城那间吧", "label": [["location", "新达城"], ["poiName", "那间"]]}
+{"text": "随便吃也要看吃什么啊", "label": []}
+{"text": "别骗我哦小P帮我查下奈雪的人均消费", "label": [["poiName", "奈雪"]]}
+{"text": "排号4人用餐", "label": []}
+{"text": "小P帮我开副驾驶开一条缝", "label": []}
+{"text": "那你推荐的能差吗", "label": []}
+{"text": "你们倒是说嘛我请客", "label": []}
+{"text": "是的是的人均一百几乎没吃", "label": []}
+{"text": "对呀我们5个人过去吃", "label": []}
+{"text": "我建议去中环广场", "label": [["location", "中环广场"]]}
+{"text": "好就粤菜行吗", "label": [["type", "粤菜"]]}
+{"text": "可以呀瑞幸应该不用等这么久", "label": [["poiName", "瑞幸"]]}
+{"text": "帮我们排个号", "label": []}
+{"text": "要不带你去吃卤煮吧", "label": [["dishName", "卤煮"]]}
+{"text": "老公先排号吧", "label": []}
+{"text": "换一个吧", "label": []}
+{"text": "别着急慢慢来", "label": []}
+{"text": "亲爱的今天有点想吃东北菜", "label": [["type", "东北菜"]]}
+{"text": "哈哈哈那我就不客气咯", "label": []}
+{"text": "好嘞听你们两位的我现在看排号情况", "label": []}
+{"text": "好像有点难度", "label": []}
+{"text": "有船船我想去这里婆婆", "label": [["poiName", "这里"]]}
+{"text": "就去那家吧", "label": [["poiName", "那家"]]}
+{"text": "我都行你们决定吧", "label": []}
+{"text": "是吃什么东西的", "label": []}
+{"text": "我不想去天香府火锅不好吃", "label": [["poiName", "天香府火锅"]]}
+{"text": "不喜欢吃", "label": []}
+{"text": "那小P带我们去吧", "label": []}
+{"text": "墨西哥菜没听过我想尝试下", "label": [["type", "墨西哥菜"]]}
+{"text": "他也去算上他", "label": []}
+{"text": "吃点", "label": []}
+{"text": "这家怎么样胡辣子川菜", "label": [["poiName", "胡辣子川菜"]]}
+{"text": "那我们就去品胜餐厅吧", "label": [["poiName", "品胜餐厅"]]}
+{"text": "我有个好去处不知道你们去不去", "label": []}
+{"text": "小p帮我们排曼殊怀石料理的号.", "label": [["poiName", "曼殊怀石料理"]]}
+{"text": "我们现在就出发吗", "label": []}
+{"text": "现在是去吃东西吗", "label": []}
+{"text": "自助餐也不错啊你们觉得呢", "label": [["type", "自助餐"]]}
+{"text": "我不想吃呢", "label": []}
+{"text": "你们快点想啊", "label": []}
+{"text": "爸爸我想吃酸甜排骨", "label": [["dishName", "酸甜排骨"]]}
+{"text": "就是快点走吧", "label": []}
+{"text": "我也不想啊", "label": []}
+{"text": "我们逛到满头大汗了去喝点东西吧", "label": []}
+{"text": "摩达食堂你们吃过吗", "label": [["poiName", "摩达食堂"]]}
+{"text": "小P可以帮我们排号的嘛", "label": []}
+{"text": "就是去海边", "label": [["location", "海边"]]}
+{"text": "嘉宏广场的牛杂火锅煲很不错", "label": [["location", "嘉宏广场"], ["dishName", "牛杂火锅煲"]]}
+{"text": "想吃", "label": []}
+{"text": "小P找一下吃清淡的餐厅", "label": [["type", "清淡"]]}
+{"text": "说了请你么吃好吃的想吃什么就提出来", "label": []}
+{"text": "3个人", "label": []}
+{"text": "我上次在奥体打完球发现外面很多好吃的", "label": [["location", "奥体"]]}
+{"text": "我想吃川菜最近想吃辣的", "label": [["type", "川菜"], ["taste", "辣"]]}
+{"text": "2位", "label": []}
+{"text": "可以", "label": []}
+{"text": "小P开始导航吧", "label": []}
+{"text": "对嘛小p帮我排醉长安钟楼旗舰店的号.", "label": [["poiName", "醉长安"], ["location", "钟楼"]]}
+{"text": "行吧咱们就去财发家常菜吧", "label": [["poiName", "财发家常菜"]]}
+{"text": "排号吧", "label": []}
+{"text": "2人", "label": []}
+{"text": "好啊你们想吃什么", "label": []}
+{"text": "3人", "label": []}
+{"text": "妈妈我以后听你的话就是啦你带我去啦", "label": []}
+{"text": "我不管我们今天要搓顿好的", "label": []}
+{"text": "四位", "label": []}
+{"text": "需要", "label": []}
+{"text": "它的评分怎么好吃吗", "label": [["poiName", "它"]]}
+{"text": "什么居然还可以帮我们点外卖", "label": []}
+{"text": "小开始导航到重庆火锅人民路店", "label": [["poiName", "重庆火锅人民路店"]]}
+{"text": "那要不试下摩打食堂", "label": [["poiName", "摩打食堂"]]}
+{"text": "宝宝我们去吃顺德菜吧", "label": [["type", "顺德菜"]]}
+{"text": "亲爱的去东北人吃吧", "label": [["poiName", "东北人"]]}
+{"text": "去啊", "label": []}
+{"text": "我吃过那个炝五彩虾仁真的好吃.", "label": []}
+{"text": "别了吧不想吃印度菜", "label": [["type", "印度菜"]]}
+{"text": "先帮我排序评分高到低", "label": []}
+{"text": "评分最高的要等位吗", "label": []}
+{"text": "4人", "label": []}
+{"text": "我比较喜欢吃肉", "label": []}
+{"text": "好啊我想吃很久了", "label": []}
+{"text": "哟哟哟不愧是想了好多天的人都计划好啦", "label": []}
+{"text": "那让小P看看排号情况吧", "label": []}
+{"text": "说啥呢你不是去过吗", "label": []}
+{"text": "我已经看好了去正佳广场吧", "label": [["location", "正佳广场"]]}
+{"text": "小导航到重庆小吃馆", "label": [["poiName", "重庆小吃馆"]]}
+{"text": "他们家的烤乳鸽也不错", "label": [["dishName", "烤乳鸽"], ["poiName", "他们家"]]}
+{"text": "几点了老婆", "label": []}
+{"text": "好啊那里的烤茄子好吃", "label": []}
+{"text": "小P找好吃的黄焖鸡", "label": [["dishName", "黄焖鸡"]]}
+{"text": "好呀去海底捞我要吃我最爱吃的牛肚", "label": [["poiName", "海底捞"], ["dishName", "牛肚"]]}
+{"text": "这饿了么上面有张优惠券哦不知道能不能用", "label": []}
+{"text": "可以呀", "label": []}
+{"text": "那5人的", "label": []}
+{"text": "说是味道不入味还是什么反正评价不好", "label": []}
+{"text": "我们去蛙小家", "label": [["poiName", "蛙小家"]]}
+{"text": "你是想告诉我你没有计划去哪里庆祝吗", "label": []}
+{"text": "我吃过了你们吃我就陪你们", "label": []}
+{"text": "宝贝们我们去吃好吃的", "label": []}
+{"text": "没吃过可以试一下.", "label": []}
+{"text": "小P我要先点餐", "label": []}
+{"text": "好啊好啊", "label": []}
+{"text": "可以啊我现在就带你去", "label": []}
+{"text": "我们仨人就餐", "label": []}
+{"text": "你这话说得多虚一下去喝啥呢", "label": []}
+{"text": "我也想吃来着.", "label": []}
+{"text": "现在去吗", "label": []}
+{"text": "不太想去", "label": []}
+{"text": "还有一个和苑酒家也挺不错的", "label": [["poiName", "和苑酒家"]]}
+{"text": "我不想去这家哦", "label": [["poiName", "这家"]]}
+{"text": "才不告诉你呢我直接对小p说", "label": []}
+{"text": "小p搜索奶茶店", "label": [["dishName", "奶茶"]]}
+{"text": "嗯小p筛选评分高的", "label": []}
+{"text": "我们现在从这里过去刚刚就可以吃了", "label": []}
+{"text": "想去吃西餐吗老婆", "label": [["type", "西餐"]]}
+{"text": "给我播放中国好声音", "label": []}
+{"text": "嗯嗯", "label": []}
+{"text": "查到了没有", "label": []}
+{"text": "3人", "label": []}
+{"text": "没问题你让小P带我们去就好了你也不知道去哪里吃", "label": []}
+{"text": "要去吃什么啊宝", "label": []}
+{"text": "帮我们按照评分的从高到低来排序吧", "label": []}
+{"text": "小p查一下评分怎么样", "label": []}
+{"text": "4位", "label": []}
+{"text": "那还有多久才能吃上", "label": []}
+{"text": "去大润发那边", "label": [["location", "大润发"]]}
+{"text": "我没去吃过不过可以尝尝", "label": []}
+{"text": "宝宝我想吃酸奶", "label": [["dishName", "酸奶"]]}
+{"text": "爸爸我明天就要回学校了你今天要带我去吃什么好的吖", "label": []}
+{"text": "今晚想吃什么呢", "label": []}
+{"text": "四人", "label": []}
+{"text": "出发吧", "label": []}
+{"text": "还有呢想去吃什么", "label": []}
+{"text": "这还差不多", "label": []}
+{"text": "看看去哪吃肠粉", "label": [["dishName", "肠粉"]]}
+{"text": "那你有啥想吃的说", "label": []}
+{"text": "那咱们去哪里吃啊", "label": []}
+{"text": "好的小P帮我导航", "label": []}
+{"text": "这个点应该不会", "label": []}
+{"text": "他什么时候都对你那么好的只是你不知道而已", "label": []}
+{"text": "能先去吃饭吗我都饿死了", "label": []}
+{"text": "亲爱的下班了我们去吃饭吧", "label": []}
+{"text": "取号3人用餐", "label": []}
+{"text": "要不问问小p吧", "label": []}
+{"text": "该菜品评分多少", "label": []}
+{"text": "那吃川菜吧如何", "label": [["type", "川菜"]]}
+{"text": "那我们就决定去这家咯", "label": [["poiName", "这家"]]}
+{"text": "叫礼乐轩", "label": [["poiName", "礼乐轩"]]}
+{"text": "走带你去吃你找下去哪吃", "label": []}
+{"text": "孩子他爸去哪里吃", "label": []}
+{"text": "4位", "label": []}
+{"text": "远不远的呀", "label": []}
