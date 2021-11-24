@@ -7,37 +7,36 @@
 
 import torch
 import torch.nn as nn
+from transformers import BertPreTrainedModel
 
 
-class GlobalPointer(nn.Module):
+class GlobalPointer(BertPreTrainedModel):
     def __init__(self, bert, opt):
         super(GlobalPointer, self).__init__()
         self.bert = bert
-        opt.hidden_size = bert.config.hidden_size
+        self.hidden_size = bert.config.hidden_size
         self.ro_pe = opt.ro_pe
         self.inner_dim = opt.inner_dim
         self.ner_type_num = opt.ner_type_num
-        self.dropout = nn.Dropout(opt.dropout)
-        self.dense = nn.Linear(opt.hidden_size, opt.ner_type_num * opt.inner_dim * 2)
+        self.dropout = torch.nn.Dropout(opt.dropout)
+        self.dense = torch.nn.Linear(self.hidden_size, self.ner_type_num * self.inner_dim * 2)
+        self.init_weights()
 
     @staticmethod
     def sinusoidal_position_embedding(batch_size, seq_len, output_dim):
         position_ids = torch.arange(0, seq_len, dtype=torch.float).unsqueeze(-1)
-
         indices = torch.arange(0, output_dim // 2, dtype=torch.float)
         indices = torch.pow(10000, -2 * indices / output_dim)
         embeddings = position_ids * indices
         embeddings = torch.stack([torch.sin(embeddings), torch.cos(embeddings)], dim=-1)
         embeddings = embeddings.repeat((batch_size, *([1] * len(embeddings.shape))))
         embeddings = torch.reshape(embeddings, (batch_size, seq_len, output_dim))
-        # embeddings = embeddings.to(self.device)
         return embeddings
 
     def rotate_position_embedding(self, qw, kw):
         # qw shape: (batch_size, seq_len, ner_type_num, inner_dim)
-        batch_size = qw.size()[0]
-        seq_len = qw.size()[1]
-        inn_dim = qw.size()[3]
+        input_sz = qw.size()
+        batch_size, seq_len, inn_dim = input_sz[0], input_sz[1], input_sz[3]
 
         # pos_emb:(batch_size, seq_len, inner_dim)
         pos_emb = self.sinusoidal_position_embedding(batch_size, seq_len, inn_dim)
