@@ -50,7 +50,7 @@ def get_entity_spans(text_tokens, entity_dct):
 def get_ner_example(sample, with_punctuation=False, tokenizer=None, opt=None):
     """
 
-    :param sample: input data record, like {"text": "可以去吃无骨鱼啊", "label": {"dishName": ["无骨鱼"]}}
+    :param sample: input data record, like {"text": "可以去吃无骨鱼啊", "label": [["dishName", "无骨鱼"]]}
     :param with_punctuation:
     :param tokenizer:
     :param opt: configure parameters
@@ -63,7 +63,7 @@ def get_ner_example(sample, with_punctuation=False, tokenizer=None, opt=None):
     ner_type_num = opt.ner_type_num
     max_seq_len = opt.max_seq_len
     ent2id = opt.ent2id
-    text = sample["text"].lower()
+    text = sample["text"].upper()
     text_tokens = [ch for ch in text]
 
     inputs = tokenizer.encode_plus(
@@ -87,7 +87,7 @@ def get_ner_example(sample, with_punctuation=False, tokenizer=None, opt=None):
     inputs["labels"] = labels
 
     data = {
-        # "sample": sample,
+        "sample": sample,
         "labels": torch.LongTensor(inputs["labels"]).to(opt.device),
         "input_ids": torch.LongTensor(inputs["input_ids"]).to(opt.device),
         "attention_mask": torch.LongTensor(inputs["attention_mask"]).to(opt.device),
