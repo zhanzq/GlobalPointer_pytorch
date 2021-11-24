@@ -7,20 +7,18 @@
 
 import torch
 import torch.nn as nn
-from transformers import BertPreTrainedModel
 
 
-class GlobalPointer(BertPreTrainedModel):
+class GlobalPointer(nn.Module):
     def __init__(self, bert, opt):
         super(GlobalPointer, self).__init__()
         self.bert = bert
-        self.hidden_size = bert.config.hidden_size
         self.ro_pe = opt.ro_pe
-        self.inner_dim = opt.inner_dim
-        self.ner_type_num = opt.ner_type_num
+        self.inner_dim = opt.inner_dim              # default 64, ff layer dim
+        self.ner_type_num = opt.ner_type_num        # default 5, [location, type, poiName, dishName, taste]
+        self.hidden_size = bert.config.hidden_size  # default 768, bert-base dim
         self.dropout = torch.nn.Dropout(opt.dropout)
         self.dense = torch.nn.Linear(self.hidden_size, self.ner_type_num * self.inner_dim * 2)
-        self.init_weights()
 
     @staticmethod
     def sinusoidal_position_embedding(batch_size, seq_len, output_dim):

@@ -237,7 +237,7 @@ def main():
     parser.add_argument("--bert_dim", default=768, type=int)
     parser.add_argument("--pretrained_bert_name", default="bert-base-uncased", type=str)
     parser.add_argument("--max_seq_len", default=50, type=int)
-    parser.add_argument("--ner_type_num", default=6, type=int)
+    parser.add_argument("--ner_type_num", default=5, type=int)
     parser.add_argument("--hops", default=3, type=int)
     parser.add_argument("--patience", default=5, type=int)
     parser.add_argument("--ro_pe", default=False, type=bool)
@@ -292,7 +292,7 @@ def main():
     opt.model_class = model_classes[opt.model_name]
     opt.dataset_file = dataset_files[opt.dataset]
     opt.initializer = initializers[str(opt.initializer)]
-    opt.ent2id = {"": 0, "location": 1, "type": 2, "poiName": 3, "dishName": 4, "taste": 5}
+    opt.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4}
     if opt.device is None:
         if torch.cuda.is_available():
             opt.device = torch.device("cuda")

@@ -54,10 +54,10 @@ def norm_text(text):
 
 
 class Option(object):
-    def __init__(self, max_seq_len=50, ner_type_num=6):
+    def __init__(self, max_seq_len=50, ner_type_num=5):
         self.max_seq_len = max_seq_len
         self.ner_type_num = ner_type_num
-        self.ent2id = {"": 0, "location": 1, "type": 2, "poiName": 3, "dishName": 4, "taste": 5}
+        self.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4}
         self.device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
 
