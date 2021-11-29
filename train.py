@@ -43,7 +43,7 @@ class Instructor:
         data_dir = opt.data_dir
         train_data, valid_data, test_data = load_ner_data(
             data_dir=data_dir,
-            with_punctuation=False,
+            norm_text=False,
             tokenizer=self.tokenizer,
             do_shuffle=True,
             opt=opt,
@@ -242,7 +242,7 @@ def main():
     parser.add_argument("--patience", default=5, type=int)
     parser.add_argument("--ro_pe", default=False, type=bool)
     parser.add_argument("--device", default=None, type=str, help="e.g. cuda:0")
-    parser.add_argument("--data_dir", default="datasets/xp_ner/", type=str, help="xp dataset")
+    parser.add_argument("--data_dir", default="datasets/xp_ner_1124/", type=str, help="xp dataset")
     parser.add_argument("--seed", default=1234, type=int, help="set seed for reproducibility")
     parser.add_argument("--valid_dataset_ratio", default=0.1, type=float,
                         help="set ratio between 0 and 1 for validation support")
