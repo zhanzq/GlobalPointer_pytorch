@@ -18,47 +18,18 @@ from torch.utils.data import Dataset
 from transformers import BertTokenizer
 
 
-REMAIN = re.compile(r"[\u4e00-\u9fa5a-zA-Z0-9.]+")
-ASR_RE = [
-    (
-        re.compile(r"(小批|小屁|小平|小佩|小片|小弟|小D|小贝)"),
-        "小P"
-    ),
-    (
-        re.compile(r"(牌号|拍号)"),
-        "排号"
-    ),
-    (
-        re.compile(r"拍个号"),
-        "排个号"
-    )
-]
-
-
-def asr_correct(text):
-    for compiler, sub in ASR_RE:
-        text = compiler.sub(sub, text)
-    return text
-
-
-def norm_text(text):
-    """
-    1. 去掉无关字符
-    2. ASR纠错通过词表替换
-
-    :param text:
-    :return:
-    """
-
-    return asr_correct("".join(REMAIN.findall(text)))
-
-
 class Option(object):
-    def __init__(self, max_seq_len=50, ner_type_num=5):
+    def __init__(self, max_seq_len=50, ner_type_num=6):
         self.max_seq_len = max_seq_len
         self.ner_type_num = ner_type_num
-        self.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4}
-        self.device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+        self.ent2id = {"": 0, "location": 1, "type": 2, "poiName": 3, "dishName": 4, "taste": 5}
+
+
+def rm_punctuation(text):
+    punctuations = [",", "，", "\.", "。", "\?", "？", ":", "：", "!", "！", "'", "\"", "、"]
+    for pun in punctuations:
+        text = re.sub(pun, "", text)
+    return text
 
 
 def get_entity_spans(text, entity_dct):
@@ -77,7 +48,7 @@ def get_entity_spans(text, entity_dct):
 def get_ner_example(sample, with_punctuation=False, tokenizer=None, opt=None):
     """
 
-    :param sample: input data record, like {"text": "可以去吃无骨鱼啊", "label": [["dishName", "无骨鱼"]]}
+    :param sample: input data record, like {"text": "可以去吃无骨鱼啊", "label": {"dishName": ["无骨鱼"]}}
     :param with_punctuation:
     :param tokenizer:
     :param opt: configure parameters
@@ -85,38 +56,39 @@ def get_ner_example(sample, with_punctuation=False, tokenizer=None, opt=None):
     """
 
     if not with_punctuation:
-        sample["text"] = norm_text(text=sample["text"])
+        sample["text"] = rm_punctuation(text=sample["text"])
 
     ner_type_num = opt.ner_type_num
     max_seq_len = opt.max_seq_len
     ent2id = opt.ent2id
-    text = sample["text"].lower()
-    text_tokens = [ch for ch in text]
+    text = sample["text"]
 
-    inputs = tokenizer.encode_plus(text_tokens, max_length=max_seq_len, truncation=True,
-                                   padding='max_length', add_special_tokens=True)
+    inputs = tokenizer.encode_plus(
+        text,
+        max_length=max_seq_len,
+        truncation=True,
+        padding='max_length',
+        add_special_tokens=True
+    )
 
-    anns = sample.get("label", None)
-    entity_dct = {}
-    for slot_type, slot_value in anns:
-        slot_value = slot_value.lower()
-        if slot_type in ent2id and slot_value in text:
-            if slot_type not in entity_dct:
-                entity_dct[slot_type] = []
-            entity_dct[slot_type].append(slot_value)
-    labels = np.zeros((ner_type_num, max_seq_len, max_seq_len))
-
-    entity_spans = get_entity_spans(text, entity_dct)
-    for start, end, label in entity_spans:
-        labels[ent2id[label], start, end] = 1
-
+    gd_truths = sample.get("label", None)
+    for slot_type in gd_truths:
+        if slot_type not in ent2id:
+            gd_truths.pop(slot_type)
+    if gd_truths is not None:
+        entity_dct = gd_truths
+        entity_spans = get_entity_spans(text, entity_dct)
+        labels = np.zeros((ner_type_num, max_seq_len, max_seq_len))
+        for start, end, label in entity_spans:
+            labels[ent2id[label], start, end] = 1
     inputs["labels"] = labels
+
     data = {
         "sample": sample,
-        "labels": torch.LongTensor(inputs["labels"]).to(opt.device),
-        "input_ids": torch.LongTensor(inputs["input_ids"]).to(opt.device),
-        "attention_mask": torch.LongTensor(inputs["attention_mask"]).to(opt.device),
-        "token_type_ids": torch.LongTensor(inputs["token_type_ids"]).to(opt.device),
+        "labels": torch.LongTensor(inputs["labels"]),
+        "input_ids": torch.LongTensor(inputs["input_ids"]),
+        "attention_mask": torch.LongTensor(inputs["attention_mask"]),
+        "token_type_ids": torch.LongTensor(inputs["token_type_ids"]),
     }
 
     return data
@@ -143,7 +115,7 @@ def load_ner_data(data_dir, with_punctuation=False, tokenizer=None, opt=None, do
     files = os.listdir(data_dir)
     for file_name in files:
         data_path = os.path.join(data_dir, file_name)
-        if "train.jsonl" == file_name:
+        if "train.json" == file_name:
             with open(data_path, "r", encoding="utf-8", newline="\n", errors="ignore") as reader:
                 lines = reader.readlines()
                 train_lines.extend(lines)
@@ -189,13 +161,27 @@ class XPNER(Dataset):
         return self.length
 
 
+def load_ent_dct(data_path):
+    assert os.path.exists(data_path), "entity dict file must exist"
+    ent_dct = None
+    with open(data_path, "r") as reader:
+        line = reader.readline().strip()
+        ent_dct = json.loads(line)
+
+    return ent_dct
+
+
 def main():
-    data_path = "datasets/xp_ner_1124/train.jsonl"
-    opt = Option(max_seq_len=20)
+    data_path = "datasets/cluener/train.json"
+    ent_dct_path = "datasets/cluener/ent2id.json"
+    ent2id = load_ent_dct(data_path=ent_dct_path)
+    opt = Option(max_seq_len=128, ner_type_num=10)
+    opt.ent2id = ent2id
+    opt.ner_type_num = len(ent2id)
     tokenizer = BertTokenizer.from_pretrained("/Users/zhanzq/Downloads/models/bert-base-chinese")
     with open(data_path, "r") as reader:
         lines = reader.readlines()
-        dataset = get_ner_dataset(lines[:10], with_punctuation=False, tokenizer=tokenizer, opt=opt)
+        dataset = get_ner_dataset(lines, with_punctuation=True, tokenizer=tokenizer, opt=opt)
 
         print("dataset samples:")
         for i in range(10):
@@ -203,14 +189,5 @@ def main():
             print(dataset[i])
 
 
-def test():
-    opt = Option(max_seq_len=10)
-    tokenizer = BertTokenizer.from_pretrained("/Users/zhanzq/Downloads/models/bert-base-chinese")
-    sample = {"text": "可以去吃无骨鱼啊", "label": [["dishName", "无骨鱼"]]}
-    data_i = get_ner_example(sample, with_punctuation=False, tokenizer=tokenizer, opt=opt)
-    print(data_i)
-
-
 if __name__ == "__main__":
-    # main()
-    test()
+    main()
