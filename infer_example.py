@@ -10,7 +10,7 @@ import torch
 import json
 from data_utils import get_ner_example
 from models.gp import GlobalPointer
-from transformers import BertTokenizerFast, BertModel
+from transformers import BertTokenizer, BertModel
 from torch.utils.data import DataLoader, Dataset
 import numpy as np
 
@@ -21,44 +21,44 @@ class Inference:
     """
     def __init__(self, opt):
         self.opt = opt
-        self.tokenizer = BertTokenizerFast.from_pretrained(opt.pretrained_bert_model)
+        self.tokenizer = BertTokenizer.from_pretrained(opt.pretrained_bert_model)
         bert = BertModel.from_pretrained(opt.pretrained_bert_model)
         self.model = GlobalPointer(bert, opt).to(opt.device)
 
-        print("loading model {0} from {}".format(opt.model_name, opt.best_model_path))
-        if torch.cuda.is_available():
-            self.model.load_state_dict(torch.load(opt.best_model_path))
-        else:
-            self.model.load_state_dict(torch.load(opt.best_model_path, map_location=torch.device("cpu")))
+        print("loading model {0} from {1}".format(opt.model_name, opt.best_model_path))
+        self.model.load_state_dict(torch.load(opt.best_model_path, map_location=opt.device))
 
         # switch model to evaluation mode
         self.model.eval()
         torch.autograd.set_grad_enabled(False)
 
-    def decode_ent(self, text, pred_matrix, tokenizer, threshold=0):
-        # print(text)
-        token2char_span_mapping = tokenizer(text, return_offsets_mapping=True)["offset_mapping"]
-        id2ent = {id: ent for ent, id in self.opt.ent2id.items()}
+    def get_ner(self, text, pred_matrix, threshold=-1.0):
+        """
+        pred_matrix: shape (1, ner_type_num, seq_len, seq_len)
+        """
+        id2ent = {val:key for key, val in self.opt.ent2id.items()}
         pred_matrix = pred_matrix.cpu().numpy()
-        ent_list = {}
-        for ent_type_id, token_start_index, toekn_end_index in zip(*np.where(pred_matrix > threshold)):
-            ent_type = id2ent[ent_type_id]
-            ent_char_span = [token2char_span_mapping[token_start_index][0], token2char_span_mapping[toekn_end_index][1]]
-            ent_text = text[ent_char_span[0]:ent_char_span[1]]
 
-            ent_type_dict = ent_list.get(ent_type, {})
-            ent_text_list = ent_type_dict.get(ent_text, [])
-            ent_text_list.append(ent_char_span)
-            ent_type_dict.update({ent_text: ent_text_list})
-            ent_list.update({ent_type:ent_type_dict})
-        # print(ent_list)
-        return ent_list
+        ent_lst = {}
+        for _, ent_type_id, start_idx, end_idx in zip(*np.where(pred_matrix > threshold)):
+            ner_type = id2ent[ent_type_id]
+            ent_text = text[start_idx-1: end_idx]
+            entity = {"value": ent_text, "span": [start_idx-1, end_idx]}
+            ent_type_lst = ent_lst.get(ner_type, [])
+            ent_type_lst.append(entity)
+            ent_lst[ner_type] = ent_type_lst
 
-    def evaluate(self, text):
+        return ent_lst
+
+
+    def evaluate(self, text, threshold=0.0):
         sample = {"text": text}
         data = get_ner_example(sample, norm_text=True, tokenizer=self.tokenizer, opt=self.opt)
+        data["input_ids"] = data["input_ids"].unsqueeze(0)
+        data["attention_mask"] = data["attention_mask"].unsqueeze(0)
+        data["token_type_ids"] = data["token_type_ids"].unsqueeze(0)
         pred_matrix = self.model(data)
-        labels = self.decode_ent(text, pred_matrix, self.tokenizer)
+        labels = self.get_ner(text, pred_matrix, threshold=threshold)
         predict_res = {"text": text, "label": labels}
         return predict_res
 
@@ -68,24 +68,38 @@ class Option(object):
         self.ro_pe = False      # rotated position encoding
         self.dropout = 0.1
         self.inner_dim = 64
+        self.max_seq_len = 50
         self.model_name = "GlobalPointer"
-        self.best_model_path = ""
+        self.best_model_path = "state_dict/gp_xp_ner_val_acc_0.8774_bert-base-chinese_1"
+        self.pretrained_bert_model = "/Users/zhanzq/Downloads/models/bert-base-chinese"
         self.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4}
         self.ner_type_num = len(self.ent2id)
+
+        if torch.cuda.is_available():
+            self.device = torch.device("cuda")
+        else:
+            self.device = torch.device("cpu")
 
 
 def test():
     opt = Option()
     # set your trained models here
-    opt.best_model_path = ""
     inf = Inference(opt)
     prompt = "请输入用户语句:"
     print(prompt)
+    threshold = 0.0
     test_sentence = input()
     while test_sentence:
-        labels = inf.evaluate(test_sentence)
-        print(labels)
-        prompt = "请输入用户语句:"
+        try:
+            while test_sentence.lower() == "set":
+                print("请输入NER阈值:")
+                threshold = float(input())
+                print(prompt)
+                test_sentence = input()
+            labels = inf.evaluate(test_sentence, threshold)
+            print(labels)
+        except Exception as e:
+            print(e)
         print(prompt)
         test_sentence = input()
 
