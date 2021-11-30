@@ -1,0 +1,292 @@
+{"text": "第一家是吃酸菜鱼的上次吃过不好吃", "label": [["listNum", "第一家"], ["dishName", "酸菜鱼"]]}
+{"text": "倒数第三家是吃酸菜鱼的上次吃过不好吃", "label": [["listNum", "倒数第三家"], ["dishName", "酸菜鱼"]]}
+{"text": "第十家是吃酸菜鱼的上次吃过不好吃", "label": [["listNum", "第十家"], ["dishName", "酸菜鱼"]]}
+{"text": "第一个是川菜", "label": [["listNum", "第一个"], ["type", "川菜"]]}
+{"text": "第四个是川菜", "label": [["listNum", "第四个"], ["type", "川菜"]]}
+{"text": "第六个是川菜", "label": [["listNum", "第六个"], ["type", "川菜"]]}
+{"text": "选择第一条路线", "label": [["listNum", "第一条"]]}
+{"text": "选择倒数第六条路线", "label": [["listNum", "倒数第六条"]]}
+{"text": "选择第四条路线", "label": [["listNum", "第四条"]]}
+{"text": "你觉得第一个怎么样我觉得不错", "label": [["listNum", "第一个"]]}
+{"text": "你觉得倒数第一个怎么样我觉得不错", "label": [["listNum", "倒数第一个"]]}
+{"text": "你觉得倒数第三个怎么样我觉得不错", "label": [["listNum", "倒数第三个"]]}
+{"text": "第一家的家常豆腐好吃吗", "label": [["listNum", "第一家"], ["dishName", "家常豆腐"]]}
+{"text": "第九家的家常豆腐好吃吗", "label": [["listNum", "第九家"], ["dishName", "家常豆腐"]]}
+{"text": "第二家的家常豆腐好吃吗", "label": [["listNum", "第二家"], ["dishName", "家常豆腐"]]}
+{"text": "是我的话就选第一家", "label": [["listNum", "第一家"]]}
+{"text": "是我的话就选倒数第九家", "label": [["listNum", "倒数第九家"]]}
+{"text": "是我的话就选第四家", "label": [["listNum", "第四家"]]}
+{"text": "第一家是辣的我不想去", "label": [["listNum", "第一家"], ["taste", "辣"]]}
+{"text": "倒数第七家是辣的我不想去", "label": [["listNum", "倒数第七家"], ["taste", "辣"]]}
+{"text": "倒数第八家是辣的我不想去", "label": [["listNum", "倒数第八家"], ["taste", "辣"]]}
+{"text": "第一个我比较推荐", "label": [["listNum", "第一个"]]}
+{"text": "倒数第一个我比较推荐", "label": [["listNum", "倒数第一个"]]}
+{"text": "倒数第十个我比较推荐", "label": [["listNum", "倒数第十个"]]}
+{"text": "除了第一家我觉得都不错", "label": [["listNum", "第一家"]]}
+{"text": "除了倒数第二家我觉得都不错", "label": [["listNum", "倒数第二家"]]}
+{"text": "除了第五家我觉得都不错", "label": [["listNum", "第五家"]]}
+{"text": "第一家的毛血旺不错", "label": [["listNum", "第一家"], ["dishName", "毛血旺"]]}
+{"text": "第九家的毛血旺不错", "label": [["listNum", "第九家"], ["dishName", "毛血旺"]]}
+{"text": "倒数第三家的毛血旺不错", "label": [["listNum", "倒数第三家"], ["dishName", "毛血旺"]]}
+{"text": "第一个是吃什么菜系的闽菜吗", "label": [["listNum", "第一个"], ["type", "闽菜"]]}
+{"text": "第九个是吃什么菜系的闽菜吗", "label": [["listNum", "第九个"], ["type", "闽菜"]]}
+{"text": "倒数第五个是吃什么菜系的闽菜吗", "label": [["listNum", "倒数第五个"], ["type", "闽菜"]]}
+{"text": "既然这样不如去第一家吧", "label": [["listNum", "第一家"]]}
+{"text": "既然这样不如去倒数第一家吧", "label": [["listNum", "倒数第一家"]]}
+{"text": "既然这样不如去倒数第四家吧", "label": [["listNum", "倒数第四家"]]}
+{"text": "我和肖哥都比较想去第一家", "label": [["listNum", "第一家"]]}
+{"text": "我和肖哥都比较想去倒数第四家", "label": [["listNum", "倒数第四家"]]}
+{"text": "我和肖哥都比较想去第八家", "label": [["listNum", "第八家"]]}
+{"text": "第一家还是算了吧我不想吃牛蛙", "label": [["listNum", "第一家"], ["dishName", "牛蛙"]]}
+{"text": "第四家还是算了吧我不想吃牛蛙", "label": [["listNum", "第四家"], ["dishName", "牛蛙"]]}
+{"text": "倒数第七家还是算了吧我不想吃牛蛙", "label": [["listNum", "倒数第七家"], ["dishName", "牛蛙"]]}
+{"text": "播放第一条吧", "label": [["listNum", "第一条"]]}
+{"text": "播放第四条吧", "label": [["listNum", "第四条"]]}
+{"text": "播放第六条吧", "label": [["listNum", "第六条"]]}
+{"text": "我想吃汉堡和披萨去第一个吧", "label": [["listNum", "第一个"], ["dishName", "汉堡"], ["dishName", "披萨"]]}
+{"text": "我想吃汉堡和披萨去倒数第八个吧", "label": [["listNum", "倒数第八个"], ["dishName", "汉堡"], ["dishName", "披萨"]]}
+{"text": "我想吃汉堡和披萨去倒数第十个吧", "label": [["listNum", "倒数第十个"], ["dishName", "汉堡"], ["dishName", "披萨"]]}
+{"text": "第一家可太难吃了别去", "label": [["listNum", "第一家"]]}
+{"text": "倒数第五家可太难吃了别去", "label": [["listNum", "倒数第五家"]]}
+{"text": "第五家可太难吃了别去", "label": [["listNum", "第五家"]]}
+{"text": "我想吃第一家的潮汕菜", "label": [["listNum", "第一家"], ["type", "潮汕菜"]]}
+{"text": "我想吃倒数第十家的潮汕菜", "label": [["listNum", "倒数第十家"], ["type", "潮汕菜"]]}
+{"text": "我想吃第九家的潮汕菜", "label": [["listNum", "第九家"], ["type", "潮汕菜"]]}
+{"text": "第一家是在哪里的金州路吗", "label": [["listNum", "第一家"], ["location", "金州路"]]}
+{"text": "倒数第八家是在哪里的金州路吗", "label": [["listNum", "倒数第八家"], ["location", "金州路"]]}
+{"text": "倒数第七家是在哪里的金州路吗", "label": [["listNum", "倒数第七家"], ["location", "金州路"]]}
+{"text": "尝试一下第一个吧", "label": [["listNum", "第一个"]]}
+{"text": "尝试一下倒数第五个吧", "label": [["listNum", "倒数第五个"]]}
+{"text": "尝试一下倒数第一个吧", "label": [["listNum", "倒数第一个"]]}
+{"text": "我不想去第一家", "label": [["listNum", "第一家"]]}
+{"text": "我不想去第九家", "label": [["listNum", "第九家"]]}
+{"text": "我不想去倒数第一家", "label": [["listNum", "倒数第一家"]]}
+{"text": "我想去第一家你呢", "label": [["listNum", "第一家"]]}
+{"text": "我想去倒数第一家你呢", "label": [["listNum", "倒数第一家"]]}
+{"text": "我想去倒数第十家你呢", "label": [["listNum", "倒数第十家"]]}
+{"text": "第一家有阳光厨房健康安全去试试吧", "label": [["listNum", "第一家"]]}
+{"text": "第四家有阳光厨房健康安全去试试吧", "label": [["listNum", "第四家"]]}
+{"text": "倒数第二家有阳光厨房健康安全去试试吧", "label": [["listNum", "倒数第二家"]]}
+{"text": "你不会又想去第一家吧吃吐了都", "label": [["listNum", "第一家"]]}
+{"text": "你不会又想去倒数第八家吧吃吐了都", "label": [["listNum", "倒数第八家"]]}
+{"text": "你不会又想去第七家吧吃吐了都", "label": [["listNum", "第七家"]]}
+{"text": "第一家也行听你的", "label": [["listNum", "第一家"]]}
+{"text": "第十家也行听你的", "label": [["listNum", "第十家"]]}
+{"text": "倒数第六家也行听你的", "label": [["listNum", "倒数第六家"]]}
+{"text": "第一家是吃粤菜的吗", "label": [["listNum", "第一家"], ["type", "粤菜"]]}
+{"text": "第十家是吃粤菜的吗", "label": [["listNum", "第十家"], ["type", "粤菜"]]}
+{"text": "倒数第二家是吃粤菜的吗", "label": [["listNum", "倒数第二家"], ["type", "粤菜"]]}
+{"text": "第一家太清淡了算了", "label": [["listNum", "第一家"], ["taste", "清淡"]]}
+{"text": "第四家太清淡了算了", "label": [["listNum", "第四家"], ["taste", "清淡"]]}
+{"text": "第七家太清淡了算了", "label": [["listNum", "第七家"], ["taste", "清淡"]]}
+{"text": "我可是第一家的死忠粉你去试试就知道了", "label": [["listNum", "第一家"]]}
+{"text": "我可是倒数第一家的死忠粉你去试试就知道了", "label": [["listNum", "倒数第一家"]]}
+{"text": "我可是第七家的死忠粉你去试试就知道了", "label": [["listNum", "第七家"]]}
+{"text": "第一个很近啊可以去看看", "label": [["listNum", "第一个"]]}
+{"text": "倒数第四个很近啊可以去看看", "label": [["listNum", "倒数第四个"]]}
+{"text": "倒数第一个很近啊可以去看看", "label": [["listNum", "倒数第一个"]]}
+{"text": "第一家有水煮鱼吗我想吃", "label": [["listNum", "第一家"], ["dishName", "水煮鱼"]]}
+{"text": "倒数第一家有水煮鱼吗我想吃", "label": [["listNum", "倒数第一家"], ["dishName", "水煮鱼"]]}
+{"text": "第三家有水煮鱼吗我想吃", "label": [["listNum", "第三家"], ["dishName", "水煮鱼"]]}
+{"text": "既然你这么推荐第一家那我今天一定得去试试", "label": [["listNum", "第一家"]]}
+{"text": "既然你这么推荐第二家那我今天一定得去试试", "label": [["listNum", "第二家"]]}
+{"text": "既然你这么推荐倒数第二家那我今天一定得去试试", "label": [["listNum", "倒数第二家"]]}
+{"text": "我可太懂吃了就第一家吧", "label": [["listNum", "第一家"]]}
+{"text": "我可太懂吃了就第十家吧", "label": [["listNum", "第十家"]]}
+{"text": "我可太懂吃了就第七家吧", "label": [["listNum", "第七家"]]}
+{"text": "第一家是在天环广场的吃粤菜的", "label": [["listNum", "第一家"], ["type", "粤菜"], ["location", "天环广场"]]}
+{"text": "第四家是在天环广场的吃粤菜的", "label": [["listNum", "第四家"], ["type", "粤菜"], ["location", "天环广场"]]}
+{"text": "倒数第六家是在天环广场的吃粤菜的", "label": [["listNum", "倒数第六家"], ["type", "粤菜"], ["location", "天环广场"]]}
+{"text": "你要是不喜欢那我推荐去第一家", "label": [["listNum", "第一家"]]}
+{"text": "你要是不喜欢那我推荐去倒数第七家", "label": [["listNum", "倒数第七家"]]}
+{"text": "你要是不喜欢那我推荐去第二家", "label": [["listNum", "第二家"]]}
+{"text": "第一个我吃过一点都不好吃", "label": [["listNum", "第一个"]]}
+{"text": "倒数第二个我吃过一点都不好吃", "label": [["listNum", "倒数第二个"]]}
+{"text": "倒数第八个我吃过一点都不好吃", "label": [["listNum", "倒数第八个"]]}
+{"text": "选第一个模式吧", "label": [["listNum", "第一个"]]}
+{"text": "选第七个模式吧", "label": [["listNum", "第七个"]]}
+{"text": "选倒数第九个模式吧", "label": [["listNum", "倒数第九个"]]}
+{"text": "第一家不错或者去棠下附近看看吧", "label": [["listNum", "第一家"], ["location", "棠下"]]}
+{"text": "倒数第九家不错或者去棠下附近看看吧", "label": [["listNum", "倒数第九家"], ["location", "棠下"]]}
+{"text": "第十家不错或者去棠下附近看看吧", "label": [["listNum", "第十家"], ["location", "棠下"]]}
+{"text": "第一家的螃蟹不错带你去试试", "label": [["listNum", "第一家"], ["dishName", "螃蟹"]]}
+{"text": "第五家的螃蟹不错带你去试试", "label": [["listNum", "第五家"], ["dishName", "螃蟹"]]}
+{"text": "第九家的螃蟹不错带你去试试", "label": [["listNum", "第九家"], ["dishName", "螃蟹"]]}
+{"text": "选第一行吧去试试味道", "label": [["listNum", "第一行"]]}
+{"text": "选倒数第四行吧去试试味道", "label": [["listNum", "倒数第四行"]]}
+{"text": "选第五行吧去试试味道", "label": [["listNum", "第五行"]]}
+{"text": "第一行不要上次跟宇哥吃过太难吃了", "label": [["listNum", "第一行"]]}
+{"text": "第六行不要上次跟宇哥吃过太难吃了", "label": [["listNum", "第六行"]]}
+{"text": "倒数第二行不要上次跟宇哥吃过太难吃了", "label": [["listNum", "倒数第二行"]]}
+{"text": "今晚就去第一个吃吧", "label": [["listNum", "第一个"]]}
+{"text": "今晚就去第六个吃吧", "label": [["listNum", "第六个"]]}
+{"text": "今晚就去第十个吃吧", "label": [["listNum", "第十个"]]}
+{"text": "第一家是吃什么菜的没看到相关介绍啊", "label": [["listNum", "第一家"]]}
+{"text": "倒数第五家是吃什么菜的没看到相关介绍啊", "label": [["listNum", "倒数第五家"]]}
+{"text": "第六家是吃什么菜的没看到相关介绍啊", "label": [["listNum", "第六家"]]}
+{"text": "不要吃海鲜和火锅去第一个吧", "label": [["listNum", "第一个"], ["type", "海鲜"], ["type", "火锅"]]}
+{"text": "不要吃海鲜和火锅去倒数第四个吧", "label": [["listNum", "倒数第四个"], ["type", "海鲜"], ["type", "火锅"]]}
+{"text": "不要吃海鲜和火锅去倒数第四个吧", "label": [["listNum", "倒数第四个"], ["type", "海鲜"], ["type", "火锅"]]}
+{"text": "座椅习惯调到第一个", "label": [["listNum", "第一个"]]}
+{"text": "座椅习惯调到倒数第七个", "label": [["listNum", "倒数第七个"]]}
+{"text": "座椅习惯调到倒数第三个", "label": [["listNum", "倒数第三个"]]}
+{"text": "第一个是辣的我不要辣的", "label": [["listNum", "第一个"], ["taste", "辣"]]}
+{"text": "倒数第五个是辣的我不要辣的", "label": [["listNum", "倒数第五个"], ["taste", "辣"]]}
+{"text": "倒数第十个是辣的我不要辣的", "label": [["listNum", "倒数第十个"], ["taste", "辣"]]}
+{"text": "第一家是喝粥的", "label": [["listNum", "第一家"], ["dishName", "粥"]]}
+{"text": "第四家是喝粥的", "label": [["listNum", "第四家"], ["dishName", "粥"]]}
+{"text": "第八家是喝粥的", "label": [["listNum", "第八家"], ["dishName", "粥"]]}
+{"text": "我很讨厌吃粤菜和徽菜我们去第一家吧", "label": [["listNum", "第一家"], ["type", "粤菜"], ["type", "徽菜"]]}
+{"text": "我很讨厌吃粤菜和徽菜我们去倒数第三家吧", "label": [["listNum", "倒数第三家"], ["type", "粤菜"], ["type", "徽菜"]]}
+{"text": "我很讨厌吃粤菜和徽菜我们去倒数第五家吧", "label": [["listNum", "倒数第五家"], ["type", "粤菜"], ["type", "徽菜"]]}
+{"text": "行就吃那个天下第一家吧", "label": [["poiName", "天下第一家"]]}
+{"text": "行就吃那个倒数第四家吧", "label": [["poiName", "倒数第四家"]]}
+{"text": "行就吃那个倒数第四家吧", "label": [["poiName", "倒数第四家"]]}
+{"text": "你上次是吃过第一家吗", "label": [["listNum", "第一家"]]}
+{"text": "你上次是吃过倒数第四家吗", "label": [["listNum", "倒数第四家"]]}
+{"text": "你上次是吃过第二家吗", "label": [["listNum", "第二家"]]}
+{"text": "第一家的评论很高哦我们去试试吧", "label": [["listNum", "第一家"]]}
+{"text": "倒数第三家的评论很高哦我们去试试吧", "label": [["listNum", "倒数第三家"]]}
+{"text": "倒数第九家的评论很高哦我们去试试吧", "label": [["listNum", "倒数第九家"]]}
+{"text": "第一家的卫生很差我们还是不要去了", "label": [["listNum", "第一家"]]}
+{"text": "第八家的卫生很差我们还是不要去了", "label": [["listNum", "第八家"]]}
+{"text": "倒数第八家的卫生很差我们还是不要去了", "label": [["listNum", "倒数第八家"]]}
+{"text": "第一家的辣度我非常喜欢我建议吃这家", "label": [["listNum", "第一家"], ["taste", "辣"]]}
+{"text": "倒数第二家的辣度我非常喜欢我建议吃这家", "label": [["listNum", "倒数第二家"], ["taste", "辣"]]}
+{"text": "第七家的辣度我非常喜欢我建议吃这家", "label": [["listNum", "第七家"], ["taste", "辣"]]}
+{"text": "第一家的装修风格很不错推荐去", "label": [["listNum", "第一家"]]}
+{"text": "第二家的装修风格很不错推荐去", "label": [["listNum", "第二家"]]}
+{"text": "第四家的装修风格很不错推荐去", "label": [["listNum", "第四家"]]}
+{"text": "看看第一个的评论如何", "label": [["listNum", "第一个"]]}
+{"text": "看看倒数第三个的评论如何", "label": [["listNum", "倒数第三个"]]}
+{"text": "看看倒数第二个的评论如何", "label": [["listNum", "倒数第二个"]]}
+{"text": "你觉得第一个怎么样", "label": [["listNum", "第一个"]]}
+{"text": "你觉得第九个怎么样", "label": [["listNum", "第九个"]]}
+{"text": "你觉得第五个怎么样", "label": [["listNum", "第五个"]]}
+{"text": "试试第一家的湖南菜吧", "label": [["listNum", "第一家"], ["type", "湖南菜"]]}
+{"text": "试试第八家的湖南菜吧", "label": [["listNum", "第八家"], ["type", "湖南菜"]]}
+{"text": "试试第十家的湖南菜吧", "label": [["listNum", "第十家"], ["type", "湖南菜"]]}
+{"text": "不知道你喜不喜欢第一家呢", "label": [["listNum", "第一家"]]}
+{"text": "不知道你喜不喜欢倒数第七家呢", "label": [["listNum", "倒数第七家"]]}
+{"text": "不知道你喜不喜欢倒数第十家呢", "label": [["listNum", "倒数第十家"]]}
+{"text": "第一家是不是在搞活动", "label": [["listNum", "第一家"]]}
+{"text": "倒数第十家是不是在搞活动", "label": [["listNum", "倒数第十家"]]}
+{"text": "倒数第七家是不是在搞活动", "label": [["listNum", "倒数第七家"]]}
+{"text": "我买了第一家的代金券我们去那吃吧", "label": []}
+{"text": "第一行那家好像看着挺不错的", "label": [["listNum", "第一行"]]}
+{"text": "第五行那家好像看着挺不错的", "label": [["listNum", "第五行"]]}
+{"text": "倒数第六行那家好像看着挺不错的", "label": [["listNum", "倒数第六行"]]}
+{"text": "带你去第一家吃湖南菜刚好是你的最爱哦", "label": [["listNum", "第一家"], ["type", "湖南菜"]]}
+{"text": "带你去倒数第八家吃湖南菜刚好是你的最爱哦", "label": [["listNum", "倒数第八家"], ["type", "湖南菜"]]}
+{"text": "带你去倒数第十家吃湖南菜刚好是你的最爱哦", "label": [["listNum", "倒数第十家"], ["type", "湖南菜"]]}
+{"text": "你看第一条的位置远吗", "label": [["listNum", "第一条"]]}
+{"text": "你看第九条的位置远吗", "label": [["listNum", "第九条"]]}
+{"text": "你看倒数第五条的位置远吗", "label": [["listNum", "倒数第五条"]]}
+{"text": "我知道你喜欢吃什么是第一家吧", "label": [["listNum", "第一家"]]}
+{"text": "我知道你喜欢吃什么是倒数第一家吧", "label": [["listNum", "倒数第一家"]]}
+{"text": "我知道你喜欢吃什么是第二家吧", "label": [["listNum", "第二家"]]}
+{"text": "第一家的臭豆腐看着流口水了", "label": [["dishName", "臭豆腐"]]}
+{"text": "第一家的臭豆腐看着流口水了", "label": [["dishName", "臭豆腐"]]}
+{"text": "第一家的臭豆腐看着流口水了", "label": [["dishName", "臭豆腐"]]}
+{"text": "第一家刚好在你你家隔壁的体育路", "label": [["listNum", "第一家"], ["location", "体育路"]]}
+{"text": "倒数第九家刚好在你你家隔壁的体育路", "label": [["listNum", "倒数第九家"], ["location", "体育路"]]}
+{"text": "倒数第二家刚好在你你家隔壁的体育路", "label": [["listNum", "倒数第二家"], ["location", "体育路"]]}
+{"text": "第一条太远了还是不去了吧", "label": [["listNum", "第一条"]]}
+{"text": "倒数第六条太远了还是不去了吧", "label": [["listNum", "倒数第六条"]]}
+{"text": "第七条太远了还是不去了吧", "label": [["listNum", "第七条"]]}
+{"text": "我看了第一个有活动过去凑热闹吧", "label": [["listNum", "第一个"]]}
+{"text": "我看了第四个有活动过去凑热闹吧", "label": [["listNum", "第四个"]]}
+{"text": "我看了倒数第七个有活动过去凑热闹吧", "label": [["listNum", "倒数第七个"]]}
+{"text": "第一家我还差一个印花过去吃一顿吧", "label": [["listNum", "第一家"]]}
+{"text": "倒数第九家我还差一个印花过去吃一顿吧", "label": [["listNum", "倒数第九家"]]}
+{"text": "第十家我还差一个印花过去吃一顿吧", "label": [["listNum", "第十家"]]}
+{"text": "我看了第一家不用排队过去吧", "label": [["listNum", "第一家"]]}
+{"text": "我看了第四家不用排队过去吧", "label": [["listNum", "第四家"]]}
+{"text": "我看了倒数第四家不用排队过去吧", "label": [["listNum", "倒数第四家"]]}
+{"text": "第一家没有空调的还是不要去哪里了", "label": [["listNum", "第一家"]]}
+{"text": "倒数第三家没有空调的还是不要去哪里了", "label": [["listNum", "倒数第三家"]]}
+{"text": "第九家没有空调的还是不要去哪里了", "label": [["listNum", "第九家"]]}
+{"text": "既然你不决定那我决定去第一家试试吧", "label": [["listNum", "第一家"]]}
+{"text": "既然你不决定那我决定去倒数第五家试试吧", "label": [["listNum", "倒数第五家"]]}
+{"text": "既然你不决定那我决定去倒数第六家试试吧", "label": [["listNum", "倒数第六家"]]}
+{"text": "第一家有停车位去那吃吧", "label": [["listNum", "第一家"]]}
+{"text": "第十家有停车位去那吃吧", "label": [["listNum", "第十家"]]}
+{"text": "倒数第三家有停车位去那吃吧", "label": [["listNum", "倒数第三家"]]}
+{"text": "我觉得第一家偏咸还是不要了", "label": [["listNum", "第一家"], ["taste", "咸"]]}
+{"text": "我觉得倒数第九家偏咸还是不要了", "label": [["listNum", "倒数第九家"], ["taste", "咸"]]}
+{"text": "我觉得第七家偏咸还是不要了", "label": [["listNum", "第七家"], ["taste", "咸"]]}
+{"text": "今天过节哦去第一家吃烧肉吧", "label": [["listNum", "第一家"], ["dishName", "烧肉"]]}
+{"text": "今天过节哦去第六家吃烧肉吧", "label": [["listNum", "第六家"], ["dishName", "烧肉"]]}
+{"text": "今天过节哦去倒数第四家吃烧肉吧", "label": [["listNum", "倒数第四家"], ["dishName", "烧肉"]]}
+{"text": "第一个能用优惠券吗", "label": [["listNum", "第一个"]]}
+{"text": "第七个能用优惠券吗", "label": [["listNum", "第七个"]]}
+{"text": "第三个能用优惠券吗", "label": [["listNum", "第三个"]]}
+{"text": "还是不要去第一家了那里太偏僻了", "label": [["listNum", "第一家"]]}
+{"text": "还是不要去倒数第三家了那里太偏僻了", "label": [["listNum", "倒数第三家"]]}
+{"text": "还是不要去第十家了那里太偏僻了", "label": [["listNum", "第十家"]]}
+{"text": "吃海鲜还是去第一家吧老板比较实惠", "label": [["listNum", "第一家"], ["type", "海鲜"]]}
+{"text": "吃海鲜还是去倒数第八家吧老板比较实惠", "label": [["listNum", "倒数第八家"], ["type", "海鲜"]]}
+{"text": "吃海鲜还是去第六家吧老板比较实惠", "label": [["listNum", "第六家"], ["type", "海鲜"]]}
+{"text": "第一家上菜太慢了别去这家", "label": [["listNum", "第一家"]]}
+{"text": "倒数第六家上菜太慢了别去这家", "label": [["listNum", "倒数第六家"]]}
+{"text": "第六家上菜太慢了别去这家", "label": [["listNum", "第六家"]]}
+{"text": "去第一家试试吧我朋友强烈推荐", "label": [["listNum", "第一家"]]}
+{"text": "去倒数第一家试试吧我朋友强烈推荐", "label": [["listNum", "倒数第一家"]]}
+{"text": "去第七家试试吧我朋友强烈推荐", "label": [["listNum", "第七家"]]}
+{"text": "第一家今天是会员日中午去哪吃吧", "label": [["listNum", "第一家"]]}
+{"text": "倒数第八家今天是会员日中午去哪吃吧", "label": [["listNum", "倒数第八家"]]}
+{"text": "倒数第十家今天是会员日中午去哪吃吧", "label": [["listNum", "倒数第十家"]]}
+{"text": "不知道第一家的消费怎么样", "label": [["listNum", "第一家"]]}
+{"text": "不知道倒数第九家的消费怎么样", "label": [["listNum", "倒数第九家"]]}
+{"text": "不知道第七家的消费怎么样", "label": [["listNum", "第七家"]]}
+{"text": "第一家的消费真高还是不要去了", "label": [["listNum", "第一家"]]}
+{"text": "第三家的消费真高还是不要去了", "label": [["listNum", "第三家"]]}
+{"text": "倒数第七家的消费真高还是不要去了", "label": [["listNum", "倒数第七家"]]}
+{"text": "第一家吧别挑来挑去了", "label": [["listNum", "第一家"]]}
+{"text": "第七家吧别挑来挑去了", "label": [["listNum", "第七家"]]}
+{"text": "第十家吧别挑来挑去了", "label": [["listNum", "第十家"]]}
+{"text": "不知道第一家那边有没有塞车", "label": [["listNum", "第一家"]]}
+{"text": "不知道倒数第一家那边有没有塞车", "label": [["listNum", "倒数第一家"]]}
+{"text": "不知道第二家那边有没有塞车", "label": [["listNum", "第二家"]]}
+{"text": "我听你的去第一家吧", "label": [["listNum", "第一家"]]}
+{"text": "我听你的去第四家吧", "label": [["listNum", "第四家"]]}
+{"text": "我听你的去第四家吧", "label": [["listNum", "第四家"]]}
+{"text": "第一家的用餐时间有2小时去那吧", "label": [["listNum", "第一家"]]}
+{"text": "第三家的用餐时间有2小时去那吧", "label": [["listNum", "第三家"]]}
+{"text": "第四家的用餐时间有2小时去那吧", "label": [["listNum", "第四家"]]}
+{"text": "第一家的自助餐出名时间长和菜品足的可以去试试", "label": [["listNum", "第一家"], ["type", "自助餐"]]}
+{"text": "第四家的自助餐出名时间长和菜品足的可以去试试", "label": [["listNum", "第四家"], ["type", "自助餐"]]}
+{"text": "第八家的自助餐出名时间长和菜品足的可以去试试", "label": [["listNum", "第八家"], ["type", "自助餐"]]}
+{"text": "现在过去第一家是不是有点晚了", "label": [["listNum", "第一家"]]}
+{"text": "现在过去倒数第一家是不是有点晚了", "label": [["listNum", "倒数第一家"]]}
+{"text": "现在过去倒数第六家是不是有点晚了", "label": [["listNum", "倒数第六家"]]}
+{"text": "第一行那个看上去一般般不想去交智商税", "label": [["listNum", "第一行"]]}
+{"text": "倒数第六行那个看上去一般般不想去交智商税", "label": [["listNum", "倒数第六行"]]}
+{"text": "第六行那个看上去一般般不想去交智商税", "label": [["listNum", "第六行"]]}
+{"text": "第一家的椒盐排骨辣吗", "label": [["listNum", "第一家"], ["dishName", "椒盐排骨"], ["taste", "辣"]]}
+{"text": "倒数第九家的椒盐排骨辣吗", "label": [["listNum", "倒数第九家"], ["dishName", "椒盐排骨"], ["taste", "辣"]]}
+{"text": "第四家的椒盐排骨辣吗", "label": [["listNum", "第四家"], ["dishName", "椒盐排骨"], ["taste", "辣"]]}
+{"text": "第一家真不咋地还是别了", "label": [["listNum", "第一家"]]}
+{"text": "倒数第四家真不咋地还是别了", "label": [["listNum", "倒数第四家"]]}
+{"text": "第九家真不咋地还是别了", "label": [["listNum", "第九家"]]}
+{"text": "你要不要去试试第一家", "label": [["listNum", "第一家"]]}
+{"text": "你要不要去试试第八家", "label": [["listNum", "第八家"]]}
+{"text": "你要不要去试试倒数第十家", "label": [["listNum", "倒数第十家"]]}
+{"text": "座椅习惯调到第一个", "label": [["listNum", "第一个"]]}
+{"text": "座椅习惯调到第四个", "label": [["listNum", "第四个"]]}
+{"text": "座椅习惯调到第七个", "label": [["listNum", "第七个"]]}
+{"text": "导航切换到第一条路线", "label": [["listNum", "第一条"]]}
+{"text": "导航切换到第二条路线", "label": [["listNum", "第二条"]]}
+{"text": "导航切换到倒数第一条路线", "label": [["listNum", "倒数第一条"]]}
+{"text": "播放第一条音乐", "label": [["listNum", "第一条"]]}
+{"text": "播放倒数第四条音乐", "label": [["listNum", "倒数第四条"]]}
+{"text": "播放第五条音乐", "label": [["listNum", "第五条"]]}
+{"text": "选择第一个位置", "label": [["listNum", "第一个"]]}
+{"text": "选择倒数第三个位置", "label": [["listNum", "倒数第三个"]]}
+{"text": "选择倒数第四个位置", "label": [["listNum", "倒数第四个"]]}
+{"text": "连接第一个蓝牙", "label": [["listNum", "第一个"]]}
+{"text": "连接倒数第二个蓝牙", "label": [["listNum", "倒数第二个"]]}
+{"text": "连接第十个蓝牙", "label": [["listNum", "第十个"]]}
+{"text": "第一家口碑全肇庆第一去试试看吧", "label": [["listNum", "第一家"]]}
+{"text": "第六家口碑全肇庆第一去试试看吧", "label": [["listNum", "第六家"]]}
+{"text": "第二家口碑全肇庆第一去试试看吧", "label": [["listNum", "第二家"]]}
