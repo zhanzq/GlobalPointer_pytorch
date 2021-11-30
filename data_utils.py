@@ -96,7 +96,7 @@ def get_ner_example(sample, norm_text=False, tokenizer=None, opt=None):
     inputs = tokenizer.encode_plus(text_tokens, max_length=max_seq_len, truncation=True,
                                    padding='max_length', add_special_tokens=True)
 
-    anns = sample.get("label", None)
+    anns = sample.get("label", [])
     entity_dct = {}
     for slot_type, slot_value in anns:
         slot_value = slot_value.lower()
