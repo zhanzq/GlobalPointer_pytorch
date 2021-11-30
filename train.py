@@ -237,12 +237,12 @@ def main():
     parser.add_argument("--bert_dim", default=768, type=int)
     parser.add_argument("--pretrained_bert_name", default="bert-base-uncased", type=str)
     parser.add_argument("--max_seq_len", default=50, type=int)
-    parser.add_argument("--ner_type_num", default=5, type=int)
+    parser.add_argument("--ner_type_num", default=6, type=int)
     parser.add_argument("--hops", default=3, type=int)
     parser.add_argument("--patience", default=5, type=int)
     parser.add_argument("--ro_pe", default=False, type=bool)
     parser.add_argument("--device", default=None, type=str, help="e.g. cuda:0")
-    parser.add_argument("--data_dir", default="datasets/xp_ner_1124/", type=str, help="xp dataset")
+    parser.add_argument("--data_dir", default="datasets/xp_ner_1129/", type=str, help="xp dataset")
     parser.add_argument("--seed", default=1234, type=int, help="set seed for reproducibility")
     parser.add_argument("--valid_dataset_ratio", default=0.1, type=float,
                         help="set ratio between 0 and 1 for validation support")
@@ -292,7 +292,8 @@ def main():
     opt.model_class = model_classes[opt.model_name]
     opt.dataset_file = dataset_files[opt.dataset]
     opt.initializer = initializers[str(opt.initializer)]
-    opt.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4}
+    opt.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4, "listNum"}
+    opt.ner_type_num = len(opt.ent2id)
     if opt.device is None:
         if torch.cuda.is_available():
             opt.device = torch.device("cuda")
