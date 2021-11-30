@@ -292,7 +292,7 @@ def main():
     opt.model_class = model_classes[opt.model_name]
     opt.dataset_file = dataset_files[opt.dataset]
     opt.initializer = initializers[str(opt.initializer)]
-    opt.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4, "listNum"}
+    opt.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4, "listNum": 5}
     opt.ner_type_num = len(opt.ent2id)
     if opt.device is None:
         if torch.cuda.is_available():
