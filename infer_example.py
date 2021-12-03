@@ -8,7 +8,7 @@ import config
 import sys
 import torch
 import json
-from data_utils import get_ner_example
+from data_utils import get_ner_example, normalize
 from models.gp import GlobalPointer
 from transformers import BertTokenizer, BertModel
 from torch.utils.data import DataLoader, Dataset
@@ -52,6 +52,7 @@ class Inference:
 
 
     def evaluate(self, text, threshold=0.0):
+        text = normalize(text)
         sample = {"text": text}
         data = get_ner_example(sample, norm_text=True, tokenizer=self.tokenizer, opt=self.opt)
         data["input_ids"] = data["input_ids"].unsqueeze(0)
@@ -70,9 +71,9 @@ class Option(object):
         self.inner_dim = 64
         self.max_seq_len = 50
         self.model_name = "GlobalPointer"
-        self.best_model_path = "state_dict/gp_xp_ner_val_acc_0.8774_bert-base-chinese_1"
+        self.best_model_path = "/Users/zhanzq/Downloads/xp_ner_pytorch_model.bin"
         self.pretrained_bert_model = "/Users/zhanzq/Downloads/models/bert-base-chinese"
-        self.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4}
+        self.ent2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4, "poiIndex": 5}
         self.ner_type_num = len(self.ent2id)
 
         if torch.cuda.is_available():
