@@ -11,6 +11,8 @@ import json
 import random
 import traceback
 
+import pickle as pkl
+
 import torch
 
 import numpy as np
@@ -137,6 +139,18 @@ def get_ner_dataset(lines, norm_text=False, tokenizer=None, opt=None):
     return all_data
 
 
+def load_ner_data_from_pkl(data_path):
+    print("load data from {}".format(data_path))
+    with open(data_path, "rb") as reader:
+        data = pkl.load(reader)
+        train_data = data["train"]
+        valid_data = data["eval"]
+        test_data = data["test"]
+
+        print("train_data: {}, valid_data: {}, test_data: {}".format(len(train_data), len(valid_data), len(test_data)))
+        return train_data, valid_data, test_data
+
+
 def load_ner_data(data_dir, norm_text=False, tokenizer=None, opt=None, do_shuffle=True, splits=(0.7, 0.2, 0.1)):
     train_lines, valid_lines, test_lines = [], [], []
     assert os.path.isdir(data_dir), "input path must be data dir"
@@ -211,6 +225,12 @@ def test():
     print(data_i)
 
 
+def load_data_from_pkl_test():
+    data_path = "/Users/zhanzq/Downloads/mpcc-ner.pkl"
+    train_data, valid_data, test_data = load_ner_data_from_pkl(data_path)
+
+
 if __name__ == "__main__":
     # main()
-    test()
+    # test()
+    load_data_from_pkl_test()

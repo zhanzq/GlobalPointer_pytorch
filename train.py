@@ -21,7 +21,7 @@ import torch
 from torch.utils.data import DataLoader
 
 from data_utils import XPNER
-from data_utils import load_ner_data
+from data_utils import load_ner_data, load_ner_data_from_pkl
 
 from models.gp import GlobalPointer
 
@@ -41,13 +41,17 @@ class Instructor:
         self.model = opt.model_class(bert, opt).to(opt.device)
 
         data_dir = opt.data_dir
-        train_data, valid_data, test_data = load_ner_data(
-            data_dir=data_dir,
-            norm_text=False,
-            tokenizer=self.tokenizer,
-            do_shuffle=True,
-            opt=opt,
-        )
+        pkl_path = opt.pkl_path
+        if os.path.exists(pkl_path):
+            train_dat, valid_data, test_data = load_ner_data_from_pkl(pkl_path)
+        else:
+            train_data, valid_data, test_data = load_ner_data(
+                data_dir=data_dir,
+                norm_text=False,
+                tokenizer=self.tokenizer,
+                do_shuffle=True,
+                opt=opt,
+            )
 
         self.train_dataset = XPNER(train_data)
         self.valid_dataset = XPNER(valid_data)
