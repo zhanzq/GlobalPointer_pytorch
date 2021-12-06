@@ -42,8 +42,12 @@ class Instructor:
 
         data_dir = opt.data_dir
         pkl_path = opt.pkl_path
+        train_data, valid_data, test_data = None, None, None
         if os.path.exists(pkl_path):
-            train_dat, valid_data, test_data = load_ner_data_from_pkl(pkl_path)
+            train_data, valid_data, test_data = load_ner_data_from_pkl(pkl_path)
+            train_data = [{key:numpy.array(val) for key, val in it.items()} for it in train_data]
+            valid_data = [{key:numpy.array(val) for key, val in it.items()} for it in valid_data]
+            test_data = [{key:numpy.array(val) for key, val in it.items()} for it in test_data]
         else:
             train_data, valid_data, test_data = load_ner_data(
                 data_dir=data_dir,
@@ -114,6 +118,7 @@ class Instructor:
                 # clear gradient accumulators
                 optimizer.zero_grad()
 
+                batch = {key: val.to(self.opt.device) for key,val in batch.items()}
                 outputs = self.model(batch)
                 targets = batch["labels"].to(self.opt.device)
 
@@ -172,6 +177,7 @@ batch_acc: %.4f" % (global_step, train_loss, batch_loss, batch_f1, batch_acc))
         with torch.no_grad():
             for i_batch, t_batch in enumerate(data_loader):
                 t_targets = t_batch["labels"].to(self.opt.device)
+                t_batch = {key: val.to(self.opt.device) for key,val in t_batch.items()}
                 t_outputs = self.model(t_batch)
 
                 batch_truths = t_targets.cpu().numpy()
@@ -247,6 +253,7 @@ def main():
     parser.add_argument("--ro_pe", default=False, type=bool)
     parser.add_argument("--device", default=None, type=str, help="e.g. cuda:0")
     parser.add_argument("--data_dir", default="datasets/xp_ner_1129/", type=str, help="xp dataset")
+    parser.add_argument("--pkl_path", default="datasets/xp_ner/mpcc-ner.pkl", type=str, help="xp dataset")
     parser.add_argument("--seed", default=1234, type=int, help="set seed for reproducibility")
     parser.add_argument("--valid_dataset_ratio", default=0.1, type=float,
                         help="set ratio between 0 and 1 for validation support")
