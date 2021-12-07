@@ -12,9 +12,9 @@ train_config = {
     "model_name": "mengzi-base-chinese",
     "pretrained_model_dir": "/Users/zhanzq/Downloads/models/",
     "project_dir": "/Users/zhanzq/github/GlobalPointer_pytorch/",
-    "data_dir": "./datasets/xp_ner_1129/",
-    "output_dir": "./output/",
-    "logging_dir": "./log/",
+    "data_dir": "datasets/xp_ner_1129/",
+    "output_dir": "output/",
+    "logging_dir": "log/",
     "num_train_epochs": 10,
     "per_device_train_batch_size": 16,
     "per_device_eval_batch_size": 64,
@@ -44,7 +44,7 @@ else:
     project_dir = "/Users/zhanzq/github/GlobalPointer_pytorch/"
     pretrained_model_dir = "/Users/zhanzq/Downloads/models/"
 
-train_config["pretrained_model_path"] = os.path.join(pretrained_model_dir, train_config["model_name"])
+train_config["pretrained_model_dir"] = os.path.join(pretrained_model_dir, train_config["model_name"])
 train_config["data_dir"] = os.path.join(project_dir, train_config["data_dir"])
 train_config["output_dir"] = os.path.join(project_dir, train_config["output_dir"])
 train_config["logging_dir"] = os.path.join(project_dir, train_config["logging_dir"])
@@ -53,10 +53,10 @@ label2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4}
 id2label = {val:key for key,val in label2id.items()}
 train_config["label2id"] = label2id
 train_config["id2label"] = id2label
-train_config["device"] = torch.device("cpu")
+train_config["device"] = "cpu"
 
 if torch.cuda.is_available():
-    train_config["device"] = torch.device("cuda")
+    train_config["device"] = "cuda"
 
 
 eval_config = {
