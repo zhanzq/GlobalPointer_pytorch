@@ -41,8 +41,8 @@ if local:
     project_dir = "/Users/zhanzq/github/GlobalPointer_pytorch/"
     pretrained_model_dir = "/Users/zhanzq/Downloads/models/"
 else:
-    project_dir = "/Users/zhanzq/github/GlobalPointer_pytorch/"
-    pretrained_model_dir = "/Users/zhanzq/Downloads/models/"
+    project_dir = "/data/zhanzhiqiang/github/GlobalPointer_pytorch/"
+    pretrained_model_dir = "/data/zhanzhiqiang/models/"
 
 train_config["pretrained_model_dir"] = os.path.join(pretrained_model_dir, train_config["model_name"])
 train_config["data_dir"] = os.path.join(project_dir, train_config["data_dir"])
