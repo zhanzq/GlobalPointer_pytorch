@@ -77,21 +77,24 @@ class XPNER(Dataset):
             if val >= self.vocab:
                 example["input_ids"][idx] = 102
         self.examples[idx] = example
+        input_ids_tensor = example["input_ids"] if type(example["input_ids"]) is torch.Tensor else torch.LongTensor(example["input_ids"])
+        token_type_ids_tensor = example["token_type_ids"] if type(example["token_type_ids"]) is torch.Tensor else torch.LongTensor(example["token_type_ids"])
+        attention_mask_tensor = example["attention_mask"] if type(example["attention_mask"]) is torch.Tensor else torch.LongTensor(example["attention_mask"])
         inputs = {
-            "input_ids": torch.tensor(self.examples[idx]["input_ids"], dtype=torch.long),
-            "token_type_ids": torch.tensor(self.examples[idx]["token_type_ids"], dtype=torch.long),
-            "attention_mask": torch.tensor(self.examples[idx]["attention_mask"], dtype=torch.long)
+            "input_ids": input_ids_tensor,
+            "token_type_ids": token_type_ids_tensor,
+            "attention_mask": attention_mask_tensor,
         }
         if "label" in self.examples[idx]:
-            inputs["labels"] = torch.tensor(self.examples[idx]["label"], dtype=torch.long)
+            inputs["labels"] = example["label"] if type(example["label"]) is torch.Tensor else torch.LongTensor(example["label"])
         if "labels" in self.examples[idx]:
-            inputs["labels"] = torch.tensor(self.examples[idx]["labels"], dtype=torch.long)
+            inputs["labels"] = example["labels"] if type(example["labels"]) is torch.Tensor else torch.LongTensor(example["label"])
         if "start_pos" in self.examples[idx]:
-            inputs["start_positions"] = torch.tensor(self.examples[idx]["start_pos"], dtype=torch.long)
+            inputs["start_positions"] = example["start_pos"] if type(example["start_pos"]) is torch.Tensor else torch.LongTensor(example["label"])
         if "end_pos" in self.examples[idx]:
-            inputs["end_positions"] = torch.tensor(self.examples[idx]["end_pos"], dtype=torch.long)
+            inputs["end_positions"] = example["end_pos"] if type(example["end_pos"]) is torch.Tensor else torch.LongTensor(example["label"])
         if "weight" in self.examples[idx]:
-            inputs["weights"] = torch.tensor(self.examples[idx]["weight"], dtype=torch.float32)
+            inputs["weights"] = example["weight"] if type(example["weight"]) is torch.Tensor else torch.LongTensor(example["weight"])
         return inputs
 
 
@@ -185,10 +188,11 @@ def get_ner_example(sample, norm_text=False, tokenizer=None, opt=None):
     if norm_text:
         sample["text"] = normalize(text=sample["text"])
 
-    num_labels = config.num_labels
-    max_seq_len = config.max_len
-    label2id = config.label2id
+    num_labels = opt.num_labels
+    max_seq_len = opt.max_len
+    label2id = opt.label2id
     text = sample["text"].lower()
+    text = text[:max_seq_len-2]
     text_tokens = [ch for ch in text]
 
     inputs = tokenizer.encode_plus(text_tokens, max_length=max_seq_len, truncation=True,
@@ -211,10 +215,10 @@ def get_ner_example(sample, norm_text=False, tokenizer=None, opt=None):
     inputs["labels"] = labels
     data = {
         "sample": sample,
-        "labels": torch.LongTensor(inputs["labels"]).to(config.device),
-        "input_ids": torch.LongTensor(inputs["input_ids"]).to(config.device),
-        "attention_mask": torch.LongTensor(inputs["attention_mask"]).to(config.device),
-        "token_type_ids": torch.LongTensor(inputs["token_type_ids"]).to(config.device),
+        "labels": torch.LongTensor(inputs["labels"]).to(opt.device),
+        "input_ids": torch.LongTensor(inputs["input_ids"]).to(opt.device),
+        "attention_mask": torch.LongTensor(inputs["attention_mask"]).to(opt.device),
+        "token_type_ids": torch.LongTensor(inputs["token_type_ids"]).to(opt.device),
     }
 
     return data
