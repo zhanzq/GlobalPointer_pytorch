@@ -34,22 +34,25 @@ train_config = {
     "ro_pe": False,
     "inner_dim": 32,
     "vocab_size": 21128,
+    "best_model_path": "/Users/zhanzq/Downloads/checkpoint-1400/pytorch_model.bin",
 }
 
 local = True
 if local:
     project_dir = "/Users/zhanzq/github/GlobalPointer_pytorch/"
     pretrained_model_dir = "/Users/zhanzq/Downloads/models/"
+    best_model_path = "/Users/zhanzq/Downloads/pytorch_model.bin"
 else:
     project_dir = "/data/zhanzhiqiang/github/GlobalPointer_pytorch/"
     pretrained_model_dir = "/data/zhanzhiqiang/models/"
+    best_model_path = "/data/zhanzhiqiang/github/pytorch_model.bin"
 
 train_config["pretrained_model_dir"] = os.path.join(pretrained_model_dir, train_config["model_name"])
 train_config["data_dir"] = os.path.join(project_dir, train_config["data_dir"])
 train_config["output_dir"] = os.path.join(project_dir, train_config["output_dir"])
 train_config["logging_dir"] = os.path.join(project_dir, train_config["logging_dir"])
 
-label2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4}
+label2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4, "poiIndex": 5}
 id2label = {val:key for key,val in label2id.items()}
 train_config["label2id"] = label2id
 train_config["id2label"] = id2label
