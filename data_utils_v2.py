@@ -10,112 +10,120 @@ import re
 import json
 import random
 import traceback
+import pickle as pkl
 
 import torch
 
 import numpy as np
 from torch.utils.data import Dataset
 from transformers import BertTokenizer
+from config_v2 import train_config as config
+from transformers import BertConfig
+
+REMAIN = re.compile(r"[\u4e00-\u9fa5a-zA-Z0-9.]+")
+ASR_RE = [
+    (
+        re.compile(r"(小批|小屁|小平|小佩|小片|小弟|小D|小贝)"),
+        "小P"
+    ),
+    (
+        re.compile(r"(牌号|拍号)"),
+        "排号"
+    ),
+    (
+        re.compile(r"拍个号"),
+        "排个号"
+    )
+]
 
 
-class Option(object):
-    def __init__(self, max_seq_len=50, ner_type_num=6):
-        self.max_seq_len = max_seq_len
-        self.ner_type_num = ner_type_num
-        self.ent2id = {"": 0, "location": 1, "type": 2, "poiName": 3, "dishName": 4, "taste": 5}
-
-
-def rm_punctuation(text):
-    punctuations = [",", "，", "\.", "。", "\?", "？", ":", "：", "!", "！", "'", "\"", "、"]
-    for pun in punctuations:
-        text = re.sub(pun, "", text)
+def asr_correct(text):
+    for compiler, sub in ASR_RE:
+        text = compiler.sub(sub, text)
     return text
 
 
-def get_entity_spans(text, entity_dct):
-    entity_spans = []
-    for slot_type in entity_dct:
-        entity_lst = entity_dct[slot_type]
-        for entity in entity_lst:
-            entity_len = len(entity)
-            for idx in range(len(text)):
-                if text[idx: idx + entity_len] == entity:
-                    entity_spans.append([idx + 1, idx + entity_len, slot_type])
-                    # print("span: [%d, %d]" % (idx + 1, idx + entity_len))
-    return entity_spans
-
-
-def get_ner_example(sample, with_punctuation=False, tokenizer=None, opt=None):
+def normalize(text):
     """
+    1. 去掉无关字符
+    2. ASR纠错通过词表替换
 
-    :param sample: input data record, like {"text": "可以去吃无骨鱼啊", "label": {"dishName": ["无骨鱼"]}}
-    :param with_punctuation:
-    :param tokenizer:
-    :param opt: configure parameters
+    :param text:
     :return:
     """
 
-    if not with_punctuation:
-        sample["text"] = rm_punctuation(text=sample["text"])
-
-    ner_type_num = opt.ner_type_num
-    max_seq_len = opt.max_seq_len
-    ent2id = opt.ent2id
-    text = sample["text"]
-
-    inputs = tokenizer.encode_plus(
-        text,
-        max_length=max_seq_len,
-        truncation=True,
-        padding='max_length',
-        add_special_tokens=True
-    )
-
-    gd_truths = sample.get("label", None)
-    for slot_type in gd_truths:
-        if slot_type not in ent2id:
-            gd_truths.pop(slot_type)
-    if gd_truths is not None:
-        entity_dct = gd_truths
-        entity_spans = get_entity_spans(text, entity_dct)
-        labels = np.zeros((ner_type_num, max_seq_len, max_seq_len))
-        for start, end, label in entity_spans:
-            labels[ent2id[label], start, end] = 1
-    inputs["labels"] = labels
-
-    data = {
-        "sample": sample,
-        "labels": torch.LongTensor(inputs["labels"]),
-        "input_ids": torch.LongTensor(inputs["input_ids"]),
-        "attention_mask": torch.LongTensor(inputs["attention_mask"]),
-        "token_type_ids": torch.LongTensor(inputs["token_type_ids"]),
-    }
-
-    return data
+    return asr_correct("".join(REMAIN.findall(text)))
 
 
-def get_ner_dataset(lines, with_punctuation=False, tokenizer=None, opt=None):
-    all_data = []
-    for line in lines:
-        line = line.strip()
-        try:
-            sample = json.loads(line)
-            data = get_ner_example(sample, with_punctuation=with_punctuation, tokenizer=tokenizer, opt=opt)
-            all_data.append(data)
-        except Exception as e:
-            print(e)
-            traceback.print_exc()
+class XPNER(Dataset):
+    def __init__(self, examples=None, vocab=21128):
+        self.vocab = vocab
+        if examples is None:
+            examples = []
+        self.examples = examples
 
-    return all_data
+    def add_examples(self, examples):
+        self.examples.append(examples)
+
+    def shuffle(self):
+        random.shuffle(self.examples)
+
+    def __len__(self):
+        return len(self.examples)
+
+    def __getitem__(self, idx):
+        example = self.examples[idx]
+        for idx, val in enumerate(example["input_ids"]):
+            if val >= self.vocab:
+                example["input_ids"][idx] = 102
+        self.examples[idx] = example
+        inputs = {
+            "input_ids": torch.tensor(self.examples[idx]["input_ids"], dtype=torch.long),
+            "token_type_ids": torch.tensor(self.examples[idx]["token_type_ids"], dtype=torch.long),
+            "attention_mask": torch.tensor(self.examples[idx]["attention_mask"], dtype=torch.long)
+        }
+        if "label" in self.examples[idx]:
+            inputs["labels"] = torch.tensor(self.examples[idx]["label"], dtype=torch.long)
+        if "labels" in self.examples[idx]:
+            inputs["labels"] = torch.tensor(self.examples[idx]["labels"], dtype=torch.long)
+        if "start_pos" in self.examples[idx]:
+            inputs["start_positions"] = torch.tensor(self.examples[idx]["start_pos"], dtype=torch.long)
+        if "end_pos" in self.examples[idx]:
+            inputs["end_positions"] = torch.tensor(self.examples[idx]["end_pos"], dtype=torch.long)
+        if "weight" in self.examples[idx]:
+            inputs["weights"] = torch.tensor(self.examples[idx]["weight"], dtype=torch.float32)
+        return inputs
 
 
-def load_ner_data(data_dir, with_punctuation=False, tokenizer=None, opt=None, do_shuffle=True, splits=(0.7, 0.2, 0.1)):
+def load_ent_dct(data_path):
+    assert os.path.exists(data_path), "entity dict file must exist"
+    ent_dct = None
+    with open(data_path, "r") as reader:
+        line = reader.readline().strip()
+        ent_dct = json.loads(line)
+
+    return ent_dct
+
+
+def load_ner_data_from_pkl(data_path):
+    print("load data from {}".format(data_path))
+    with open(data_path, "rb") as reader:
+        data = pkl.load(reader)
+        train_data = data["train"]
+        valid_data = data["eval"]
+        test_data = data["test"]
+
+        print("train_data: {}, valid_data: {}, test_data: {}".format(len(train_data), len(valid_data), len(test_data)))
+        return train_data, valid_data, test_data
+
+
+def load_ner_data(data_dir, norm_text=False, tokenizer=None, opt=None, do_shuffle=True, splits=(0.7, 0.2, 0.1)):
     train_lines, valid_lines, test_lines = [], [], []
     assert os.path.isdir(data_dir), "input path must be data dir"
     files = os.listdir(data_dir)
     for file_name in files:
         data_path = os.path.join(data_dir, file_name)
-        if "train.json" == file_name:
+        if "train.jsonl" == file_name:
             with open(data_path, "r", encoding="utf-8", newline="\n", errors="ignore") as reader:
                 lines = reader.readlines()
                 train_lines.extend(lines)
@@ -142,46 +150,95 @@ def load_ner_data(data_dir, with_punctuation=False, tokenizer=None, opt=None, do
         train_sz -= valid_sz
         valid_lines = train_lines[train_sz:train_sz + valid_sz]
 
-    train_data = get_ner_dataset(train_lines, with_punctuation=with_punctuation, tokenizer=tokenizer, opt=opt)
-    valid_data = get_ner_dataset(valid_lines, with_punctuation=with_punctuation, tokenizer=tokenizer, opt=opt)
-    test_data = get_ner_dataset(test_lines, with_punctuation=with_punctuation, tokenizer=tokenizer, opt=opt)
+    train_data = get_ner_dataset(train_lines, norm_text=norm_text, tokenizer=tokenizer, opt=opt)
+    valid_data = get_ner_dataset(valid_lines, norm_text=norm_text, tokenizer=tokenizer, opt=opt)
+    test_data = get_ner_dataset(test_lines, norm_text=norm_text, tokenizer=tokenizer, opt=opt)
 
     return train_data, valid_data, test_data
 
 
-class XPNER(Dataset):
-    def __init__(self, data):
-        self.data = data
-        self.length = len(data)
+def get_ner_dataset(lines, norm_text=False, tokenizer=None, opt=None):
+    all_data = []
+    for line in lines:
+        line = line.strip()
+        try:
+            sample = json.loads(line)
+            data = get_ner_example(sample, norm_text=norm_text, tokenizer=tokenizer, opt=opt)
+            all_data.append(data)
+        except Exception as e:
+            print(e)
+            traceback.print_exc()
 
-    def __getitem__(self, index):
-        return self.data[index]
-
-    def __len__(self):
-        return self.length
+    return all_data
 
 
-def load_ent_dct(data_path):
-    assert os.path.exists(data_path), "entity dict file must exist"
-    ent_dct = None
-    with open(data_path, "r") as reader:
-        line = reader.readline().strip()
-        ent_dct = json.loads(line)
+def get_ner_example(sample, norm_text=False, tokenizer=None, opt=None):
+    """
 
-    return ent_dct
+    :param sample: input data record, like {"text": "可以去吃无骨鱼啊", "label": [["dishName", "无骨鱼"]]}
+    :param norm_text:
+    :param tokenizer:
+    :param opt: configure parameters
+    :return:
+    """
+
+    if norm_text:
+        sample["text"] = normalize(text=sample["text"])
+
+    num_labels = config.num_labels
+    max_seq_len = config.max_len
+    label2id = config.label2id
+    text = sample["text"].lower()
+    text_tokens = [ch for ch in text]
+
+    inputs = tokenizer.encode_plus(text_tokens, max_length=max_seq_len, truncation=True,
+                                   padding='max_length', add_special_tokens=True)
+
+    anns = sample.get("label", [])
+    entity_dct = {}
+    for slot_type, slot_value in anns:
+        slot_value = slot_value.lower()
+        if slot_type in label2id and slot_value in text:
+            if slot_type not in entity_dct:
+                entity_dct[slot_type] = []
+            entity_dct[slot_type].append(slot_value)
+    labels = np.zeros((num_labels, max_seq_len, max_seq_len))
+
+    entity_spans = get_entity_spans(text, entity_dct)
+    for start, end, label in entity_spans:
+        labels[label2id[label], start, end] = 1
+
+    inputs["labels"] = labels
+    data = {
+        "sample": sample,
+        "labels": torch.LongTensor(inputs["labels"]).to(config.device),
+        "input_ids": torch.LongTensor(inputs["input_ids"]).to(config.device),
+        "attention_mask": torch.LongTensor(inputs["attention_mask"]).to(config.device),
+        "token_type_ids": torch.LongTensor(inputs["token_type_ids"]).to(config.device),
+    }
+
+    return data
+
+
+def get_entity_spans(text, entity_dct):
+    entity_spans = []
+    for slot_type in entity_dct:
+        entity_lst = entity_dct[slot_type]
+        for entity in entity_lst:
+            entity_len = len(entity)
+            for idx in range(len(text)):
+                if text[idx: idx + entity_len] == entity:
+                    entity_spans.append([idx + 1, idx + entity_len, slot_type])
+                    # print("span: [%d, %d]" % (idx + 1, idx + entity_len))
+    return entity_spans
 
 
 def main():
-    data_path = "datasets/cluener/train.json"
-    ent_dct_path = "datasets/cluener/ent2id.json"
-    ent2id = load_ent_dct(data_path=ent_dct_path)
-    opt = Option(max_seq_len=128, ner_type_num=10)
-    opt.ent2id = ent2id
-    opt.ner_type_num = len(ent2id)
+    data_path = "datasets/xp_ner_1124/train.jsonl"
     tokenizer = BertTokenizer.from_pretrained("/Users/zhanzq/Downloads/models/bert-base-chinese")
     with open(data_path, "r") as reader:
         lines = reader.readlines()
-        dataset = get_ner_dataset(lines, with_punctuation=True, tokenizer=tokenizer, opt=opt)
+        dataset = get_ner_dataset(lines[:10], norm_text=False, tokenizer=tokenizer, opt=config)
 
         print("dataset samples:")
         for i in range(10):
@@ -189,5 +246,21 @@ def main():
             print(dataset[i])
 
 
+def test():
+    tokenizer = BertTokenizer.from_pretrained("/Users/zhanzq/Downloads/models/bert-base-chinese")
+    sample = {"text": "可以去吃无骨鱼啊", "label": [["dishName", "无骨鱼"]]}
+    data_i = get_ner_example(sample, norm_text=False, tokenizer=tokenizer, opt=config)
+    print(data_i)
+
+
+def load_data_from_pkl_test():
+    data_path = "/Users/zhanzq/Downloads/mpcc-ner.pkl"
+    train_data, valid_data, test_data = load_ner_data_from_pkl(data_path)
+
+
 if __name__ == "__main__":
+    config = BertConfig(**config)
     main()
+    # test()
+    # load_data_from_pkl_test()
+
