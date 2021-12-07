@@ -5,7 +5,8 @@
 # date  : 2021/11/15
 #
 
-import time
+import os
+import torch
 
 train_config = {
     "model_name": "mengzi-base-chinese",
@@ -52,6 +53,11 @@ label2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4}
 id2label = {val:key for key,val in label2id.items()}
 train_config["label2id"] = label2id
 train_config["id2label"] = id2label
+train_config["device"] = torch.device("cpu")
+
+if torch.cuda.is_available():
+    train_config["device"] = torch.device("cuda")
+
 
 eval_config = {
     "model_state_dir": "./outputs/xp_ner/",
@@ -66,6 +72,7 @@ eval_config = {
     }
     
 }
+
 
 # ---------------------------------------------
 train_config = {**train_config}
