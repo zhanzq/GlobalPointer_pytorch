@@ -82,6 +82,7 @@ def compute_ner_metrics(predictions):
 def main():
     tokenizer = BertTokenizer.from_pretrained(config.pretrained_model_dir)
     model = GlobalPointer.from_pretrained(config.pretrained_model_dir, config=config)
+    logger.info(model)
     trained_param_num, untrained_param_num = get_param_num(model)
     logger.info(msg="trained_param_num: {}, untrained_param_num: {}".format(trained_param_num, untrained_param_num))
 
