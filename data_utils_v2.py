@@ -52,6 +52,7 @@ def normalize(text):
     :return:
     """
 
+    text = text.lower()
     return asr_correct("".join(REMAIN.findall(text)))
 
 
@@ -120,7 +121,7 @@ def load_ner_data_from_pkl(data_path):
         return train_data, valid_data, test_data
 
 
-def load_ner_data(data_dir, norm_text=False, tokenizer=None, opt=None, do_shuffle=True, splits=(0.7, 0.2, 0.1)):
+def load_ner_data(data_dir, norm_text=True, tokenizer=None, opt=None, do_shuffle=True, splits=(0.7, 0.2, 0.1)):
     train_lines, valid_lines, test_lines = [], [], []
     assert os.path.isdir(data_dir), "input path must be data dir"
     files = os.listdir(data_dir)
@@ -160,7 +161,7 @@ def load_ner_data(data_dir, norm_text=False, tokenizer=None, opt=None, do_shuffl
     return train_data, valid_data, test_data
 
 
-def get_ner_dataset(lines, norm_text=False, tokenizer=None, opt=None):
+def get_ner_dataset(lines, norm_text=True, tokenizer=None, opt=None):
     all_data = []
     for line in lines:
         line = line.strip()
@@ -175,7 +176,7 @@ def get_ner_dataset(lines, norm_text=False, tokenizer=None, opt=None):
     return all_data
 
 
-def get_ner_example(sample, norm_text=False, tokenizer=None, opt=None):
+def get_ner_example(sample, norm_text=True, tokenizer=None, opt=None):
     """
 
     :param sample: input data record, like {"text": "可以去吃无骨鱼啊", "label": [["dishName", "无骨鱼"]]}
@@ -242,7 +243,7 @@ def main():
     tokenizer = BertTokenizer.from_pretrained("/Users/zhanzq/Downloads/models/bert-base-chinese")
     with open(data_path, "r") as reader:
         lines = reader.readlines()
-        dataset = get_ner_dataset(lines[:10], norm_text=False, tokenizer=tokenizer, opt=config)
+        dataset = get_ner_dataset(lines[:10], norm_text=True, tokenizer=tokenizer, opt=config)
 
         print("dataset samples:")
         for i in range(10):
@@ -253,7 +254,7 @@ def main():
 def test():
     tokenizer = BertTokenizer.from_pretrained("/Users/zhanzq/Downloads/models/bert-base-chinese")
     sample = {"text": "可以去吃无骨鱼啊", "label": [["dishName", "无骨鱼"]]}
-    data_i = get_ner_example(sample, norm_text=False, tokenizer=tokenizer, opt=config)
+    data_i = get_ner_example(sample, norm_text=True, tokenizer=tokenizer, opt=config)
     print(data_i)
 
 
