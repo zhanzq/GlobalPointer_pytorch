@@ -9,7 +9,7 @@ import os
 import torch
 
 train_config = {
-    "model_name": "mengzi-base-chinese",
+    "model_name": "bert-base-chinese",
     "pretrained_model_dir": "/Users/zhanzq/Downloads/models/",
     "project_dir": "/Users/zhanzq/github/GlobalPointer_pytorch/",
     "data_dir": "datasets/xp_ner_1129/",
@@ -41,7 +41,7 @@ local = True
 if local:
     project_dir = "/Users/zhanzq/github/GlobalPointer_pytorch/"
     pretrained_model_dir = "/Users/zhanzq/Downloads/models/"
-    best_model_path = "/Users/zhanzq/Downloads/pytorch_model.bin"
+    best_model_path = "/Users/zhanzq/Downloads/xp_ner_pytorch_model.bin"
 else:
     project_dir = "/data/zhanzhiqiang/github/GlobalPointer_pytorch/"
     pretrained_model_dir = "/data/zhanzhiqiang/models/"
@@ -51,6 +51,7 @@ train_config["pretrained_model_dir"] = os.path.join(pretrained_model_dir, train_
 train_config["data_dir"] = os.path.join(project_dir, train_config["data_dir"])
 train_config["output_dir"] = os.path.join(project_dir, train_config["output_dir"])
 train_config["logging_dir"] = os.path.join(project_dir, train_config["logging_dir"])
+train_config["best_model_path"] = best_model_path
 
 label2id = {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4, "poiIndex": 5}
 id2label = {val:key for key,val in label2id.items()}
