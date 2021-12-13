@@ -12,7 +12,7 @@ train_config = {
     "model_name": "bert-base-chinese",
     "pretrained_model_dir": "/Users/zhanzq/Downloads/models/",
     "project_dir": "/Users/zhanzq/github/GlobalPointer_pytorch/",
-    "data_dir": "datasets/xp_ner_1129/",
+    "data_dir": "datasets/xp_ner_1210/",
     "output_dir": "output/",
     "logging_dir": "log/",
     "num_train_epochs": 10,
