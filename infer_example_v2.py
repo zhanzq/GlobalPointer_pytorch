@@ -18,9 +18,12 @@ class Inference:
     A simple inference example
     """
     def __init__(self, config):
+        config.ro_pe = True
         self.config = config
         self.tokenizer = BertTokenizer.from_pretrained(config.pretrained_model_dir)
         self.model = GlobalPointer.from_pretrained(config.pretrained_model_dir, config=config).to(config.device)
+        import pdb
+        pdb.set_trace()
 
         print("loading pretrained model {0} from {1}".format(config.model_name, config.pretrained_model_dir))
         self.model.load_state_dict(torch.load(config.best_model_path, map_location=config.device))

@@ -57,10 +57,41 @@ class GlobalPointer(BertPreTrainedModel):
 
     def __init__(self, config):
         super().__init__(config)
+        self.ro_pe = config.ro_pe
         self.bert = BertModel(config, add_pooling_layer=False)
         self.dropout = torch.nn.Dropout(config.hidden_dropout_prob)
         self.dense = torch.nn.Linear(config.hidden_size, 2 * config.num_labels * config.inner_dim)
         self.init_weights()
+
+    @staticmethod
+    def sinusoidal_position_embedding(batch_size, seq_len, output_dim):
+        position_ids = torch.arange(0, seq_len, dtype=torch.float).unsqueeze(-1)
+        indices = torch.arange(0, output_dim // 2, dtype=torch.float)
+        indices = torch.pow(10000, -2 * indices / output_dim)
+        embeddings = position_ids * indices
+        embeddings = torch.stack([torch.sin(embeddings), torch.cos(embeddings)], dim=-1)
+        embeddings = embeddings.repeat((batch_size, *([1] * len(embeddings.shape))))
+        embeddings = torch.reshape(embeddings, (batch_size, seq_len, output_dim))
+        return embeddings
+
+    def rotate_position_embedding(self, qw, kw):
+        # qw shape: (batch_size, seq_len, ner_type_num, inner_dim)
+        input_sz = qw.size()
+        batch_size, seq_len, inn_dim = input_sz[0], input_sz[1], input_sz[3]
+
+        # pos_emb:(batch_size, seq_len, inner_dim)
+        pos_emb = self.sinusoidal_position_embedding(batch_size, seq_len, inn_dim)
+
+        # cos_pos,sin_pos: (batch_size, seq_len, 1, inner_dim)
+        cos_pos = pos_emb[..., None, 1::2].repeat_interleave(2, dim=-1)
+        sin_pos = pos_emb[..., None, 0::2].repeat_interleave(2, dim=-1)
+        qw2 = torch.stack([-qw[..., 1::2], qw[..., 0::2]], -1)
+        qw2 = qw2.reshape(qw.shape)
+        qw = qw * cos_pos + qw2 * sin_pos
+        kw2 = torch.stack([-kw[..., 1::2], kw[..., 0::2]], -1)
+        kw2 = kw2.reshape(kw.shape)
+        kw = kw * cos_pos + kw2 * sin_pos
+        return qw, kw
 
     def get_logits(self, outputs, attention_mask):
         sequence_output = outputs[0]
@@ -72,6 +103,10 @@ class GlobalPointer(BertPreTrainedModel):
         proj_outputs = torch.split(proj_outputs, self.config.inner_dim * 2, dim=-1)
         proj_outputs = torch.stack(proj_outputs, dim=-2)
         qw, kw = proj_outputs[..., : self.config.inner_dim], proj_outputs[..., self.config.inner_dim:]
+
+        if self.ro_pe:
+            qw, kw = self.rotate_position_embedding(qw, kw)
+
         logits = torch.einsum('bmhd,bnhd->bhmn', qw, kw)
 
         # padding mask
