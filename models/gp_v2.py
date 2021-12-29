@@ -80,7 +80,7 @@ class GlobalPointer(BertPreTrainedModel):
         batch_size, seq_len, inn_dim = input_sz[0], input_sz[1], input_sz[3]
 
         # pos_emb:(batch_size, seq_len, inner_dim)
-        pos_emb = self.sinusoidal_position_embedding(batch_size, seq_len, inn_dim)
+        pos_emb = self.sinusoidal_position_embedding(batch_size, seq_len, inn_dim).to(self.config.device)
 
         # cos_pos,sin_pos: (batch_size, seq_len, 1, inner_dim)
         cos_pos = pos_emb[..., None, 1::2].repeat_interleave(2, dim=-1)
