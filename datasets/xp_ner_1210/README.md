@@ -8,6 +8,16 @@
 
 ```{"text": "第一个", "label": []} ==> {"text": "第一个", "label": [["poiIndex", "第一个"]]}```
 
+2. 将标注结果规范化，即按槽位在原句出现的先后顺序进行标注
+输入为*train_1129.jsonl*
+输出为*train_1129_norm.jsonl*
+**示例: **
+```
+original  : {"text": "我很讨厌吃粤菜和徽菜我们去第一家吧", "label": [["poiIndex", "第一家"], ["type", "粤菜"], ["type", "徽菜"]]}
+ 
+normalized: {"text": "我很讨厌吃粤菜和徽菜我们去第一家吧", "label": [["type", "粤菜"], ["type", "徽菜"], ["poiIndex", "第一家"]]}
+```
+
 **更新详情：**
 
 ```json
