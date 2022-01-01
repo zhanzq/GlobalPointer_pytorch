@@ -15,11 +15,11 @@ train_config = {
     "data_dir": "datasets/xp_ner_1210/",
     "output_dir": "output/",
     "logging_dir": "log/",
-    "num_train_epochs": 10,
+    "num_train_epochs": 5,
     "per_device_train_batch_size": 16,
     "per_device_eval_batch_size": 64,
     "learning_rate": 5e-5,
-    "max_len": 24,
+    "max_len": 40,
     "warmup_ratio": 0.1,
     "warmup_steps": 320,
     "weight_decay": 0.01,
@@ -31,7 +31,7 @@ train_config = {
     "hidden_dropout_prob": 0.05,
     "attention_probs_dropout_prob": 0.05,
     "use_r_drop": False,
-    "ro_pe": False,
+    "ro_pe": True,
     "inner_dim": 32,
     "vocab_size": 21128,
     "best_model_path": "/Users/zhanzq/Downloads/checkpoint-1400/pytorch_model.bin",
@@ -47,6 +47,7 @@ else:
     pretrained_model_dir = "/data/zhanzhiqiang/models/"
     best_model_path = "/data/zhanzhiqiang/github/pytorch_model.bin"
 
+train_config["project_dir"] = project_dir
 train_config["pretrained_model_dir"] = os.path.join(pretrained_model_dir, train_config["model_name"])
 train_config["data_dir"] = os.path.join(project_dir, train_config["data_dir"])
 train_config["output_dir"] = os.path.join(project_dir, train_config["output_dir"])
