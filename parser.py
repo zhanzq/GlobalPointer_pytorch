@@ -49,6 +49,9 @@ PARSER_DICT = {
             "default": {0: "location", 1: "type", 2: "poiName", 3: "dishName", 4: "taste", 5: "poiIndex"}},
         {"name": "vocab_size", "type": int, "help": "# of vocabulary size", "default": 21128},
         {"name": "device", "type": str, "help": "device type", "default": "cpu"},
+        {"name": "do_train", "action": "store_true", "help": "train model or not", "default": None},
+        {"name": "do_eval", "action": "store_true", "help": "eval model or not", "default": None},
+        {"name": "do_predict", "action": "store_true", "help": "predict model or not", "default": None},
     ]
 }
 

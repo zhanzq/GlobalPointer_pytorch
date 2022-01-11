@@ -28,5 +28,8 @@
     "vocab_size": 21128,
     "label2id": {"location": 0, "type": 1, "poiName": 2, "dishName": 3, "taste": 4, "poiIndex": 5},
     "id2label": {},
-    "device": "cpu"
+    "device": "cpu",
+    "do_train": true,
+    "do_eval": true,
+    "do_predict": false
 }
