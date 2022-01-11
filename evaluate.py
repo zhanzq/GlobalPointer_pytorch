@@ -1,152 +1,208 @@
-"""
-Date: 2021-06-11 13:54:00
-LastEditors: GodK
-LastEditTime: 2021-07-19 21:53:18
-"""
+# !/usr/bin/env python
+# encoding=utf-8
+# author: zhanzq
+# email : zhanzhiqiang09@126.com
+# date  : 2021/12/07
+#
+
 import os
-import config
-import sys
-import torch
 import json
-from transformers import BertTokenizerFast, BertModel
-from models.GlobalPointer import DataMaker, XPNER, GlobalPointer
-from torch.utils.data import DataLoader, Dataset
-import numpy as np
+from time import localtime, strftime
+
+import torch
+import numpy
+
+import sys
+
+from parser import get_parser
+from transformers import BertTokenizer, TrainingArguments, Trainer
+from models.gp_v2 import GlobalPointer
+from data_utils_v2 import get_ner_example, XPNER, load_ner_data, compute_ner_metrics
+
+sys.path.append("/Users/zhanzq/github/common")
+from utils import save_to_jsonl
+
+import logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
-config = config.eval_config
-hyper_parameters = config["hyper_parameters"]
-
-os.environ["TOKENIZERS_PARALLELISM"] = "true"
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-config["num_workers"] = 6 if sys.platform.startswith("linux") else 0
-
-# for reproductivity
-torch.backends.cudnn.deterministic = True
-
-tokenizer = BertTokenizerFast.from_pretrained(config["bert_path"], add_special_tokens=True, do_lower_case=False)
-
-def load_data(data_path, data_type="test"):
-    if data_type == "test":
-        datas = []
-        with open(data_path, encoding="utf-8") as f:
-            for line in f:
-                line = json.loads(line)
-                datas.append(line)
-        return datas
-    else:
-        return json.load(open(data_path, encoding="utf-8"))
-
-
-ent2id_path = os.path.join(config["data_home"], config["exp_name"], config["ent2id"])
-ent2id = load_data(ent2id_path, "ent2id")
-ent_type_size = len(ent2id)
-
-def data_generator(data_type="test"):
+class Inference:
     """
-    读取数据，生成DataLoader。
+    A simple inference example
     """
-       
-    if data_type=="test":
-        test_data_path = os.path.join(config["data_home"], config["exp_name"], config["test_data"])
-        test_data = load_data(test_data_path, "test")
-   
+    def __init__(self, config):
+        self.config = config
+        self.tokenizer = BertTokenizer.from_pretrained(config.pretrained_model_dir)
+        self.model = GlobalPointer(config=config).to(config.device)
 
-    all_data = test_data
+        self.print_args()
 
-    # TODO:句子截取
-    max_tok_num = 0
-    for sample in all_data:
-        tokens = tokenizer.tokenize(sample["text"])
-        max_tok_num = max(max_tok_num, len(tokens))
-    assert max_tok_num <= hyper_parameters["max_seq_len"], f'数据文本最大token数量{max_tok_num}超过预设{hyper_parameters["max_seq_len"]}'
-    max_seq_len = min(max_tok_num, hyper_parameters["max_seq_len"])
+        logger.info("loading best NER model from {}".format(config.best_model_path))
+        self.model.load_state_dict(torch.load(config.best_model_path, map_location=config.device))
 
-    data_maker = DataMaker(tokenizer)
+        # switch model to evaluation mode
+        self.model.eval()
+        torch.autograd.set_grad_enabled(False)
 
-    if data_type == "test":
-        test_inputs = data_maker.generate_inputs(test_data, max_seq_len, ent2id, data_type="test")
-        test_dataloader = DataLoader(XPNER(test_inputs),
-                                        batch_size=hyper_parameters["batch_size"],
-                                        shuffle=False,
-                                        num_workers=config["num_workers"],
-                                        drop_last=False,
-                                        collate_fn=lambda data_batch: data_maker.generate_batch(data_batch, data_type="test")
-                                        )
-        return test_dataloader
+    def print_args(self):
+        n_trainable_params, n_untrainable_params = 0, 0
+        for p in self.model.parameters():
+            n_params = torch.prod(torch.tensor(p.shape))
+            if p.requires_grad:
+                n_trainable_params += n_params
+            else:
+                n_untrainable_params += n_params
+        logger.info("> n_trainable_params: %d, n_untrainable_params: %d" % (n_trainable_params, n_untrainable_params))
+        logger.info("> training arguments:")
+        for arg in vars(self.config):
+            logger.info(">>> {0}: {1}".format(arg, getattr(self.config, arg)))
 
-def decode_ent(text, pred_matrix, tokenizer, threshold = 0):
-    # print(text)
-    token2char_span_mapping = tokenizer(text, return_offsets_mapping=True)["offset_mapping"]
-    id2ent = {id:ent for ent,id in ent2id.items()}
-    pred_matrix = pred_matrix.cpu().numpy()
-    ent_list = {}
-    for ent_type_id, token_start_index, toekn_end_index in zip(*np.where(pred_matrix > threshold)):
-        ent_type = id2ent[ent_type_id]
-        ent_char_span = [token2char_span_mapping[token_start_index][0], token2char_span_mapping[toekn_end_index][1]]
-        ent_text = text[ent_char_span[0]:ent_char_span[1]]
-        
-        ent_type_dict = ent_list.get(ent_type, {})
-        ent_text_list = ent_type_dict.get(ent_text, [])
-        ent_text_list.append(ent_char_span)
-        ent_type_dict.update({ent_text: ent_text_list})
-        ent_list.update({ent_type:ent_type_dict})
-    # print(ent_list)
-    return ent_list
+    def get_entities(self, text, pred_matrix, threshold=0.0):
+        """
+        get all entities in text, with threshold
+        :param text:
+        :param pred_matrix: shape (1, ner_type_num, seq_len, seq_len)
+        :param threshold: default 0.0
+        :return: {"type1": [{"value": "val1", "pos": [start1, end1]}, {}], "type2": []}
+        """
+        id2label = self.config.id2label
+        pred_matrix = pred_matrix.cpu().numpy()
 
-def predict(dataloader, model):
+        entities = {}
+        for _, ent_type_id, start_idx, end_idx in zip(*numpy.where(pred_matrix > threshold)):
+            entity_type = id2label[ent_type_id]
+            entity_name = text[start_idx-1: end_idx]
+            entity = {"value": entity_name, "pos": [start_idx-1, end_idx]}
+            ent_type_lst = entities.get(entity_type, [])
+            ent_type_lst.append(entity)
+            entities[entity_type] = ent_type_lst
 
-    predict_res = []
+        return entities
 
-    model.eval()
-    for batch_data in dataloader:
-        batch_samples, batch_input_ids, batch_attention_mask, batch_token_type_ids, _ = batch_data
-        batch_input_ids, batch_attention_mask, batch_token_type_ids = (batch_input_ids.to(device),
-                                                                                 batch_attention_mask.to(device),
-                                                                                 batch_token_type_ids.to(device),
-                                                                                 )
-        with torch.no_grad():
-            batch_logits = model(batch_input_ids, batch_attention_mask, batch_token_type_ids)
+    def infer(self, text, threshold=0.0):
+        sample = {"text": text}
+        data = get_ner_example(sample, norm_text=True, tokenizer=self.tokenizer, opt=self.config)
+        data["input_ids"] = data["input_ids"].unsqueeze(0)
+        data["attention_mask"] = data["attention_mask"].unsqueeze(0)
+        data["token_type_ids"] = data["token_type_ids"].unsqueeze(0)
+        pred_matrix = self.model(data["input_ids"], data["attention_mask"], data["token_type_ids"])[0]
+        labels = self.get_entities(data["sample"]["text"], pred_matrix, threshold=threshold)
+        predict_res = {"text": text, "label": labels}
 
-        for ind in range(len(batch_samples)):
-            gold_sample = batch_samples[ind]
-            text = gold_sample["text"]
-            text_id = gold_sample["id"]
-            pred_matrix = batch_logits[ind]
-            labels = decode_ent(text, pred_matrix, tokenizer)
-            predict_res.append({"id": text_id, "text": text, "label": labels})
-    return predict_res
-            
+        return predict_res
 
-def load_model():
-    model_state_dir = config["model_state_dir"]
-    model_state_list = sorted(filter(lambda x: "model_state" in x, os.listdir(model_state_dir)), key=lambda x: int(x.split(".")[0].split("_")[-1]))
-    last_k_model = config["last_k_model"]
-    model_state_path = os.path.join(model_state_dir, model_state_list[-last_k_model])
+    def load_data(self):
+        train_data, valid_data, test_data = load_ner_data(self.config.data_dir,
+                                                          norm_text=True,
+                                                          tokenizer=self.tokenizer,
+                                                          opt=self.config)
+        train_dataset = XPNER(train_data)
+        eval_dataset = XPNER(valid_data)
+        test_dataset = XPNER(test_data)
 
-    encoder = BertModel.from_pretrained(config["bert_path"])
-    model = GlobalPointer(encoder, ent_type_size, 64)
-    model.load_state_dict(torch.load(model_state_path))
-    model = model.to(device)
+        return train_dataset, eval_dataset, test_dataset
 
-    return model
+    def evaluate_on_dataset(self,):
+        train_dataset, eval_dataset, test_dataset = self.load_data()
+        training_args = TrainingArguments(
+            adam_epsilon=1e-8,
+            eval_steps=self.config.save_steps,
+            do_predict=True,
+            # evaluate_during_training=True,
+            evaluation_strategy="steps",
+            label_names=None,
+            logging_first_step=True,
+            **self.config
+        )
+
+        trainer = Trainer(
+            model=self.model,  # the instantiated 🤗 Transformers model to be trained
+            args=training_args,  # training arguments, defined above
+            train_dataset=train_dataset,  # training dataset
+            eval_dataset=eval_dataset,  # evaluation dataset
+            compute_metrics=compute_ner_metrics,
+            tokenizer=self.tokenizer
+        )
+
+        logger.info(trainer.predict(test_dataset=test_dataset).metrics)
+
+    def pred_on_dataset(self, data_path=None, output_dir=None, threshold=0.0):
+        if not data_path:
+            data_path = self.config.test_data_path
+        if not output_dir:
+            output_dir = self.config.output_dir
+        diffs, preds = [], []
+        with open(data_path, "r", encoding="utf-8") as reader:
+            for line in reader:
+                sample = json.loads(line.strip())
+                pred = self.infer(sample["text"], threshold)
+                diff = get_diff(sample, pred)
+                if diff is not None:
+                    diffs.append(diff)
+                preds.append(diff)
+                break
+
+        pred_path = os.path.join(output_dir, "pred_{}_{}".format(threshold, data_path.split("/")[-1]))
+        save_to_jsonl(json_lst=preds, jsonl_path=pred_path)
+
+        diff_path = os.path.join(output_dir, "diff_{}_{}".format(threshold, data_path.split("/")[-1]))
+        save_to_jsonl(json_lst=diffs, jsonl_path=diff_path)
+
+    def interactive_test(self,):
+        prompt = "请输入用户语句:"
+        print(prompt)
+        threshold = 0.0
+        test_sentence = input()
+        while test_sentence:
+            try:
+                while test_sentence.lower() == "set":
+                    print("请输入NER阈值:")
+                    threshold = float(input())
+                    print(prompt)
+                    test_sentence = input()
+                labels = self.infer(test_sentence, threshold)
+                print(labels)
+            except Exception as e:
+                print(e)
+            print(prompt)
+            test_sentence = input()
 
 
-def evaluate():
-    test_dataloader = data_generator(data_type="test")
-
-    model = load_model()
-
-    predict_res = predict(test_dataloader, model)
-    
-    if not os.path.exists(os.path.join(config["save_res_dir"], config["exp_name"])):
-        os.mkdir(os.path.join(config["save_res_dir"], config["exp_name"]))
-    save_path = os.path.join(config["save_res_dir"], config["exp_name"], "predict_result.json")
-    # json.dump(predict_res, open(save_path, "w", encoding="utf-8"), ensure_ascii=False)
-    with open(save_path, "w", encoding="utf-8") as f:
-        for item in predict_res:
-            f.write(json.dumps(item, ensure_ascii=False)+"\n")
+def convert_dict_to_list(dct):
+    lst = []
+    for key in dct:
+        val_lst = dct[key]
+        for item in val_lst:
+            lst.append([key, item["value"]])
+    return lst
 
 
-if __name__ == '__main__':
-    evaluate()
+def get_diff(sample, pred):
+    text = sample["text"]
+    label = sample["label"]
+    label2 = convert_dict_to_list(pred["label"])
+    if len(label) == len(label2):
+        label.sort()
+        label2.sort()
+        if label == label2:
+            return None
+
+    return {"text": text, "label": label, "pred": label2}
+
+
+def main():
+    log_file = "{}-{}_evaluation.log".format("NER", strftime("%y%m%d-%H%M", localtime()))
+    logger.addHandler(logging.FileHandler(log_file))
+    problem = sys.argv.pop(1)
+    args = get_parser(problem)
+    args.id2label = {val: key for key, val in args.label2id.items()}
+    config = GlobalPointer.config_class(**vars(args))
+
+    inf = Inference(config=config)
+    inf.interactive_test()
+
+
+if __name__ == "__main__":
+    main()
