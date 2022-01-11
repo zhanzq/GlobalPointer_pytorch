@@ -238,6 +238,43 @@ def get_entity_spans(text, entity_dct):
     return entity_spans
 
 
+def compute_ner_metrics(predictions):
+    logits, labels = predictions
+    pred = []
+    true = []
+    result = {i: [] for i in range(logits.shape[0])}
+    for b, l, start, end in zip(*np.where(labels > 0)):
+        true.append((b, l, start, end))
+        result[b].append((l, start, end))
+    for b, l, start, end in zip(*np.where(logits > 0)):
+        pred.append((b, l, start, end))
+        if (l, start, end) in result[b]:
+            result[b].remove((l, start, end))
+    is_correct = 0
+    total = 0
+    for idx in result:
+        if not result[idx]:
+            is_correct += 1
+        total += 1
+    acc = is_correct / total
+    r = set(pred)
+    t = set(true)
+    x = len(r & t)
+    y = len(r)
+    z = len(t)
+    try:
+        f1, precision, recall = 2 * x / (y + z), x / y, x / z
+    except ZeroDivisionError:
+        f1, precision, recall = 0, 0, 0
+    result = {
+        "acc": acc,
+        "f1": f1,
+        "precision": precision,
+        "recall": recall
+    }
+    return result
+
+
 def main():
     data_path = "datasets/xp_ner_1124/train.jsonl"
     tokenizer = BertTokenizer.from_pretrained("/Users/zhanzq/Downloads/models/bert-base-chinese")

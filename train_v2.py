@@ -7,8 +7,8 @@
 
 
 import sys
+from time import localtime, strftime
 
-import numpy
 import logging
 
 from config_v2 import train_config
@@ -16,8 +16,7 @@ from transformers import BertTokenizer
 
 import torch
 
-from data_utils_v2 import XPNER
-from data_utils_v2 import load_ner_data
+from data_utils_v2 import load_ner_data, compute_ner_metrics, XPNER
 
 from models.gp_v2 import GlobalPointer
 from transformers import Trainer, TrainingArguments
@@ -42,44 +41,10 @@ def get_param_num(model):
     return trained_param_num, untrained_param_num
 
 
-def compute_ner_metrics(predictions):
-    logits, labels = predictions
-    pred = []
-    true = []
-    result = {i: [] for i in range(logits.shape[0])}
-    for b, l, start, end in zip(*numpy.where(labels > 0)):
-        true.append((b, l, start, end))
-        result[b].append((l, start, end))
-    for b, l, start, end in zip(*numpy.where(logits > 0)):
-        pred.append((b, l, start, end))
-        if (l, start, end) in result[b]:
-            result[b].remove((l, start, end))
-    is_correct = 0
-    total = 0
-    for idx in result:
-        if not result[idx]:
-            is_correct += 1
-        total += 1
-    acc = is_correct / total
-    r = set(pred)
-    t = set(true)
-    x = len(r & t)
-    y = len(r)
-    z = len(t)
-    try:
-        f1, precision, recall = 2 * x / (y + z), x / y, x / z
-    except ZeroDivisionError:
-        f1, precision, recall = 0, 0, 0
-    result = {
-        "acc": acc,
-        "f1": f1,
-        "precision": precision,
-        "recall": recall
-    }
-    return result
-
-
 def main():
+    log_file = "{}-{}_train.log".format("NER", strftime("%y%m%d-%H%M", localtime()))
+    logger.addHandler(logging.FileHandler(log_file))
+
     tokenizer = BertTokenizer.from_pretrained(config.pretrained_model_dir)
     model = GlobalPointer.from_pretrained(config.pretrained_model_dir, config=config)
     logger.info(model)
