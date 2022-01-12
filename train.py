@@ -22,6 +22,15 @@ logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
+def get_training_args(config_dct):
+    training_args = {}
+    for key, val in config_dct.items():
+        if hasattr(TrainingArguments, key):
+            training_args[key] = val
+
+    return training_args
+
+
 class Instructor:
     """
     A simple inference example
@@ -64,6 +73,7 @@ class Instructor:
 
     def get_trainer(self):
         config_dct = self.config.__dict__
+        config_dct = get_training_args(config_dct)
         training_args = TrainingArguments(**config_dct)
 
         trainer = Trainer(

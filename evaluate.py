@@ -19,6 +19,7 @@ from transformers import BertTokenizer, TrainingArguments, Trainer
 from models.gp_v2 import GlobalPointer
 from data_utils_v2 import get_ner_example, XPNER, load_ner_data, compute_ner_metrics
 
+from train import get_training_args
 from utils import save_to_jsonl
 
 import logging
@@ -106,6 +107,7 @@ class Inference:
     def evaluate_on_dataset(self,):
         train_dataset, eval_dataset, test_dataset = self.load_data()
         config_dct = self.config.__dict__
+        config_dct = get_training_args(config_dct)
         training_args = TrainingArguments(**config_dct)
 
         trainer = Trainer(
