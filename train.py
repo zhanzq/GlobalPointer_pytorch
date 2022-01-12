@@ -29,14 +29,13 @@ class Instructor:
     def __init__(self, config):
         self.config = config
         self.tokenizer = BertTokenizer.from_pretrained(config.pretrained_model_dir)
-        self.model = GlobalPointer(config=config).to(config.device)
-
         self.print_args()
 
         logger.info("loading pretrained NER model from {}".format(config.pretrained_model_dir))
-        self.model.load_state_dict(torch.load(config.pretrained_model_dir, map_location=config.device))
+        self.model = GlobalPointer.from_pretrained(config.pretrained_model_dir, config=config).to(config.device)
 
         # load dataset
+        logger.info("loading dataset ...")
         self.train_dataset, self.eval_dataset, self.test_dataset = self.load_data()
 
     def print_args(self):
@@ -115,8 +114,8 @@ class Instructor:
         self.config.do_train = False
         self.config.do_eval = True
         self.config.do_predict = False
-        logger.info("loading best NER model from {}".format(config.best_model_path))
-        self.model.load_state_dict(torch.load(config.best_model_path, map_location=config.device))
+        logger.info("loading best NER model from {}".format(self.config.best_model_path))
+        self.model.load_state_dict(torch.load(self.config.best_model_path, map_location=self.config.device))
         trainer = self.get_trainer()
         trainer.evaluate(eval_dataset=self.eval_dataset)
 
@@ -124,8 +123,8 @@ class Instructor:
         self.config.do_train = False
         self.config.do_eval = False
         self.config.do_predict = True
-        logger.info("loading best NER model from {}".format(config.best_model_path))
-        self.model.load_state_dict(torch.load(config.best_model_path, map_location=config.device))
+        logger.info("loading best NER model from {}".format(self.config.best_model_path))
+        self.model.load_state_dict(torch.load(self.config.best_model_path, map_location=self.config.device))
         trainer = self.get_trainer()
         test_res = trainer.predict(test_dataset=self.test_dataset).metrics
         logger.info(test_res)
