@@ -14,21 +14,12 @@ from transformers import Trainer, TrainingArguments, BertTokenizer
 from data_utils_v2 import load_ner_data, compute_ner_metrics, XPNER
 
 import logging
-
 from parser import get_parser
+from utils import get_default_params
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler(sys.stdout))
-
-
-def get_training_args(config_dct):
-    training_args = {}
-    for key, val in config_dct.items():
-        if hasattr(TrainingArguments, key):
-            training_args[key] = val
-
-    return training_args
 
 
 class Instructor:
@@ -73,7 +64,7 @@ class Instructor:
 
     def get_trainer(self):
         config_dct = self.config.__dict__
-        config_dct = get_training_args(config_dct)
+        config_dct = get_default_params(config_dct, TrainingArguments)
         training_args = TrainingArguments(**config_dct)
 
         trainer = Trainer(
