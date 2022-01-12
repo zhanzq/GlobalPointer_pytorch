@@ -134,7 +134,6 @@ class Inference:
                 if diff is not None:
                     diffs.append(diff)
                 preds.append(diff)
-                break
 
         pred_path = os.path.join(output_dir, "pred_{}_{}".format(threshold, data_path.split("/")[-1]))
         save_to_jsonl(json_lst=preds, jsonl_path=pred_path)
