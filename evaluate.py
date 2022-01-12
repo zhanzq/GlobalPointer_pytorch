@@ -19,7 +19,6 @@ from transformers import BertTokenizer, TrainingArguments, Trainer
 from models.gp_v2 import GlobalPointer
 from data_utils_v2 import get_ner_example, XPNER, load_ner_data, compute_ner_metrics
 
-sys.path.append("/Users/zhanzq/github/common")
 from utils import save_to_jsonl
 
 import logging
@@ -106,16 +105,8 @@ class Inference:
 
     def evaluate_on_dataset(self,):
         train_dataset, eval_dataset, test_dataset = self.load_data()
-        training_args = TrainingArguments(
-            adam_epsilon=1e-8,
-            eval_steps=self.config.save_steps,
-            do_predict=True,
-            # evaluate_during_training=True,
-            evaluation_strategy="steps",
-            label_names=None,
-            logging_first_step=True,
-            **self.config
-        )
+        config_dct = self.config.__dict__
+        training_args = TrainingArguments(**config_dct)
 
         trainer = Trainer(
             model=self.model,  # the instantiated 🤗 Transformers model to be trained
@@ -201,7 +192,10 @@ def main():
     config = GlobalPointer.config_class(**vars(args))
 
     inf = Inference(config=config)
-    inf.interactive_test()
+
+    inf.evaluate_on_dataset()
+    inf.pred_on_dataset()
+    # inf.interactive_test()
 
 
 if __name__ == "__main__":
