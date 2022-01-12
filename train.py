@@ -62,36 +62,10 @@ class Instructor:
 
         return train_dataset, eval_dataset, test_dataset
 
-    def get_train_args(self):
-        config = self.config
-        training_args = TrainingArguments(
-            output_dir=config.output_dir,  # output directory
-            num_train_epochs=config.num_train_epochs,  # total number of training epochs
-            per_device_train_batch_size=config.per_device_train_batch_size,  # batch size per device during training
-            per_device_eval_batch_size=config.per_device_eval_batch_size,  # batch size for evaluation
-            learning_rate=config.learning_rate,
-            adam_epsilon=1e-8,
-            warmup_steps=config.warmup_steps,  # number of warmup steps for learning rate scheduler
-            weight_decay=config.weight_decay,  # strength of weight decay
-            logging_dir=config.logging_dir,  # directory for storing logs
-            logging_steps=config.logging_steps,
-            eval_steps=config.save_steps,
-            save_steps=config.save_steps,
-            save_total_limit=config.save_total_limit,
-            do_train=config.do_train,
-            do_eval=config.do_eval,
-            do_predict=config.do_predict,
-            evaluate_during_training=True,
-            gradient_accumulation_steps=config.gradient_accumulation_steps,
-            evaluation_strategy="steps",
-            label_names=None,
-            logging_first_step=True,
-        )
-
-        return training_args
-
     def get_trainer(self):
-        training_args = self.get_train_args()
+        config_dct = self.config.__dict__
+        training_args = TrainingArguments(**config_dct)
+
         trainer = Trainer(
             model=self.model,  # the instantiated 🤗 Transformers model to be trained
             args=training_args,  # training arguments, defined above

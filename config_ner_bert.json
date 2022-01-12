@@ -31,5 +31,11 @@
     "device": "cpu",
     "do_train": true,
     "do_eval": true,
-    "do_predict": false
+    "do_predict": false,
+    "evaluation_strategy": "steps",
+    "adam_epsilon": 1e-8,
+    "eval_steps": 100,
+    "evaluate_during_training": true,
+    "label_names": ["location", "type", "poiName", "dishName", "taste", "poiIndex"],
+    "logging_first_step": true
 }

@@ -52,6 +52,14 @@ PARSER_DICT = {
         {"name": "do_train", "action": "store_true", "help": "train model or not", "default": None},
         {"name": "do_eval", "action": "store_true", "help": "eval model or not", "default": None},
         {"name": "do_predict", "action": "store_true", "help": "predict model or not", "default": None},
+        {"name": "evaluation_strategy", "default": "steps"},
+        {"name": "adam_epsilon", "type": float, "help": "value of adam epsilon", "default": 1e-8},
+        {"name": "eval_steps", "type": int, "help": "# of steps to evaluate", "default": 100},
+        {"name": "evaluate_during_training", "action": "store_true", "help": "evaluate or not during training",
+            "default": None},
+        {"name": "label_names", "type": list, "help": "entity name list",
+            "default": ["location", "type", "poiName", "dishName", "taste", "poiIndex"]},
+        {"name": "logging_first_step", "action": "store_true", "help": "logging first step or not", "default": None}
     ]
 }
 
