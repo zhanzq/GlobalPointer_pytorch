@@ -29,10 +29,10 @@ class Instructor:
     def __init__(self, config):
         self.config = config
         self.tokenizer = BertTokenizer.from_pretrained(config.pretrained_model_dir)
-        self.print_args()
-
         logger.info("loading pretrained NER model from {}".format(config.pretrained_model_dir))
         self.model = GlobalPointer.from_pretrained(config.pretrained_model_dir, config=config).to(config.device)
+
+        self.print_args()
 
         # load dataset
         logger.info("loading dataset ...")

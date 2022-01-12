@@ -69,6 +69,6 @@ def get_parser(parser_name):
         with open(args.config, "r", encoding="utf-8") as f:
             config = json.load(f)
             for k, v in config.items():
-                if hasattr(args, k) and getattr(args, k) is None:
+                if hasattr(args, k) and v:
                     setattr(args, k, v)
     return args
