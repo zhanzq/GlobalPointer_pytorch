@@ -57,8 +57,7 @@ PARSER_DICT = {
         {"name": "eval_steps", "type": int, "help": "# of steps to evaluate", "default": 100},
         {"name": "evaluate_during_training", "action": "store_true", "help": "evaluate or not during training",
             "default": None},
-        {"name": "label_names", "type": list, "help": "entity name list",
-            "default": ["location", "type", "poiName", "dishName", "taste", "poiIndex"]},
+        {"name": "label_names", "type": list, "help": "must be None, otherwise compute_metrics will not work", "default": None},
         {"name": "logging_first_step", "action": "store_true", "help": "logging first step or not", "default": None}
     ]
 }
