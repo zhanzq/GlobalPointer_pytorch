@@ -182,6 +182,7 @@ def get_diff(sample, pred):
         tmp_label2 = sorted(label2)
         if label == tmp_label2:
             sample["label"] = label2
+            sample["pred"] = label2
             return None
 
     return {"text": text, "label": label, "pred": label2}
