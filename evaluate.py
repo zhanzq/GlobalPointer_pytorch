@@ -168,6 +168,7 @@ def convert_dict_to_list(dct):
         for item in val_lst:
             lst.append([key, item["value"], item["pos"]])
     lst.sort(key=lambda it: it[-1])
+    lst = [[it[0], it[1]] for it in lst]
 
     return lst
 
