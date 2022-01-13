@@ -154,6 +154,8 @@ def load_ner_data(data_dir, norm_text=True, tokenizer=None, opt=None, do_shuffle
         train_sz -= valid_sz
         valid_lines = train_lines[train_sz:train_sz + valid_sz]
 
+    train_lines = train_lines[:train_sz]
+
     train_data = get_ner_dataset(train_lines, norm_text=norm_text, tokenizer=tokenizer, opt=opt)
     valid_data = get_ner_dataset(valid_lines, norm_text=norm_text, tokenizer=tokenizer, opt=opt)
     test_data = get_ner_dataset(test_lines, norm_text=norm_text, tokenizer=tokenizer, opt=opt)
