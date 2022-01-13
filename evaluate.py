@@ -177,12 +177,12 @@ def get_diff(sample, pred):
     text = sample["text"]
     label = sample["label"]
     label2 = convert_dict_to_list(pred["label"])
+    sample["pred"] = label2
     if len(label) == len(label2):
         label.sort()
         tmp_label2 = sorted(label2)
         if label == tmp_label2:
             sample["label"] = label2
-            sample["pred"] = label2
             return None
 
     return {"text": text, "label": label, "pred": label2}
