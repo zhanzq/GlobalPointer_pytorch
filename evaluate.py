@@ -133,7 +133,7 @@ class Inference:
                 diff = get_diff(sample, pred)
                 if diff is not None:
                     diffs.append(diff)
-                preds.append(diff)
+                preds.append(sample)
 
         pred_path = os.path.join(output_dir, "pred_{}_{}".format(threshold, data_path.split("/")[-1]))
         save_to_jsonl(json_lst=preds, jsonl_path=pred_path)
@@ -166,7 +166,9 @@ def convert_dict_to_list(dct):
     for key in dct:
         val_lst = dct[key]
         for item in val_lst:
-            lst.append([key, item["value"]])
+            lst.append([key, item["value"], item["pos"]])
+    lst.sort(key=lambda it: it[-1])
+
     return lst
 
 
@@ -176,8 +178,9 @@ def get_diff(sample, pred):
     label2 = convert_dict_to_list(pred["label"])
     if len(label) == len(label2):
         label.sort()
-        label2.sort()
-        if label == label2:
+        tmp_label2 = sorted(label2)
+        if label == tmp_label2:
+            sample["label"] = label2
             return None
 
     return {"text": text, "label": label, "pred": label2}
