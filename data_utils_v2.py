@@ -163,14 +163,14 @@ def load_ner_data(data_dir, norm_text=True, tokenizer=None, opt=None, do_shuffle
 
 def get_ner_dataset(lines, norm_text=True, tokenizer=None, opt=None):
     all_data = []
-    for line in lines:
+    for idx, line in enumerate(lines):
         line = line.strip()
         try:
             sample = json.loads(line)
             data = get_ner_example(sample, norm_text=norm_text, tokenizer=tokenizer, opt=opt)
             all_data.append(data)
         except Exception as e:
-            print(e)
+            print("line {}: {} is a bad case, just skip it".format(idx, line))
             traceback.print_exc()
 
     return all_data
