@@ -118,7 +118,15 @@ class Inference:
             tokenizer=self.tokenizer
         )
 
-        logger.info(trainer.predict(test_dataset=test_dataset).metrics)
+        self._evaluate_on_dataset(trainer=trainer, dataset=train_dataset, tag="train")
+        self._evaluate_on_dataset(trainer=trainer, dataset=eval_dataset, tag="eval")
+        self._evaluate_on_dataset(trainer=trainer, dataset=test_dataset, tag="test")
+
+    @staticmethod
+    def _evaluate_on_dataset(trainer, dataset, tag="eval"):
+        outputs = trainer.predict(test_dataset=dataset)
+        test_metrics = {"{}_{}".format(tag, key[5:]): val for key, val in outputs.metrics.items()}
+        logger.info(test_metrics)
 
     def pred_on_dataset(self, data_path=None, output_dir=None, threshold=0.0):
         if not data_path:
@@ -190,9 +198,11 @@ def get_diff(sample, pred):
 
 def main():
     log_file = "{}-{}_evaluation.log".format("NER", strftime("%y%m%d-%H%M", localtime()))
-    logger.addHandler(logging.FileHandler(log_file))
     problem = sys.argv.pop(1)
     args = get_parser(problem)
+    log_file = os.path.join(args.logging_dir, log_file)
+    logger.addHandler(logging.FileHandler(log_file))
+
     args.id2label = {val: key for key, val in args.label2id.items()}
     config = GlobalPointer.config_class(**vars(args))
 
