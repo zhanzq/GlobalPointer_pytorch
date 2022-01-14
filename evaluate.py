@@ -182,6 +182,7 @@ def convert_dict_to_list(dct):
 
 
 def get_diff(sample, pred):
+    sample_id = sample["id"]
     text = sample["text"]
     label = sample["label"]
     label2 = convert_dict_to_list(pred["label"])
@@ -193,7 +194,7 @@ def get_diff(sample, pred):
             sample["label"] = label2
             return None
 
-    return {"text": text, "label": label, "pred": label2}
+    return {"id": sample_id, "text": text, "label": label, "pred": label2}
 
 
 def main():
